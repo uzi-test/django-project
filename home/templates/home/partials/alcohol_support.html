@@ -1,0 +1,205 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Alcohol Support – Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Section -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/alc.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-7 col-md-9">
+        <div class="hero-content animate-slide-up text-start">
+
+          <h1 class="fw-bold text-uppercase text-dark-green" style="font-size:2.1rem;">
+            Take Control of Your Health
+          </h1>
+          <h2 class="fw-bold mt-2 text-dark-green" style="font-size:1.7rem;">
+            Alcohol Support & Guidance
+          </h2>
+
+          <p class="mt-3" style="font-size:1rem; line-height:1.5; max-width:550px;">
+            Alcohol has become a staple in many social gatherings and a way to unwind after a long day. 
+            However, excessive alcohol consumption can have detrimental effects on our health.
+          </p>
+
+          <p class="mt-3" style="font-size:1rem; line-height:1.5; max-width:550px;">
+           In recent years, there has been a growing trend of people choosing to drink less or even abstain from alcohol altogether. 
+           This shift is not only beneficial for our physical health, but also for our mental and emotional well-being.
+          </p>
+
+          <p class="mt-3" style="font-size:1rem; line-height:1.5; max-width:550px;">
+            You don’t have to face it alone — we’re here to guide you every step of the way toward a healthier, happier you.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🧠 Health Benefits Section -->
+<section class="py-5" style="background-color:#022b14;">
+  <div class="container">
+    <h3 class="fw-bold text-center text-light mb-5">Benefits of Reducing Alcohol Consumption</h3>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Card 1: Improve Mental Health -->
+      <div class="col-md-3">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100 text-start">
+          <div class="icon-box mb-3">
+            <div class="d-inline-flex justify-content-center align-items-center rounded-3"
+                 style="width:50px; height:50px; background-color:#eaf2ed;">
+              <i class="bi bi-emoji-smile text-success fs-4"></i>
+            </div>
+          </div>
+          <h5 class="fw-bold text-dark">Improve Mental Health</h5>
+          <p class="text-dark" style="font-size:0.95rem; line-height:1.5;">
+            Reducing alcohol intake can have a significant positive effect on mental well-being. Alcohol is a depressant and overconsumption can contribute to anxiety, stress, and depression. Cutting down can help stabilize your mood, improve focus, and boost self-esteem, giving you a more positive outlook on life.
+          </p>
+          <p class="text-dark" style="font-size:0.95rem; line-height:1.5;">
+            Even occasional heavy drinking can affect mental clarity and sleep quality, which in turn affects emotional health. By maintaining moderation, you support a healthier, happier, and more balanced mental state over time.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2: Sleep Better -->
+      <div class="col-md-3">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100 text-start">
+          <div class="icon-box mb-3">
+            <div class="d-inline-flex justify-content-center align-items-center rounded-3"
+                 style="width:50px; height:50px; background-color:#eaf2ed;">
+              <i class="bi bi-bed text-success fs-4"></i>
+            </div>
+          </div>
+          <h5 class="fw-bold text-dark">Sleep Better</h5>
+          <p class="text-dark" style="font-size:0.95rem; line-height:1.5;">
+            Alcohol can disrupt natural sleep cycles and reduce restorative sleep. Even if you fall asleep faster after drinking, the quality of sleep suffers, leading to tiredness, reduced focus, and decreased energy. Reducing alcohol helps regulate your sleep patterns, making it easier to wake up refreshed and alert.
+          </p>
+          <p class="text-dark" style="font-size:0.95rem; line-height:1.5;">
+            Better sleep also supports improved memory, mood stability, and overall physical health. Over time, consistent good sleep can positively impact your daily productivity and emotional resilience.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3: Maintain Healthy Weight -->
+      <div class="col-md-3">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100 text-start">
+          <div class="icon-box mb-3">
+            <div class="d-inline-flex justify-content-center align-items-center rounded-3"
+                 style="width:50px; height:50px; background-color:#eaf2ed;">
+              <i class="bi bi-speedometer2 text-success fs-4"></i>
+            </div>
+          </div>
+          <h5 class="fw-bold text-dark">Maintain Healthy Weight</h5>
+          <p class="text-dark" style="font-size:0.95rem; line-height:1.5;">
+            Alcohol is high in empty calories and can contribute to unwanted weight gain. Reducing alcohol consumption decreases calorie intake, helping you maintain a healthy weight. Excess weight can increase the risk of heart disease, diabetes, and joint strain, so moderation in drinking directly supports long-term health.
+          </p>
+          <p class="text-dark" style="font-size:0.95rem; line-height:1.5;">
+            Combined with balanced nutrition and regular exercise, reducing alcohol intake is a powerful step towards achieving sustainable weight management and overall wellness.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 4: Better Liver Health -->
+      <div class="col-md-3">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100 text-start">
+          <div class="icon-box mb-3">
+            <div class="d-inline-flex justify-content-center align-items-center rounded-3"
+                 style="width:50px; height:50px; background-color:#eaf2ed;">
+              <i class="bi bi-droplet text-success fs-4"></i>
+            </div>
+          </div>
+          <h5 class="fw-bold text-dark">Better Liver Health</h5>
+          <p class="text-dark" style="font-size:0.95rem; line-height:1.5;">
+            The liver is responsible for processing alcohol, and excessive drinking can cause long-term damage, including fatty liver, hepatitis, or cirrhosis. Reducing alcohol gives the liver a chance to repair and function optimally, improving digestion, metabolism, and overall health.
+          </p>
+          <p class="text-dark" style="font-size:0.95rem; line-height:1.5;">
+            Supporting liver health also benefits your immune system, energy levels, and overall physical well-being. Even moderate reduction in alcohol consumption can have meaningful long-term benefits for liver function.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🍃 Lifestyle Section -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row align-items-center g-4">
+
+      <!-- Image (Left) -->
+      <div class="col-lg-5 col-md-6">
+        <img src="{% static 'images/fru.webp' %}" 
+             alt="Alcohol Support" 
+             class="img-fluid rounded-4 shadow-sm">
+      </div>
+
+      <!-- Text (Right) -->
+      <div class="col-lg-7 col-md-6">
+        <p style="font-size: 1rem; line-height: 1.7; color: #222;">
+          Making the decision to cut down on alcohol is one of the best things you can do for your health. 
+          You'll notice improvements in sleep, mood, energy, and overall well-being within just a few weeks.
+        </p>
+
+        <p style="font-size: 1rem; line-height: 1.7; color: #222;">
+          Our pharmacy team provides confidential support and can direct you to trusted local resources, 
+          including NHS alcohol services and counseling programs.
+        </p>
+
+        <p style="font-size: 1rem; line-height: 1.7; color: #222;">
+          Small steps make a big difference. Reducing alcohol intake doesn’t have to happen overnight — 
+          every positive change you make counts toward a healthier, more balanced life.
+        </p>
+
+        <a href="https://www.nhs.uk/better-health/drink-less/" 
+           target="_blank" 
+           class="btn btn-success fw-semibold px-4 py-2 rounded-3 mt-2">
+          Get Help Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ CTA Section -->
+<section class="py-5" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      
+      <!-- Heart Icon -->
+      <div class="d-flex justify-content-center mb-3">
+        <div class="d-flex justify-content-center align-items-center rounded-circle bg-light" 
+             style="width:70px; height:70px;">
+          <i class="bi bi-heart-fill text-success fs-2"></i>
+        </div>
+      </div>
+
+      <!-- Heading -->
+      <h2 class="fw-bold text-light mb-3">Healthy Living Zone</h2>
+
+      <!-- Description -->
+      <p class="text-light mx-auto" style="max-width:700px; font-size:1rem; line-height:1.6;">
+        Discover the ultimate guide to a healthier lifestyle in the Healthy Living Zone. 
+        Get tips, resources, and inspiration for a happier, healthier you!
+      </p>
+
+      <!-- Button -->
+      <a href="{% url 'healthy_living_zone' %}" 
+         class="btn btn-success fw-semibold px-4 py-2 mt-3 rounded-3">
+        Visit the Healthy Living Zone
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,112 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Discharge Medication – Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/dis.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-7 col-md-9">
+        <div class="hero-content animate-slide-up">
+
+          <h1 class="fw-bold text-white" style="font-size:1.9rem; color:#ffffff;">
+            Discharge Medication Service
+          </h1>
+
+          <p class="mt-3" style="font-size:0.95rem; line-height:1.6; max-width:500px; color:#ffffff;">
+            When you're ready to leave the hospital, you can take part in our discharge medicines service. 
+            This service puts you directly in touch with our branch pharmacist. We can then talk about your medicines directly with you.
+          </p>
+
+        </div>
+        <p class="mt-3 fst-italic fw-bold text-emerald animate-fade"
+             style="font-size:0.95rem; max-width:550px;">
+            Cockerton Pharmacy – Supporting smooth and safe transitions from hospital to home across Darlington, Newcastle upon Tyne, and Wallsend.
+          </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Discharge Medicines Review Section -->
+<section class="py-5" style="background-color:#f8fdf9;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+
+        <h2 class="fw-bold mb-4" style="color:#004d26;">Discharge Medicines Review</h2>
+
+        <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+          Our pharmacist looks at all the medicines that you take. You can talk to them about:
+        </p>
+
+        <ul style="font-size:0.95rem; line-height:1.7; color:#222;">
+          <li>Any new medicines that we gave you in hospital</li>
+          <li>Any changes that we made to your medicines during your hospital stay</li>
+          <li>All of your medicines and how best to take them</li>
+        </ul>
+
+        <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+          Our pharmacist will explain what each medicine is for, any common side effects and how to take it safely.  
+          You can ask our pharmacist any questions about your medicines and get all the information that you need.
+        </p>
+
+        <h5 class="fw-bold mt-4" style="color:#004d26;">How this service can help you</h5>
+
+        <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+          About half of all medicines are not taken as they are prescribed. Common errors include:
+        </p>
+
+        <ul style="font-size:0.95rem; line-height:1.7; color:#222;">
+          <li>Taking the wrong dose (amount)</li>
+          <li>Taking the medicine at the wrong time</li>
+          <li>Not taking the medicine at all</li>
+        </ul>
+
+        <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+          If you do not take your medicines as prescribed, your condition is not treated correctly and could even get worse.  
+          By understanding your medicines and the best way to take them, you can make sure that they help you as much as possible.  
+          Our pharmacist will support you to feel confident about managing your medicines at home.  
+          This is a free service and our pharmacist works closely with your GP.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Bottom Service Section -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy provides a full range of services including private prescriptions,
+        health consultations, and travel vaccines.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="{% url 'private_prescription' %}" class="btn btn-success px-4 py-2">
+          Private Prescription
+        </a>
+        <a href="{% url 'pharmacy_first' %}" class="btn btn-success px-4 py-2">
+          Pharmacy First
+        </a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">
+          Our Branches
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

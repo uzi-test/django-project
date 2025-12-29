@@ -1,0 +1,120 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Blood Pressure Check – Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Section -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/bp.jpg" %}') center/cover no-repeat;
+                height: 70vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.6);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-8 col-md-10">
+        <div class="hero-content animate-slide-up">
+
+          <h1 class="fw-bold text-uppercase" style="font-size:2.2rem; color:#fff;">
+            NHS Blood Pressure Check
+          </h1>
+
+          <p class="mt-3" style="font-size:1rem; line-height:1.7; max-width:650px; color:#f0f0f0;">
+            High blood pressure is the single biggest risk factor for cardiovascular disease 
+            (heart attack and stroke). It’s thought there are 5.5 million people in the UK 
+            who have high blood pressure but don’t know they have it. The NHS Hypertension Case 
+            Finding Service can allow you to find out if you have high blood pressure. <br> <br>
+            The right treatment to control your blood pressure can greatly reduce your risk of stroke and heart attack.
+          </p>
+
+        </div>
+        <p class="mt-3 fst-italic fw-bold text-emerald animate-fade"
+             style="font-size:0.95rem; max-width:550px;">
+            Cockerton Pharmacy - Helping the local community in Darlington, Newcastle upon Tyne, Wallsend and beyond.
+          </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Information Section -->
+<section class="py-5" style="background-color:#f8fdf9;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+
+        <h3 class="fw-bold mb-3" style="color:#004d26;">Who can have an NHS Blood Pressure Check</h3>
+        <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+          This service is available to you if you are 40 years of age or over, are not having regular blood pressure checks at your practice and have not been diagnosed with high blood pressure.
+          Your Pharmacist may also be able to offer this service if:
+        </p>
+
+        <ul style="font-size:0.95rem; line-height:1.7; color:#222;">
+          <li>You are 35–39 years old and have not had a recent blood pressure check.</li>
+          <li>You are under the age of 40 and have a recognised family history of high blood pressure.</li>
+          <li>Your GP has requested that you visit a pharmacy to have your blood pressure checked.</li>
+        </ul>
+
+        <h3 class="fw-bold mt-5 mb-3" style="color:#004d26;">What does an NHS Blood Pressure Check provide</h3>
+        <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+          This service is a free NHS consultation from your Pharmacist, who will check your blood pressure and advise you on healthy lifestyle changes.
+          They will also check your pulse. If your Pharmacist finds that your blood pressure is raised, they will offer a more detailed blood pressure assessment.
+          This involves wearing a blood pressure monitor (which they will lend you and show you how to use) for 24 hours.
+          If your blood pressure is extremely high, your Pharmacist will advise you to see your GP.
+        </p>
+
+        <div class="row align-items-start mt-4">
+          <div class="col-md-6">
+            <img src="{% static 'images/heroblood.webp' %}" alt="Blood Pressure Check"
+                 class="img-fluid rounded-4 shadow-sm">
+          </div>
+          <div class="col-md-6">
+            <h4 class="fw-bold mb-3 mt-3 mt-md-0" style="color:#004d26;">About high blood pressure</h4>
+            <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+              High blood pressure happens when the force on the walls of blood vessels (caused by the blood within them) is more than normal.
+              This means the heart has to work harder and the blood vessels are under more strain, making it a major risk factor for stroke and heart attack.
+            </p>
+            <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+              The risk of high blood pressure rises with age. It’s also more common if you have diabetes or a family history of high blood pressure.
+              Eating a lot of salt, not exercising regularly, being overweight, drinking a lot of alcohol and stress also increase your risk.
+            </p>
+            <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+              One of the problems with detecting high blood pressure is that it virtually never causes symptoms in the short term.
+              That’s why it’s important to get your blood pressure checked regularly. This is a free NHS service for eligible people.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Bottom Service Section -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy provides a full range of services including private prescriptions,
+        health consultations, and travel vaccines.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="{% url 'private_prescription' %}" class="btn btn-success px-4 py-2">
+          Private Prescription
+        </a>
+        <a href="{% url 'pharmacy_first' %}" class="btn btn-success px-4 py-2">
+          Pharmacy First
+        </a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">
+          Our Branches
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

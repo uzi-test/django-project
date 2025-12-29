@@ -1,0 +1,188 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Earache – Pharmacy First{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/infect.jpg" %}') center/cover no-repeat;
+                height: 80vh; position: relative;">
+
+  <!-- Dark Overlay -->
+  <div style="
+      position:absolute;
+      top:0; left:0; right:0; bottom:0;
+      background: rgba(0,50,0,0.6);
+  "></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-7 col-md-9">
+
+        <!-- ✅ Smaller Heading -->
+        <h1 class="fw-bold text-uppercase text-dark-green"
+            style="font-size:1.7rem; line-height:1.1; letter-spacing:0.4px;">
+          PHARMACY FIRST
+        </h1>
+
+        <h2 class="fw-bold text-dark-green"
+            style="font-size:1.3rem; line-height:1.2; margin-top:10px;">
+          Earache
+        </h2>
+
+        <p style="font-size:0.95rem; line-height:1.55; max-width:560px; margin-top:12px;">
+          Earache is a common condition that we have surely all faced at some point.
+          Whether it's severe, painful earache or simple mild and irritating,
+          this condition is now covered by the free, NHS Pharmacy First Service.
+        </p>
+
+        <p class="fst-italic fw-bold animate-fade text-emerald"
+           style="font-size:0.9rem; max-width:560px; margin-top:14px;">
+          Cockerton Pharmacy – Helping the local community in Darlington,
+          Newcastle upon Tyne, Wallsend and beyond.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Earache Symptoms Section -->
+<section class="py-5" style="background-color:#cfe8da;">
+  <div class="container">
+    <div class="row align-items-center bg-white p-4 rounded-4 shadow-sm">
+      
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="{% static 'images/symp.webp' %}" 
+             alt="Earache symptoms"
+             class="img-fluid rounded-3 shadow-sm">
+      </div>
+
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-3">Earache Symptoms</h2>
+        <ul class="list-unstyled mb-4">
+          <li>✔️ Pain inside the ear</li>
+          <li>✔️ A high temperature</li>
+          <li>✔️ Being sick</li>
+          <li>✔️ A lack of energy</li>
+          <li>✔️ Difficulty hearing</li>
+          <li>✔️ Discharge running out of the ear</li>
+          <li>✔️ A feeling of pressure or fullness inside the ear</li>
+          <li>✔️ Itching and irritation in and around the ear</li>
+          <li>✔️ Scaly skin in and around the ear</li>
+        </ul>
+        <p>
+          The main symptom of earache is pain in and around the ear. Ear pain will in almost every case 
+          of earache be the main symptom. Accompanying symptoms will then vary depending on what is 
+          causing your earache. Obvious symptoms to look out for include discharge from the ear which 
+          is indicative of an infection. This can be a massive sign, especially for young children who 
+          won’t be able to spot an infection themselves. If you think your child has earache book an 
+          appointment via the new NHS Pharmacy First service.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Treatment / Causes / Complications Section -->
+<section class="py-5" style="background-color:#cfe8da;">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Treatment -->
+      <div class="col-md-4">
+        <div class="bg-white rounded-4 shadow-sm h-100 text-center p-3">
+          <img src="{% static 'images/treat.jpg' %}" class="img-fluid rounded-top-4 mb-3">
+          <h3 class="fw-bold">Treatment</h3>
+          <p>
+            We offer various treatment options for earaches, depending on the severity.
+            For milder cases, there are simple options like over-the-counter ear drops or
+            home remedies, such as using a warm flannel on the affected ear. However,
+            for more severe cases, a more complex treatment may be necessary, which could
+            include prescription medications, including antibiotics if deemed necessary.
+            Our knowledgeable pharmacist will provide a consultation to determine the
+            underlying cause of your earache, enabling them to prescribe the suitable
+            medication or treatment.
+          </p>
+        </div>
+      </div>
+
+      <!-- Causes -->
+      <div class="col-md-4">
+        <div class="bg-white rounded-4 shadow-sm h-100 text-center p-3">
+          <img src="{% static 'images/cause.jpg' %}" class="img-fluid rounded-top-4 mb-3">
+          <h3 class="fw-bold">Causes</h3>
+          <p>
+            Earache can stem from various reasons, including teething in young children.
+            Other factors such as excessive earwax buildup or a foreign object lodged in
+            the ear may also contribute to ear pain. Pinpointing the exact cause of
+            earache in a child can be challenging. If your child is experiencing
+            earache, it is best to consult our pharmacist for proper evaluation.
+            In adults, earache is typically not linked to teething and may be a
+            symptom of an ear infection. These infections are often caused by bacteria
+            and can be excruciatingly painful. Dental problems, such as tooth infections
+            or impacted wisdom teeth, may also result in ear pain due to their proximity
+            to the ears. In such cases, dental symptoms may also accompany earache.
+          </p>
+        </div>
+      </div>
+
+      <!-- Complications -->
+      <div class="col-md-4">
+        <div class="bg-white rounded-4 shadow-sm h-100 text-center p-3">
+          <img src="{% static 'images/compli.jpg' %}" class="img-fluid rounded-top-4 mb-3">
+          <h3 class="fw-bold">Complications</h3>
+          <p>
+            Earache is not a worrisome condition in itself. Though it can be painful and
+            a nuisance, the main worry is complications resulting from unchecked infection.
+            Most obviously your hearing could become damaged due to complications from
+            earache. Perforated eardrums, ear infections and inflammation can all wreak
+            havoc with your hearing. Complications range from tinnitus (ringing noise in
+            the ear) to partial or complete deafness, though this is thankfully rare.
+            NHS Pharmacy First aims to help prevent these complications by providing a
+            more immediate source of support and advice.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ✅ Info Paragraph -->
+  <div class="mt-5 px-3 text-center">
+    <p style="max-width:1100px; margin:0 auto; font-size:0.95rem; line-height:1.8;">
+      There can be no doubt that earache is a common health condition, though it can often be overlooked
+      and dismissed. Simply treating the symptoms over what is actually causing it. Even though sometimes
+      this is true. Earache remains a tell-tale sign of underlying health problems with our ears.
+      Infection for example can lead down a road to permanent hearing loss. This is why it’s vital not
+      to ignore the symptoms of earache. By and large the complications caused by earache can be easily
+      avoided by simply booking an appointment to speak to our pharmacist who can then make any
+      necessary treatments or referrals that are necessary. Now thanks to NHS Pharmacy First you can
+      easily access excellent healthcare within convenient reach! NHS Pharmacy First service.
+    </p>
+  </div>
+</section>
+
+<!-- ✅ Bottom Service Section -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy offers a wide range of services to meet your needs.
+        From prescription refills to medication counseling,
+        our knowledgeable staff is here to assist you.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="#" class="btn btn-success px-4 py-2">Services</a>
+        <a href="{% url 'pharmacy_first' %}" class="btn btn-success px-4 py-2">Pharmacy First</a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">Our Branches</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

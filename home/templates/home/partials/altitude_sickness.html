@@ -1,0 +1,100 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Altitude Sickness Treatment – Travel Clinic{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/althero.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-8 col-md-10">
+        <div class="hero-content">
+
+          <!-- Heading -->
+          <h1 class="fw-bold text-uppercase text-dark-green fade-in fade-delay-1" style="font-size:2.1rem;">
+            Altitude Sickness Treatment
+          </h1>
+
+          <!-- Paragraph 1 -->
+          <p class="mt-3 text-light fade-in fade-delay-2" style="font-size:1rem; line-height:1.5; max-width:700px;">
+            Our pharmacy offers expert advice and treatments to prevent and manage altitude sickness. 
+            Whether trekking in the mountains or visiting high-altitude destinations, we provide guidance, 
+            medications, and preventive care to ensure a safe and enjoyable journey.
+          </p>
+
+          <!-- Paragraph 2 -->
+          <p class="mt-2 text-light fade-in fade-delay-2" style="font-size:0.95rem; line-height:1.4; max-width:700px;">
+            Altitude sickness can occur when your body cannot get enough oxygen at high altitudes. Symptoms include headaches, nausea, dizziness, or difficulty breathing. 
+            It typically occurs above 8,000 feet if the ascent is rapid. Our team offers consultations and medication tailored to your travel plan.
+          </p>
+
+          <!-- Footer / small line -->
+          <p class="mt-3 fst-italic fw-bold text-emerald animate-fade"
+             style="font-size:0.95rem; max-width:550px;">
+            Cockerton Pharmacy – Helping you travel safely from Darlington,  
+            Newcastle upon Tyne, Wallsend,  
+            and across the UK.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ About This Service Section (Full-width style) -->
+<section class="py-5" style="background-color:#f8fdf9;">
+  <div class="container-fluid px-5"> <!-- Use container-fluid for full width -->
+    <h3 class="section-title mb-4">About this Service</h3>
+
+    <div class="info-box p-4 bg-white rounded-4 shadow-sm" style="width:100%;">
+      <p style="line-height:1.5; font-size:1rem;">
+        Our service includes a detailed consultation with trained pharmacy professionals who will assess your risk based on your travel plans and medical history. 
+        If you are at risk, we offer preventive medications, as well as advice on acclimatization strategies and other measures you can take to avoid altitude sickness. 
+        Should you already be experiencing symptoms, we offer treatments meant to alleviate these uncomfortable and potentially harmful effects.
+      </p>
+      <p style="line-height:1.5; font-size:1rem;">
+        At our pharmacy, your health is our priority! Don't let altitude sickness keep you from reaching new heights. 
+        Come in today to learn more about our Altitude Sickness Treatment Service.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ✅ Bottom Service Section -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy offers a wide range of services to meet your needs.
+        From prescription refills to medication counseling,
+        our knowledgeable staff is here to assist you.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <!-- Placeholder Services button -->
+        <a href="#" class="btn btn-success px-4 py-2">
+          Services
+        </a>
+        <a href="{% url 'pharmacy_first' %}" class="btn btn-success px-4 py-2">
+          Pharmacy First
+        </a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">
+          Our Branches
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

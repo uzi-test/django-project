@@ -1,0 +1,38 @@
+{% extends "home/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <a href="{% url 'branches' %}" class="btn btn-outline-secondary mb-3">← Back to branches</a>
+
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-6">
+        <h2 class="fw-bold">{{ branch.name }}</h2>
+        <p class="text-muted">{{ branch.address|linebreaksbr }}</p>
+        <p><strong>Phone:</strong> {{ branch.phone }}</p>
+      </div>
+
+      <div class="col-lg-6">
+        <div id="branch-map" style="width:100%;height:360px;border-radius:12px;overflow:hidden;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function initMap() {
+    const lat = parseFloat('{{ branch.latitude|default:"0" }}');
+    const lng = parseFloat('{{ branch.longitude|default:"0" }}');
+    const center = { lat: lat || 54.5, lng: lng || -1.5 };
+
+    const map = new google.maps.Map(document.getElementById('branch-map'), { center: center, zoom: lat && lng ? 15 : 6 });
+    if (lat && lng) {
+      new google.maps.Marker({ position: { lat: lat, lng: lng }, map: map, title: "{{ branch.name }}" });
+    }
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_REAL_KEY&callback=initMap" async defer></script>
+
+{% endblock %}

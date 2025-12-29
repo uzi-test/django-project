@@ -1,0 +1,142 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}COVID-19 Vaccination – Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/covhero.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-7 col-md-9">
+        <div class="hero-content animate-slide-up">
+
+          <!-- ✅ Compact Headings -->
+          <h1 class="fw-bold text-uppercase text-dark-green" style="font-size:2.1rem;">
+            COVID-19
+          </h1>
+          <h2 class="fw-bold mt-2 text-dark-green" style="font-size:1.7rem;">
+            Vaccination
+          </h2>
+
+          <!-- ✅ Shortened paragraph (3 lines only) -->
+          <p class="mt-3" style="font-size:1rem; line-height:1.5; max-width:550px;">
+            Protect yourself from COVID-19 with our NHS or private vaccination service.  
+            Available for adults and children aged 12+ at our pharmacy.  
+            Safe, reliable, and accessible across all branches.
+          </p>
+
+          <p class="mt-3 fst-italic fw-bold text-emerald animate-fade"
+             style="font-size:0.95rem; max-width:550px;">
+            Cockerton Pharmacy – Supporting the local community in Darlington,  
+            Newcastle upon Tyne, Wallsend,  
+            and beyond with trusted care.
+          </p>
+
+          <!-- ✅ Buttons: same size, left aligned -->
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="#" class="btn btn-success px-4 py-2 btn-hover-effect" style="min-width:220px;">
+              Book Free Consultaion <br> Darlington Branch
+            </a>
+            <a href="#" class="btn btn-success px-4 py-2 btn-hover-effect" style="min-width:220px;">
+              Book Free Consultaion <br> Newcastle Branch
+            </a>
+          </div>
+          <div class="mt-3">
+            <a href="#" class="btn btn-success px-4 py-2 btn-hover-effect" style="min-width:220px;">
+              Book Free Consultaion <br> Wallsend Branch
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Info Section -->
+<section class="covid-info-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+
+        <div class="info-content animate-on-scroll">
+          <h3 class="section-title">What is COVID-19 ?</h3>
+          <div class="info-box">
+            <p>
+              COVID-19 is a respiratory illness that is spread through coughs, sneezes and close contact with people who have the virus. 
+              Symptoms can include a high temperature or shivering, a new continuous cough, a sore throat, and a loss or change in sense of smell or taste.
+            </p>
+            <p>
+              Most people have mild symptoms and recover quickly, but some people can become severely ill. Occasionally, symptoms can persist and 
+              develop into a condition called <strong>“Long COVID”</strong>.
+            </p>
+          </div>
+
+          <h4 class="section-subtitle mt-5">Private COVID-19 Vaccination</h4>
+          <div class="info-box">
+            <p>
+              We offer a private COVID-19 Vaccination Service for adults and children aged 12 years and over. Please note that this is not an NHS service. 
+              The vaccination helps protect against catching COVID-19 and passing it on to others.
+            </p>
+            <p>This service isn’t suitable for anyone who has had:</p>
+            <ul>
+              <li>A COVID-19 vaccination within the last 3 months</li>
+              <li>An allergic reaction to any injections or vaccinations in the past</li>
+            </ul>
+            <p>
+              This isn’t a complete list and suitability will be checked before the vaccination is given.
+            </p>
+          </div>
+
+          <h4 class="section-subtitle mt-5">A FREE NHS COVID-19 Vaccination</h4>
+          <div class="info-box">
+            <p>
+              It is possible at certain times of the year you will be able to get a FREE COVID-19 vaccination dependent on age.
+            </p>
+            <ul>
+              <li>Some people may be eligible to be vaccinated against COVID-19 free of charge on the NHS.</li>
+              <li>Our pharmacy offers the free NHS service at certain times of the year.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ✅ Bottom Service Section -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy offers a wide range of services to meet your needs.
+        From prescription refills to medication counseling,
+        our knowledgeable staff is here to assist you.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <!-- Placeholder Services button -->
+        <a href="#" class="btn btn-success px-4 py-2">
+          Services
+        </a>
+        <a href="{% url 'pharmacy_first' %}" class="btn btn-success px-4 py-2">
+          Pharmacy First
+        </a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">
+          Our Branches
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

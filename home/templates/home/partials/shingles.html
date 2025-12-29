@@ -1,0 +1,194 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Shingles – Pharmacy First{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/shingu.jpg" %}') center/cover no-repeat;
+                height: 80vh; position: relative;">
+
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.6);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-7 col-md-9">
+        <div class="hero-content animate-slide-up">
+
+          <!-- ✅ Smaller / Clean Hero Typography (INLINE ONLY) -->
+          <h1 class="fw-bold text-uppercase text-dark-green"
+              style="font-size:1.7rem; line-height:1.1; letter-spacing:0.4px; margin-bottom:6px;">
+            PHARMACY FIRST
+          </h1>
+
+          <h2 class="fw-bold text-dark-green"
+              style="font-size:1.3rem; line-height:1.2; margin-top:10px; margin-bottom:10px;">
+            Shingles
+          </h2>
+
+          <p style="font-size:0.95rem; line-height:1.55; max-width:560px; margin-top:8px;">
+            Shingles is a common condition covered for free by NHS Pharmacy first
+            service. It's crucial to have a basic understanding of shingles to seek proper
+            treatment. Shingles is a caused by the sae virus that leads to chickenpox.
+            However, it only affects those who have had chickenpox before. While shingles
+            cannot be passed from person to person, those with shingles can still transmit
+            chickenpox to those who have not been vaccinated or had the virus. It's important
+            to be cautions, especially around vulnerable individuals. Shingles presents as a
+            line of blisters on the chest or face.
+          </p>
+
+          <p class="fst-italic fw-bold text-emerald animate-fade"
+             style="font-size:0.9rem; max-width:560px; margin-top:14px;">
+            Cockerton Pharmacy – Helping the local community in Darlington,
+            Newcastle upon Tyne, Wallsend and beyond.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Symptoms Section -->
+<section class="py-5" style="background-color:#cfe8da;">
+  <div class="container">
+    <div class="row align-items-center bg-white p-4 rounded-4 shadow-sm">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="{% static 'images/shingusymp.webp' %}"
+             alt="Shingles symptoms"
+             class="img-fluid rounded-4 shadow-sm">
+      </div>
+
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-4">Symptoms</h2>
+        <p>
+          Shingles usually starts with pain or tingling on one side of the body,
+          followed by a red rash that forms blisters. Early recognition and prompt
+          treatment can help reduce the severity and duration.
+        </p>
+        <h5 class="fw-bold mt-3">Common Signs</h5>
+        <ul class="list-unstyled mb-4">
+          <li><i class="bi bi-check2 text-success me-2"></i>Burning or shooting pain</li>
+          <li><i class="bi bi-check2 text-success me-2"></i>Red rash in a stripe pattern</li>
+          <li><i class="bi bi-check2 text-success me-2"></i>Fluid-filled blisters</li>
+          <li><i class="bi bi-check2 text-success me-2"></i>Itching or tingling skin</li>
+          <li><i class="bi bi-check2 text-success me-2"></i>Fever or headache</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Risk / Treatment / Complications -->
+<section class="py-5" style="background-color:#cfe8da;">
+  <div class="container border-top border-bottom py-4">
+    <div class="row g-4">
+
+      <!-- Treatment -->
+      <div class="col-md-4">
+        <div class="bg-white rounded-4 shadow-sm h-100 text-center p-4 card-hover-green insect-card">
+          <img src="{% static 'images/treatshingu.jpg' %}" alt="Shingles Treatment"
+               class="img-fluid rounded-4 shadow-sm mb-3 card-img-fixed">
+          <h3 class="fw-bold mb-3">Treatment</h3>
+          <p>
+            Common prescriptions include antivirals, painkillers, topical creams or ointments,
+            antidepressants, anticonvulsants, and corticosteroids. Antivirals are effective if
+            taken within 72 hours of symptom onset and can reduce the duration of the outbreak.
+            Your healthcare provider may still recommend antivirals after this window if they
+            believe it will help. Over-the-counter painkillers may also be suggested to alleviate
+            discomfort. Topical treatments can provide relief for itching and discomfort directly
+            on the rash site. Antidepressants and anticonvulsants, though not typically used,
+            may be prescribed for pain management. Corticosteroids, while sometimes used, have
+            potential risks and will only be recommended in severe cases. Prioritize consulting
+            with your pharmacist or GP if you suspect you have shingles to determine the best
+            treatment plan.
+          </p>
+        </div>
+      </div>
+
+      <!-- Who is at risk -->
+      <div class="col-md-4">
+        <div class="bg-white rounded-4 shadow-sm h-100 text-center p-4 card-hover-green insect-card">
+          <img src="{% static 'images/whosingu.jpg' %}" alt="Who is at risk"
+               class="img-fluid rounded-4 shadow-sm mb-3 card-img-fixed">
+          <h3 class="fw-bold mb-3">Who is at risk?</h3>
+          <p>
+            Two key risk factors for shingles are age and a weakened immune system. Individuals
+            who are over 50 are at a higher risk due to their immune system becoming weaker as
+            they age. Additionally, a weakened immune system can also result from certain
+            medications, such as corticosteroids or chemotherapy, as well as from autoimmune
+            diseases. Reasons for a weakened immune system can vary. It is important to be
+            vigilant and recognize the early signs of shingles if you fall into this high-risk
+            category, so that you can seek treatment promptly.
+          </p>
+        </div>
+      </div>
+
+      <!-- Complications -->
+      <div class="col-md-4">
+        <div class="bg-white rounded-4 shadow-sm h-100 text-center p-4 card-hover-green insect-card">
+          <img src="{% static 'images/complushingu.jpg' %}" alt="Shingles complications"
+               class="img-fluid rounded-4 shadow-sm mb-3 card-img-fixed">
+          <h3 class="fw-bold mb-3">Complications</h3>
+          <p>
+            While most cases of shingles resolve within a few weeks, it can lead to complications.
+            Infection of the rashes may require treatment with antibiotics, and scarring can occur
+            on the affected skin. If shingles affects the area near your eyes, it could lead to
+            vision impairment. In rare cases, it may even result in Ramsay Hunt syndrome,
+            weakening facial nerves and potentially impacting hearing. The key to preventing these
+            complications is seeking treatment promptly. If you experience any symptoms of
+            shingles, you can schedule an appointment with a pharmacist through Pharmacy First or
+            with a GP. Early intervention is crucial in minimizing the risk of any serious
+            complications.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Bottom Summary -->
+<section class="py-4" style="background-color:#eaf2ed;">
+  <div class="container text-center">
+    <p class="mb-0">
+      Shingles is a typically mild medical issue characterized by a rash on the body, which
+      usually resolves within a few weeks of symptoms appearing. Most often, patients are
+      given antiviral drugs to address the underlying cause, and if necessary, pain medication
+      to alleviate discomfort. Nevertheless, certain instances of shingles may escalate in
+      severity due to a compromised immune system or other contributing factor. In such
+      situations, our pharmacist would promptly refer you for an urgent consultation with
+      your GP.
+    </p>
+  </div>
+</section>
+
+<!-- ✅ Bottom Service Section -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy offers a wide range of services to meet your needs.
+        From prescription refills to medication counseling,
+        our knowledgeable staff is here to assist you.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="#" class="btn btn-success px-4 py-2 btn-hover-effect">Services</a>
+        <a href="{% url 'pharmacy_first' %}" class="btn btn-success px-4 py-2 btn-hover-effect">
+          Pharmacy First
+        </a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2 btn-hover-effect">
+          Our Branches
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

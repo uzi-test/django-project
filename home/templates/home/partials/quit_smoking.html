@@ -1,0 +1,174 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Quit Smoking – Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Section -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/herosmoke.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-7 col-md-9">
+        <div class="hero-content animate-slide-up text-start">
+
+          <h1 class="fw-bold text-uppercase text-dark-green" style="font-size:2.1rem;">
+            Take Control of Your Health
+          </h1>
+          <h2 class="fw-bold mt-2 text-dark-green" style="font-size:1.7rem;">
+            Quit Smoking Support
+          </h2>
+
+          <p class="mt-3" style="font-size:1rem; line-height:1.5; max-width:550px;">
+            Quitting smoking is a journey that many people embark on, but not everyone is successful. 
+            It's a habit that can be difficult to break, but the benefits of quitting far outweigh the temporary pleasure of lighting up a cigarette.
+          </p>
+
+          <p class="mt-3" style="font-size:1rem; line-height:1.5; max-width:550px;">
+           Quitting smoking is not easy, but it is one of the best decisions you may ever make for your health and well-being. It's a journey that requires determination and support, but the benefits are worth it. If you are thinking 
+           about quitting smoking, I encourage you to take the first step and seek out support and resources. Your future self will thank you.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 💚 New Benefits Section -->
+<section class="py-5" style="background-color:#022b14;">
+  <div class="container">
+    <h3 class="fw-bold text-center text-light mb-5">Health Benefits of Quitting Smoking</h3>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100 text-start">
+          <div class="icon-box mb-3">
+            <div class="d-inline-flex justify-content-center align-items-center rounded-3"
+                 style="width:60px; height:60px; background-color:#eaf2ed;">
+              <i class="bi bi-headset text-success fs-4"></i>
+            </div>
+          </div>
+          <h5 class="fw-bold text-dark">Improve Mental Health</h5>
+          <p class="text-dark" style="font-size:0.95rem;">
+            Not only does quitting smoking benefit your physical health, but it also has a positive impact on your mental health. 
+            Smoking is often used as a coping mechanism for stress and anxiety, but in reality, it only adds to these issues.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100 text-start">
+          <div class="icon-box mb-3">
+            <div class="d-inline-flex justify-content-center align-items-center rounded-3"
+                 style="width:60px; height:60px; background-color:#eaf2ed;">
+              <i class="bi bi-cash-stack text-success fs-4"></i>
+            </div>
+          </div>
+          <h5 class="fw-bold text-dark">Save Money</h5>
+          <p class="text-dark" style="font-size:0.95rem;">
+            Another major benefit of quitting smoking is the financial savings. Smoking is an expensive habit, 
+            and the cost adds up quickly. It's amazing to see how much money you could be wasting on something that is harming your health.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100 text-start">
+          <div class="icon-box mb-3">
+            <div class="d-inline-flex justify-content-center align-items-center rounded-3"
+                 style="width:60px; height:60px; background-color:#eaf2ed;">
+              <i class="bi bi-people text-success fs-4"></i>
+            </div>
+          </div>
+          <h5 class="fw-bold text-dark">Protect Loved Ones</h5>
+          <p class="text-dark" style="font-size:0.95rem;">
+            Quitting smoking protects those around you from secondhand smoke and helps create a healthier environment 
+            for your loved ones. Every step you take towards quitting benefits not just you, but your family as well.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- 🍃 Lifestyle Section -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row align-items-center g-4">
+
+      <!-- Image (Left) -->
+      <div class="col-lg-5 col-md-6">
+        <img src="{% static 'images/no.webp' %}" 
+             alt="Quit Smoking Support" 
+             class="img-fluid rounded-4 shadow-sm">
+      </div>
+
+      <!-- Text (Right) -->
+      <div class="col-lg-7 col-md-6">
+        <p style="font-size: 1rem; line-height: 1.7; color: #222;">
+          Of course, quitting smoking is not an easy feat. It takes determination, willpower, and support. 
+          One of the things that helps most is finding a support system. Whether it's through a quit smoking program, online support groups,
+           or friends and family, having people who understand what you are going through and can offer encouragement and advice 
+           can be crucial in your journey to quit smoking.
+        </p>
+
+        <p style="font-size: 1rem; line-height: 1.7; color: #222;">
+          It's also important to have a plan in place. Set a quit date and stick to it, and find healthy alternatives to smoking, such as chewing gum or going for a walk when cravings hit. It's also helpful to 
+          identify triggers and find ways to avoid or cope with them. For example, if you usually smoke after a meal, try going for a walk instead.
+        </p>
+
+        <a href="https://www.nhs.uk/better-health/quit-smoking/" 
+           target="_blank" 
+           class="btn btn-success fw-semibold px-4 py-2 rounded-3 mt-2">
+          Get Help Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ CTA Section -->
+<section class="py-5" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      
+      <!-- Heart Icon -->
+      <div class="d-flex justify-content-center mb-3">
+        <div class="d-flex justify-content-center align-items-center rounded-circle bg-light" 
+             style="width:70px; height:70px;">
+          <i class="bi bi-heart-fill text-success fs-2"></i>
+        </div>
+      </div>
+
+      <!-- Heading -->
+      <h2 class="fw-bold text-light mb-3">Healthy Living Zone</h2>
+
+      <!-- Description -->
+      <p class="text-light mx-auto" style="max-width:700px; font-size:1rem; line-height:1.6;">
+        Discover the ultimate guide to a healthier lifestyle in the Healthy Living Zone. 
+        Get tips, resources, and inspiration for a happier, healthier you!
+      </p>
+
+      <!-- Button -->
+      <a href="{% url 'healthy_living_zone' %}" 
+         class="btn btn-success fw-semibold px-4 py-2 mt-3 rounded-3">
+        Visit the Healthy Living Zone
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% load static %}
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">See what our customers say about us....</h2>
+    <!-- Row with center alignment -->
+    <div class="row g-4 justify-content-center">
+      {% for t in testimonials %}
+      <div class="col-md-6 col-lg-4 d-flex">
+        <div class="card shadow-sm border-0 h-100 w-100">
+          <div class="card-body text-center">
+            <!-- Avatar -->
+            {% if t.avatar %}
+              <img src="{% static t.avatar %}" alt="{{ t.name }}" 
+                   class="rounded-circle mb-3" width="70" height="70">
+            {% else %}
+              <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center mb-3"
+                   style="width:70px;height:70px;font-size:1.2rem;">
+                {{ t.name|first }}
+              </div>
+            {% endif %}
+
+            <!-- Name + Date -->
+            <h6 class="fw-bold mb-0">{{ t.name }}</h6>
+            <small class="text-muted d-block mb-2">{{ t.date }}</small>
+
+            <!-- Rating -->
+            <div class="mb-3">
+              {% for i in "12345"|make_list %}
+                {% if forloop.counter <= t.rating %}
+                  <i class="fas fa-star text-success"></i>
+                {% else %}
+                  <i class="far fa-star text-success"></i>
+                {% endif %}
+              {% endfor %}
+            </div>
+
+            <!-- Review -->
+            <p class="text-muted small">{{ t.text }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

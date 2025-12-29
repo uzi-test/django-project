@@ -1,0 +1,74 @@
+{% extends "home/base.html" %}
+{% block title %}Admin Login{% endblock %}
+
+{% block content %}
+<div class="admin-login-page">
+  <div class="floating-capsules">
+    <div class="capsule c1"></div>
+    <div class="capsule c2"></div>
+    <div class="capsule c3"></div>
+    <div class="capsule c4"></div>
+    <div class="capsule c5"></div>
+  </div>
+
+  <div class="admin-login-container d-flex justify-content-center align-items-center">
+    <div class="admin-login-card col-12 col-md-6 col-lg-4">
+      <div class="text-center mb-4">
+        <div class="admin-login-icon">
+          <i class="bi bi-shield-lock-fill"></i>
+        </div>
+        <h3>Admin Login</h3>
+        <p>Authorized personnel only. Please sign in to continue.</p>
+      </div>
+
+      {# ✅ Hide "You’ve been logged out successfully." message #}
+      {% if messages %}
+        {% for message in messages %}
+          {% if "logged out successfully" not in message %}
+            <div class="alert alert-{{ message.tags }} text-center py-2 mb-3">
+              {{ message }}
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      <form method="POST" action="">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input 
+            type="text"
+            name="username"
+            id="username"
+            class="form-control"
+            placeholder="Enter admin username"
+            required
+          >
+        </div>
+
+        <div class="mb-4">
+          <label for="password" class="form-label">Password</label>
+          <input 
+            type="password"
+            name="password"
+            id="password"
+            class="form-control"
+            placeholder="Enter password"
+            required
+          >
+        </div>
+
+        <button type="submit" class="btn btn-admin-login">
+          <i class="bi bi-box-arrow-in-right me-1"></i> Login
+        </button>
+      </form>
+
+      <div class="text-center mt-4">
+        <small>
+          You must be an <strong>admin (superuser)</strong> to continue.
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

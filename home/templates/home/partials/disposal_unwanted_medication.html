@@ -1,0 +1,101 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Disposal of Unwanted Medication – Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/dispose.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-7 col-md-9">
+        <div class="hero-content animate-slide-up">
+
+          <h1 class="fw-bold text-white" style="font-size:1.9rem; color:#ffffff;">
+            Disposal of Unwanted Medication
+          </h1>
+
+          <p class="mt-3" style="font-size:0.95rem; line-height:1.6; max-width:500px; color:#ffffff;">
+          It is not unusual to have out of date or unwanted medicines in your medical cabinets or first aid boxes at home. However, 
+          it is very important to ensure that these are disposed of safely.
+          </p>
+
+        </div>
+        <p class="mt-3 fst-italic fw-bold text-emerald animate-fade"
+             style="font-size:0.95rem; max-width:550px;">
+            Cockerton Pharmacy – Keeping our communities safe and environmentally friendly across Darlington, Newcastle upon Tyne, and Wallsend.
+          </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Disposal Information Section -->
+<section class="py-5" style="background-color:#f8fdf9;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+
+        <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+          It is not unusual to have out-of-date or unwanted medicines in your medical cabinets or first aid boxes at home.
+        </p>
+
+        <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+          However, it is very important to ensure that these are disposed of safely.
+        </p>
+
+        <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+          Always read the leaflets accompanying your medicines for further advice.
+        </p>
+
+        <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+          You may take your unwanted or out-of-date medicines to your local Cockerton Pharmacy where our staff will be happy to dispose of them for you, using our <strong>DOOP service</strong>.
+          The Environmental Agency regulates this service and collects such medicines from our pharmacies at regular intervals.
+        </p>
+
+        <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+          Unfortunately, we cannot accept chemicals or syringes, and you should contact your local Council for assistance regarding their safe disposal.
+        </p>
+
+        <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+          For information regarding the collection of medicines from Nursing and Residential Homes, please see our Care Services section.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Bottom Service Section -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy provides a full range of services including private prescriptions,
+        health consultations, and travel vaccines.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="{% url 'private_prescription' %}" class="btn btn-success px-4 py-2">
+          Private Prescription
+        </a>
+        <a href="{% url 'pharmacy_first' %}" class="btn btn-success px-4 py-2">
+          Pharmacy First
+        </a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">
+          Our Branches
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

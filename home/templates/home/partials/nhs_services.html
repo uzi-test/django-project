@@ -1,0 +1,208 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}All NHS Services – Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/heronhs.jpg" %}') center/cover no-repeat;
+                height: 65vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.6);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-6 col-md-8">
+        <div class="hero-content animate-slide-up text-start" style="max-width: 520px;">
+          <h1 class="fw-bold display-6">NHS Pharmacy Services</h1>
+          <p class="mt-3 fs-6">
+            We are proud to offer a comprehensive range of NHS services designed to support your health and wellbeing.  
+            From essential vaccinations to prescription services and blood pressure checks,  
+            our trained pharmacists are here to help you stay healthy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ✅ NHS Service Cards -->
+<section class="py-5" style="background-color:#cfe8da;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="text-uppercase fw-semibold" style="color:#1c5030; letter-spacing:1px;">
+        NHS SERVICES
+      </span>
+      <h2 class="fw-bold mt-2" style="font-size:2.2rem;">
+        Caring for Your Health – Free NHS Support
+      </h2>
+    </div>
+
+    <div class="services-wrapper p-5 rounded-4 bg-white shadow-sm">
+      <div class="row g-4 justify-content-center">
+
+        <!-- ✅ Card 1 - Blood Pressure Check -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100 shadow-sm d-flex flex-column text-center service-card">
+            <img src="{% static 'images/bp.jpg' %}" class="card-img-top" alt="Blood Pressure Check">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">NHS Blood Pressure Check</h5>
+              <p class="card-text">
+                Monitor your blood pressure with our free NHS service.  
+                Early detection can help prevent serious conditions such as heart disease or stroke.  
+                Walk in today or book your appointment online.
+              </p>
+              <a href="{% url 'blood_pressure' %}" class="btn btn-outline-success mt-auto d-inline-flex align-items-center">
+                Book Now <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✅ Card 2 - COVID-19 Vaccination -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100 shadow-sm d-flex flex-column text-center service-card">
+            <img src="{% static 'images/c19.jpg' %}" class="card-img-top" alt="COVID-19 Vaccination">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">COVID-19 Vaccination</h5>
+              <p class="card-text">
+                Get protected with the latest COVID-19 vaccines available at our pharmacy.  
+                Safe, effective, and approved for all eligible groups.  
+                Walk-in or pre-book your vaccination appointment.
+              </p>
+              <a href="{% url 'covid19' %}" class="btn btn-outline-success mt-auto d-inline-flex align-items-center">
+                Book Now <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✅ Card 3 - Discharge Medication Service -->
+       
+<div class="col-12 col-sm-6 col-lg-4">
+  <a href="{% url 'discharge_medication' %}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow-sm d-flex flex-column text-center service-card">
+      <img src="{% static 'images/discharge.jpg' %}" class="card-img-top" alt="Discharge Medication">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title fw-bold">Discharge Medication Service</h5>
+        <p class="card-text">
+          Our pharmacists help you manage your medicines safely after hospital discharge.  
+          We ensure you understand your new prescriptions and prevent medicine-related issues.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+<!-- ✅ Card 4 - Disposal of Unwanted Medicines -->
+<div class="col-12 col-sm-6 col-lg-4">
+  <a href="{% url 'disposal_unwanted_medication' %}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow-sm d-flex flex-column text-center service-card">
+      <img src="{% static 'images/disposal.jpg' %}" class="card-img-top" alt="Medicine Disposal">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title fw-bold">Disposal of Unwanted Medicines</h5>
+        <p class="card-text">
+          Safely dispose of any expired or unused medicines at our pharmacy.  
+          Help protect the environment and prevent misuse.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+   <!-- ✅ Card 5 - Electronic Prescription Service -->
+<div class="col-12 col-sm-6 col-lg-4">
+  <a href="{% url 'electronic_prescription' %}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow-sm d-flex flex-column text-center service-card">
+      <img src="{% static 'images/eps.jpg' %}" class="card-img-top" alt="Electronic Prescription Service">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title fw-bold">Electronic Prescription Service</h5>
+        <p class="card-text">
+          Get your prescriptions sent electronically from your GP to our pharmacy.  
+          Faster, paper-free, and convenient for all repeat prescriptions.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+ <!-- ✅ Card 6 - Emergency Dispensing -->
+<div class="col-12 col-sm-6 col-lg-4">
+  <a href="{% url 'emergency_dispensing' %}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow-sm d-flex flex-column text-center service-card">
+      <img src="{% static 'images/emergency.jpg' %}" class="card-img-top" alt="Emergency Dispensing">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title fw-bold">Emergency Dispensing</h5>
+        <p class="card-text">
+          If you’ve run out of your regular medication, our emergency dispensing service  
+          can help you obtain a short supply until you can see your doctor.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+        <!-- ✅ Card 7 - Flu Vaccination Service -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100 shadow-sm d-flex flex-column text-center service-card">
+            <img src="{% static 'images/fluvac.jpg' %}" class="card-img-top" alt="Flu Vaccination">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Flu Vaccination Service</h5>
+              <p class="card-text">
+                Protect yourself this flu season with a free NHS or private flu jab.  
+                Quick, safe, and available for eligible groups and walk-ins.
+              </p>
+              <a href="{% url 'flu_vaccination' %}"" class="btn btn-outline-success mt-auto d-inline-flex align-items-center">
+                Book Now <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+ <!-- ✅ Card 8 - Prescription Dispensing -->
+<div class="col-12 col-sm-6 col-lg-4">
+  <a href="{% url 'medication_service' %}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow-sm d-flex flex-column text-center service-card">
+      <img src="{% static 'images/pdispense.jpg' %}" class="card-img-top" alt="Prescription Dispensing">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title fw-bold">Prescription Dispensing</h5>
+        <p class="card-text">
+          Our pharmacy dispenses NHS prescriptions efficiently and accurately.  
+          Our pharmacists are always available for advice on safe medicine use.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+    <!-- ✅ Card 9 - Repeat Prescriptions -->
+<div class="col-12 col-sm-6 col-lg-4">
+  <a href="{% url 'repeat_prescription' %}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow-sm d-flex flex-column text-center service-card">
+      <img src="{% static 'images/repeat.jpg' %}" class="card-img-top" alt="Repeat Prescriptions">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title fw-bold">Repeat Prescriptions</h5>
+        <p class="card-text">
+          Save time with our repeat prescription service.  
+          We work with your GP to manage refills so your medicines are ready when you need them.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+      </div><!-- row end -->
+    </div><!-- wrapper end -->
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,103 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Medication Service – Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/herorep.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-7 col-md-9">
+        <div class="hero-content animate-slide-up">
+
+          <h1 class="fw-bold text-white" style="font-size:1.9rem; color:#ffffff;">
+            New Medicines Service
+          </h1>
+
+          <p class="mt-3" style="font-size:0.95rem; line-height:1.6; max-width:500px; color:#ffffff;">
+           The New Medicine Service is a Free NHS service, offered through your pharmacy, 
+           to help you understand your condition and get the most out of your new medicine.
+          </p>
+
+           
+
+        </div>
+        <p class="mt-3 fst-italic fw-bold text-emerald animate-fade"
+             style="font-size:0.95rem; max-width:550px;">
+            Cockerton Pharmacy – Your trusted partner for health and wellbeing  
+            in Darlington, Newcastle upon Tyne, and Wallsend.
+          </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class="fw-bold mb-4">New Medicine Service</h2>
+
+        <p style="font-size:0.95rem;">
+          The New Medicine Service is a Free NHS service, offered through your pharmacy, to help you understand your condition and get the most out of your new medicine.
+        </p>
+
+        <p style="font-size:0.95rem;">
+          The service is for individuals who have been received a first prescription for a new medicine to treat any of the following conditions:
+          <strong>Asthma, Chronic obstructive pulmonary disease (COPD), Lung conditions</strong> such as Chronic Bronchitis and Emphysema, 
+          <strong>Type 2 Diabetes, High Blood Pressure, High Cholesterol, Osteoporosis, Gout, Glaucoma, Heart failure, Coronary heart disease, Atrial fibrillation</strong>
+          and conditions where you take a medicine to control the way your blood clots (Anticoagulants and Antiplatelets).
+        </p>
+
+        <p style="font-size:0.95rem;">
+          Please see the following NHS link for list of conditions that a New Medicine Service can be carried out on:
+        </p>
+
+        <ul style="font-size:0.95rem;">
+          <li>Help you to find out more about the new medicine you are taking.</li>
+          <li>Help to sort out any problems you are having with your new medicine.</li>
+          <li>Give you a chance to ask questions about your medicine and discuss any concerns.</li>
+          <li>Help to improve the effectiveness of your new medicine, for example, there may be an easier or better way to take it.</li>
+          <li>Help you to make your own decisions about managing your condition.</li>
+          <li>Help you to improve your health, which could lead to fewer GP and hospital visits.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ✅ Bottom Service Section -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy provides a full range of services including private prescriptions,
+        travel vaccines, and health consultations.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="{% url 'private_prescription' %}" class="btn btn-success px-4 py-2">
+          Private Prescription
+        </a>
+        <a href="{% url 'pharmacy_first' %}" class="btn btn-success px-4 py-2">
+          Pharmacy First
+        </a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">
+          Our Branches
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,120 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Reports{% endblock %}
+
+{% block content %}
+<div class="ap-layout">
+
+  <!-- ===================== SIDEBAR (LEFT) ===================== -->
+  <aside class="ap-sidebar">
+    <div class="ap-logo">
+      <div class="ap-logo-mark">+</div>
+      <div class="ap-logo-text">
+        <div class="ap-logo-title">PHARMACY</div>
+        <div class="ap-logo-sub">Admin Panel</div>
+      </div>
+    </div>
+
+    <nav class="ap-nav">
+      <a class="ap-nav-item" href="javascript:void(0)">
+        <i class="bi bi-bag"></i><span>Orders</span>
+      </a>
+      <a class="ap-nav-item" href="javascript:void(0)">
+        <i class="bi bi-chat-left-text"></i><span>Communications</span>
+      </a>
+      <a class="ap-nav-item" href="{% url 'admin_dashboard' %}">
+        <i class="bi bi-calendar3"></i><span>Appointments</span>
+      </a>
+
+      <!-- ✅ Reports ACTIVE -->
+      <a class="ap-nav-item active" href="{% url 'admin_reports' %}">
+        <i class="bi bi-bar-chart"></i><span>Reports</span>
+      </a>
+
+      <div class="ap-nav-divider"></div>
+
+      <a class="ap-nav-item logout" href="{% url 'logout' %}">
+        <i class="bi bi-box-arrow-right"></i><span>Logout</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- ===================== MAIN (RIGHT) ===================== -->
+  <main class="ap-main">
+
+    <div class="ap-topbar">
+      <div class="ap-user">
+        <div class="ap-avatar">{{ request.user.username|slice:":1"|upper }}</div>
+        <div class="ap-user-text">
+          <div class="ap-welcome">
+            Reports • <strong>{{ request.user.username }}</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="ap-topbar-right">
+        <div class="ap-search">
+          <i class="bi bi-calendar3"></i>
+          <select id="rpDays" class="form-select form-select-sm" style="width:160px;">
+  <option value="7">Next 7 days</option>
+  <option value="14">Next 14 days</option>
+  <option value="30" selected>Next 30 days</option>
+  <option value="90">Next 90 days</option>
+</select>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="ap-pagehead">
+      <h2 class="ap-title">Reports</h2>
+      <div style="color:#6b7280; font-size:13px;">
+        Booked appointments vs Open slots per day
+      </div>
+    </div>
+
+    <!-- ✅ 3 cards: booked, open, donut summary -->
+    <div class="rp-grid">
+      <div class="rp-card">
+        <div class="rp-card-head">
+          <div class="rp-card-title">Booked appointments (per day)</div>
+          <div class="rp-card-sub" id="rpMeta1">—</div>
+        </div>
+        <canvas id="bookedChart" height="110"></canvas>
+      </div>
+
+      <div class="rp-card">
+        <div class="rp-card-head">
+          <div class="rp-card-title">Open slots (per day)</div>
+          <div class="rp-card-sub" id="rpMeta2">—</div>
+        </div>
+        <canvas id="openChart" height="110"></canvas>
+      </div>
+
+      <!-- ✅ Donut chart (Total summary for selected range) -->
+      <div class="rp-card">
+        <div class="rp-card-head">
+          <div class="rp-card-title">Summary (Booked vs Open)</div>
+          <div class="rp-card-sub" id="rpMeta3">—</div>
+        </div>
+
+        <div class="rp-donut-wrap">
+          <canvas id="donutChart" height="160"></canvas>
+
+          <!-- optional small text under donut -->
+          <div class="rp-donut-legend" style="margin-top:10px; font-size:13px; color:#6b7280;">
+            Shows total booked and total open slots in selected days range.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{% static 'js/admin_reports.js' %}" defer></script>
+{% endblock %}

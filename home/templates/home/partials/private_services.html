@@ -1,0 +1,161 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Private Services – Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner (Left aligned) -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/prihero.jpg" %}') center/cover no-repeat;
+                height: 65vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.6);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <!-- ✅ Left aligned column -->
+      <div class="col-lg-6 col-md-8">
+        <div class="hero-content animate-slide-up text-start" style="max-width: 520px;">
+          <h1 class="fw-bold display-6">Private Pharmacy Services</h1>
+          <p class="mt-3 fs-6">
+            Private pharmacy services offer personalized and confidential care for individuals
+            seeking medication and health-related advice. With a focus on individual needs
+            and privacy, private pharmacy services provide a convenient and reliable option
+            for managing one's health.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ✅ Cards Section -->
+<section class="py-5" style="background-color:#cfe8da;">
+  <div class="container">
+
+    <!-- ✅ Section Heading Above Cards -->
+    <div class="text-center mb-5">
+      <span class="text-uppercase fw-semibold" style="color:#1c5030; letter-spacing:1px;">
+        PRIVATE SERVICES
+      </span>
+      <h2 class="fw-bold mt-2" style="font-size:2.2rem;">
+        Expert Healthcare, Personally Delivered
+      </h2>
+    </div>
+
+    <div class="services-wrapper p-5 rounded-4 bg-white shadow-sm">
+      <div class="row g-4 justify-content-center">
+
+        <!-- ✅ Card 1 - COVID-19 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100 shadow-sm d-flex flex-column text-center service-card">
+            <img src="{% static 'images/19.jpg' %}" class="card-img-top" alt="COVID-19 Vaccination">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">COVID-19 Vaccination</h5>
+              <p class="card-text">
+                Protect yourself from COVID-19 with our NHS or private vaccination service.
+                It’s suitable for adults and children aged 12 years and over and is available in our pharmacy.
+              </p>
+              <a href="{% url 'covid19' %}" class="btn btn-outline-success mt-auto d-inline-flex align-items-center">
+                Book Now <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 - Counter Medicines (no button) -->
+       <div class="col-12 col-sm-6 col-lg-4">
+  <a href="{% url 'counter_medication' %}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow-sm d-flex flex-column text-center service-card">
+      <img src="{% static 'images/cm.jpg' %}" class="card-img-top" alt="Counter Medicines">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title fw-bold">Counter Medicines</h5>
+        <p class="card-text">
+          At the pharmacy counter, you can find a wide range of over-the-counter medicines that provide relief
+          for common ailments. From pain relievers to cough suppressants, the pharmacy has you covered.
+          Always follow dosage instructions and consult our pharmacist.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+        <!-- ✅ Card 3 - Earwax -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100 shadow-sm d-flex flex-column text-center service-card">
+            <img src="{% static 'images/ewax.jpg' %}" class="card-img-top" alt="Earwax Removal">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Earwax Microsuction Removal</h5>
+              <p class="card-text">
+                Don't let annoying ear wax bother you any longer. Our microsuction removal service is gentle and effective,
+                leaving you with clear hearing and a comfortable ear canal. Say goodbye to pesky ear wax today!
+              </p>
+              <a href=" {% url 'earwax' %}" class="btn btn-outline-success mt-auto d-inline-flex align-items-center">
+                Book Now <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 - Private Prescription -->
+<div class="col-12 col-sm-6 col-lg-4">
+  <a href="{% url 'private_prescription' %}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow-sm d-flex flex-column text-center service-card">
+      <img src="{% static 'images/pp.jpg' %}" class="card-img-top" alt="Private Prescription">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title fw-bold">Private Prescription</h5>
+        <p class="card-text">
+          Experience fast and confidential service for your private prescriptions at our pharmacy.
+          Our knowledgeable team ensures your medication needs are met with care and discretion.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+<!-- ✅ Card 5 - Electronic Prescription Service -->
+<div class="col-12 col-sm-6 col-lg-4">
+  <div class="card h-100 shadow-sm d-flex flex-column text-center service-card">
+    <img src="{% static 'images/eps.jpg' %}" class="card-img-top" alt="Electronic Prescription Service">
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title fw-bold">Electronic Prescription Service</h5>
+      <p class="card-text">
+        Get your prescriptions sent electronically from your GP to our pharmacy.  
+        Faster, paper-free, and convenient for all repeat prescriptions.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+        <!-- ✅ Card 6 - Weight Loss -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100 shadow-sm d-flex flex-column text-center service-card">
+            <img src="{% static 'images/wloss.jpg' %}" class="card-img-top" alt="Weight Loss Clinic">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Weight Loss Clinic</h5>
+              <p class="card-text">
+                Transform your health journey with expert pharmacy weight loss advice.
+                Take the first step towards achieving your wellness goals and discover personalized solutions
+                to help you become a happier and healthier version of yourself.
+              </p>
+              <a href="{% url 'weight_loss' %}" class="btn btn-outline-success mt-auto d-inline-flex align-items-center">
+                Book Now <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- row end -->
+    </div><!-- wrapper end -->
+  </div>
+</section>
+
+
+
+{% endblock %}

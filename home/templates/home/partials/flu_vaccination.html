@@ -1,0 +1,115 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Flu Vaccination – Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/covhero.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-7 col-md-9">
+        <div class="hero-content animate-slide-up">
+
+          <!-- ✅ Compact Headings -->
+          <h1 class="fw-bold text-uppercase text-dark-green" style="font-size:2.1rem;">
+            Flu Vaccination
+          </h1>
+          
+
+          <!-- ✅ Shortened paragraph -->
+          <p class="mt-3" style="font-size:1rem; line-height:1.5; max-width:550px;">
+           We offer a flu vaccination, in-store, for anyone over the age of 18. If you're 65 and over, 
+           have a medical condition or are pregnant, catching flu can be more serious and therefore your vaccination is FREE on the NHS.
+          </p>
+
+          <p class="mt-3 fst-italic fw-bold text-emerald animate-fade"
+             style="font-size:0.95rem; max-width:550px;">
+            Cockerton Pharmacy – Keeping communities healthy across Darlington,  
+            Newcastle upon Tyne, and Wallsend.
+          </p>
+
+          <!-- ✅ Booking Buttons -->
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="#" class="btn btn-success px-4 py-2 btn-hover-effect" style="min-width:220px;">
+              Book Free Consultaion <br> Darlington Branch
+            </a>
+            <a href="#" class="btn btn-success px-4 py-2 btn-hover-effect" style="min-width:220px;">
+              Book Free Consultaion <br> Newcastle Branch
+            </a>
+          </div>
+          <div class="mt-3">
+            <a href="#" class="btn btn-success px-4 py-2 btn-hover-effect" style="min-width:220px;">
+              Book Free Consultaion <br> Wallsend Branch
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Flu Severity & Eligibility Section -->
+<section class="py-5" style="background-color:#f8fdf9;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+
+        <h3 class="fw-bold mb-3" style="color:#004d26;">
+          Flu is predicted to be severe this year. It's important to get your flu vaccination and help you and your community stay healthy.
+        </h3>
+
+        <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+          The flu vaccine is given free on the NHS to people who:
+        </p>
+
+        <ul style="font-size:0.95rem; line-height:1.7; color:#222;">
+          <li>Are 65 and over (including those who'll be 65 by 31 March).</li>
+          <li>Have certain health conditions.</li>
+          <li>Are pregnant.</li>
+          <li>Are in long-stay residential care.</li>
+          <li>Receive a carer's allowance, or are the main carer for an older or disabled person who may be at risk if you get sick.</li>
+          <li>Live with someone who is more likely to get infections (such as someone who has HIV, has had a transplant or is having certain treatments for cancer, lupus or rheumatoid arthritis).</li>
+          <li>Are frontline health or social care workers.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ✅ Bottom Service Section -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        We offer a range of services including vaccinations, prescription support,  
+        and expert health consultations at all our branches.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="{% url 'pharmacy_first' %}" class="btn btn-success px-4 py-2">
+          Pharmacy First
+        </a>
+        <a href="{% url 'travel_clinic' %}" class="btn btn-success px-4 py-2">
+          Travel Clinic
+        </a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">
+          Our Branches
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

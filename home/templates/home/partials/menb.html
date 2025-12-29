@@ -1,0 +1,100 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Meningitis B (MenB) Vaccine – Travel Clinic{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/menB.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-8 col-md-10">
+        <div class="hero-content">
+
+          <!-- Heading -->
+          <h1 class="fw-bold text-uppercase text-dark-green fade-in fade-delay-1" style="font-size:2.1rem;">
+            Meningitis B (MenB)
+          </h1>
+
+          <!-- Paragraph 1 -->
+          <p class="mt-3 text-light fade-in fade-delay-2" style="font-size:1rem; line-height:1.5; max-width:700px;">
+            Meningitis B (MenB) is a serious bacterial infection that can cause meningitis
+and septicaemia. It's most common in babies and young children, but can affect
+people of any age
+          </p>
+
+          <!-- Footer / small line -->
+          <p class="mt-3 fst-italic fw-bold text-emerald animate-fade"
+             style="font-size:0.95rem; max-width:550px;">
+            Cockerton Pharmacy – Offering MenB vaccinations in Darlington,  
+            Newcastle upon Tyne, Wallsend,  
+            and across the UK.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ About This Service Section -->
+<section class="py-5" style="background-color:#f8fdf9;">
+  <div class="container-fluid px-5">
+    <h3 class="section-title mb-4">About this Service</h3>
+
+    <div class="info-box p-4 bg-white rounded-4 shadow-sm" style="width:100%;">
+      <p style="line-height:1.5; font-size:1rem;">
+    Our pharmacy offers the Meningitis B (MenB) vaccination for effective protection against this serious disease. With our high-quality vaccine, you can safeguard yourself and your loved ones from the risk of meningitis. 
+    Trust in our expert staff and convenient location to receive the necessary immunization for peace of mind.
+      </p>
+      <h3 class="fw-bold mt-4 mb-3 text-success">Symptoms</h3>
+      <p>
+        Symptoms fever, poor feeding, vomiting, lethargy, and purple rash.
+      </p>
+       <h3 class="fw-bold mt-4 mb-3 text-success">Risk</h3>
+      <p>
+        Meningitis B can lead to long-term health problems such as: amputation, deafness, epilepsy, and difficulty with learning. 
+      </p>
+      <h3 class="fw-bold mt-4 mb-3 text-success">Prevention</h3>
+      <p>
+The MenB vaccine is routinely offered to babies at 8, 16 weeks, and 12 to 13 months. 
+The vaccine helps protect babies against MenB.       </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Bottom Service Section -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy offers a wide range of services to meet your needs.
+        From vaccination to travel advice, 
+        our experienced staff is here to support you.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="{% url 'private_services' %}" class="btn btn-success px-4 py-2">
+          Services
+        </a>
+        <a href="{% url 'travel_clinic' %}" class="btn btn-success px-4 py-2">
+          Travel Clinic
+        </a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">
+          Our Branches
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

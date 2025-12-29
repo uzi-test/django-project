@@ -1,0 +1,106 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Find Your Nearest Branch{% endblock %}
+
+{% block content %}
+<section class="py-5" style="background-color:#f9f9f9;">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4 text-dark">Find Your Nearest Branch</h2>
+
+    <div class="row g-4">
+      <!-- ✅ LEFT SIDE: Branch List -->
+      <div class="col-lg-4">
+        <div class="card border-0 shadow-sm rounded-4" style="max-height: 520px; overflow-y: auto;">
+          <div class="list-group list-group-flush" id="branch-list">
+            {% for b in branches %}
+              <div class="list-group-item py-3 border-0 border-bottom">
+                <div class="d-flex align-items-start">
+                  <div class="me-3">
+                    <span class="badge bg-success rounded-circle" style="width:28px;height:28px;line-height:20px;font-size:15px;">{{ forloop.counter }}</span>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1">{{ b.name }}</h6>
+                    <p class="mb-1 text-muted small">{{ b.address }}</p>
+                    {% if b.phone %}
+                      <p class="mb-1 small"><i class="bi bi-telephone"></i> {{ b.phone }}</p>
+                    {% endif %}
+                    <p class="small mb-0">
+                      <span class="text-danger fw-semibold">Closed</span>
+                      <span class="text-muted"> Opens at 08:30 GMT+1</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            {% empty %}
+              <div class="p-3 text-center text-muted">No branches found.</div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅ RIGHT SIDE: Map -->
+      <div class="col-lg-8">
+        <div id="map" style="width:100%;height:520px;border-radius:12px;overflow:hidden;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JSON data for Google Maps -->
+  {{ branches_list|json_script:"branches-data" }}
+</section>
+
+<script>
+function initMap() {
+  const data = JSON.parse(document.getElementById('branches-data').textContent || '[]');
+  const mapEl = document.getElementById('map');
+  let center = { lat: 54.9784, lng: -1.6174 }; // Default near Newcastle
+
+  if (data.length && data[0].latitude && data[0].longitude) {
+    center = { lat: parseFloat(data[0].latitude), lng: parseFloat(data[0].longitude) };
+  }
+
+  const map = new google.maps.Map(mapEl, {
+    center: center,
+    zoom: 8,
+    mapId: "MAP_STYLE_ID" // Optional custom map style
+  });
+
+  // Add markers for each branch
+  data.forEach((b, index) => {
+    const lat = parseFloat(b.latitude);
+    const lng = parseFloat(b.longitude);
+    if (isNaN(lat) || isNaN(lng)) return;
+
+    // ✅ Custom numbered marker
+    const marker = new google.maps.Marker({
+      position: { lat: lat, lng: lng },
+      map: map,
+      label: {
+        text: String(index + 1),
+        color: "white",
+        fontSize: "12px",
+        fontWeight: "bold"
+      },
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: "#198754",
+        fillOpacity: 1,
+        scale: 12,
+        strokeColor: "#fff",
+        strokeWeight: 2
+      },
+      title: b.name
+    });
+
+    // ✅ Click marker → open branch detail page
+    marker.addListener('click', () => {
+      window.location.href = '/branches/' + b.id + '/';
+    });
+  });
+}
+</script>
+
+<!-- Replace with your own API key -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+{% endblock %}
