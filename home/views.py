@@ -152,7 +152,7 @@ def admin_dashboard(request):
 @login_required(login_url='admin_login')
 @user_passes_test(is_superuser, login_url='admin_login')
 def admin_reports(request):
-    return render(request, "home/admin_reports.html")
+    return render(request, "home/partials/admin_reports.html")
 
 
 def _generate_daily_slots(start_t=time(9, 0), end_t=time(15, 0), step_minutes=60):
