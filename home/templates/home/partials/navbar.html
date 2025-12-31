@@ -6,19 +6,44 @@
 
   <div class="container">
     <!-- Logo -->
-    <a class="navbar-brand mx-auto" href="{% url 'index' %}">
+    <a class="navbar-brand me-auto" href="{% url 'index' %}">
       <img src="{% static 'images/logo.png' %}" alt="Pharmacy Logo" class="site-logo" />
     </a>
 
     <!-- Hamburger Toggle (mobile) -->
-    <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<button class="navbar-toggler" type="button"
+        id="mobileMenuToggle"
+        aria-label="Open menu">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div id="sidebarOverlay"></div>
+
+<div id="mobileSidebar">
+  <div class="sidebar-header">
+    <h5>Menu</h5>
+    <button id="closeSidebar" type="button">×</button>
+  </div>
+
+  <div class="sidebar-content">
+    <a href="{% url 'index' %}">Home</a>
+
+    <div class="collapsible">
+      <div class="collapsible-header">
+        Services <span class="arrow">▼</span>
+      </div>
+      <div class="collapsible-body">
+        <a href="{% url 'pharmacy_first' %}">Pharmacy First</a>
+        <a href="{% url 'private_services' %}">Private Services</a>
+        <a href="{% url 'nhs_services' %}">NHS Services</a>
+      </div>
+    </div>
+
+    <a href="{% url 'branches' %}">Our Branches</a>
+    <a href="{% url 'health_az' %}">Health A-Z</a>
+  </div>
+</div>
+
 
     <!-- Desktop Menu -->
     <div class="collapse navbar-collapse" id="navbarNav">
