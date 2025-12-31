@@ -1,0 +1,444 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Health A-Z{% endblock %}
+
+{% block content %}
+
+<section class="health-hero">
+  <div class="health-hero__overlay"></div>
+
+  <div class="container health-hero__content">
+    <div class="health-badge">NHS</div>
+    <h1 class="health-title">Health Information</h1>
+    <p class="health-subtitle">
+      Accessing reliable health information is crucial for making informed decisions about our well-being.
+      It empowers us to take control of our health and live a happier, healthier life.
+      Our health information is sourced directly from the NHS.
+    </p>
+  </div>
+</section>
+
+<section class="health-wrap">
+  <div class="container">
+
+    <div class="health-search">
+      <i class="bi bi-search"></i>
+      <input id="healthSearch" type="text" placeholder="Search" autocomplete="off">
+    </div>
+
+    <div class="az-row" id="azRow">
+      <button class="az-btn active" data-letter="all" type="button">All</button>
+      {% for ch in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" %}
+        <button class="az-btn" data-letter="{{ ch }}" type="button">{{ ch }}</button>
+      {% endfor %}
+    </div>
+
+    <!-- ===== LIST GRID (STATIC NAMES) ===== -->
+    <div class="health-grid" id="healthGrid">
+
+      <!-- A -->
+      <a class="health-item"
+   href="{% url 'nhs_condition_detail' 'adhd-adults' %}"
+   data-title="adhd in adults"
+   data-letter="A">
+  ADHD in adults
+</a>
+      <a class="health-item"
+   href="{% url 'nhs_condition_detail' 'adhd-children-young-people' %}">
+   ADHD in children and young people
+</a>
+
+      <div class="health-item" data-title="abdominal aortic aneurysm" data-letter="A">Abdominal aortic aneurysm</div>
+      <div class="health-item" data-title="abdominal aortic aneurysm (aaa) screening" data-letter="A">Abdominal aortic aneurysm (AAA) screening</div>
+      <div class="health-item" data-title="abortion" data-letter="A">Abortion</div>
+      <div class="health-item" data-title="acne" data-letter="A">Acne</div>
+      <div class="health-item" data-title="actinomycosis" data-letter="A">Actinomycosis</div>
+      <div class="health-item" data-title="acute myeloid leukaemia" data-letter="A">Acute myeloid leukaemia</div>
+      <div class="health-item" data-title="adenoidectomy" data-letter="A">Adenoidectomy</div>
+      <div class="health-item" data-title="alcohol misuse" data-letter="A">Alcohol misuse</div>
+      <div class="health-item" data-title="alkaptonuria" data-letter="A">Alkaptonuria</div>
+      <div class="health-item" data-title="alzheimer's disease" data-letter="A">Alzheimer's disease</div>
+      <div class="health-item" data-title="anabolic steroid misuse" data-letter="A">Anabolic steroid misuse</div>
+      <div class="health-item" data-title="anaphylaxis" data-letter="A">Anaphylaxis</div>
+      <div class="health-item" data-title="angioedema" data-letter="A">Angioedema</div>
+      <div class="health-item" data-title="antiphospholipid syndrome (aps)" data-letter="A">Antiphospholipid syndrome (APS)</div>
+      <div class="health-item" data-title="arthritis" data-letter="A">Arthritis</div>
+      <div class="health-item" data-title="asthma" data-letter="A">Asthma</div>
+      <div class="health-item" data-title="athlete's foot" data-letter="A">Athlete's foot</div>
+
+      <div class="health-item" data-title="acoustic neuroma (vestibular schwannoma)" data-letter="A">Acoustic neuroma (vestibular schwannoma)</div>
+      <div class="health-item" data-title="acute cholecystitis" data-letter="A">Acute cholecystitis</div>
+      <div class="health-item" data-title="acute pancreatitis" data-letter="A">Acute pancreatitis</div>
+      <div class="health-item" data-title="adenomyosis" data-letter="A">Adenomyosis</div>
+      <div class="health-item" data-title="alcohol poisoning" data-letter="A">Alcohol poisoning</div>
+      <div class="health-item" data-title="allergic rhinitis" data-letter="A">Allergic rhinitis</div>
+      <div class="health-item" data-title="amniocentesis" data-letter="A">Amniocentesis</div>
+      <div class="health-item" data-title="anal cancer" data-letter="A">Anal cancer</div>
+      <div class="health-item" data-title="androgen insensitivity syndrome" data-letter="A">Androgen insensitivity syndrome</div>
+      <div class="health-item" data-title="angiography" data-letter="A">Angiography</div>
+      <div class="health-item" data-title="aortic valve replacement" data-letter="A">Aortic valve replacement</div>
+      <div class="health-item" data-title="arthroscopy" data-letter="A">Arthroscopy</div>
+      <div class="health-item" data-title="astigmatism" data-letter="A">Astigmatism</div>
+      <div class="health-item" data-title="atopic eczema" data-letter="A">Atopic eczema</div>
+      <div class="health-item" data-title="autism" data-letter="A">Autism</div>
+
+      <div class="health-item" data-title="achalasia" data-letter="A">Achalasia</div>
+      <div class="health-item" data-title="acromegaly" data-letter="A">Acromegaly</div>
+      <div class="health-item" data-title="acute kidney injury" data-letter="A">Acute kidney injury</div>
+      <div class="health-item" data-title="acute respiratory distress syndrome (ards)" data-letter="A">Acute respiratory distress syndrome (ARDS)</div>
+      <div class="health-item" data-title="age-related macular degeneration (amd)" data-letter="A">Age-related macular degeneration (AMD)</div>
+      <div class="health-item" data-title="alcohol-related liver disease" data-letter="A">Alcohol-related liver disease</div>
+      <div class="health-item" data-title="allergies" data-letter="A">Allergies</div>
+      <div class="health-item" data-title="amputation" data-letter="A">Amputation</div>
+      <div class="health-item" data-title="anal fissure" data-letter="A">Anal fissure</div>
+      <div class="health-item" data-title="angelman syndrome" data-letter="A">Angelman syndrome</div>
+      <div class="health-item" data-title="animal and human bites" data-letter="A">Animal and human bites</div>
+      <div class="health-item" data-title="aphasia" data-letter="A">Aphasia</div>
+      <div class="health-item" data-title="asbestosis" data-letter="A">Asbestosis</div>
+      <div class="health-item" data-title="ataxia" data-letter="A">Ataxia</div>
+      <div class="health-item" data-title="atrial fibrillation" data-letter="A">Atrial fibrillation</div>
+
+      <div class="health-item" data-title="acid and chemical burns" data-letter="A">Acid and chemical burns</div>
+      <div class="health-item" data-title="actinic keratoses (solar keratoses)" data-letter="A">Actinic keratoses (solar keratoses)</div>
+      <div class="health-item" data-title="acute lymphoblastic leukaemia" data-letter="A">Acute lymphoblastic leukaemia</div>
+      <div class="health-item" data-title="addison's disease" data-letter="A">Addison's disease</div>
+      <div class="health-item" data-title="albinism" data-letter="A">Albinism</div>
+      <div class="health-item" data-title="alexander technique" data-letter="A">Alexander technique</div>
+      <div class="health-item" data-title="altitude sickness" data-letter="A">Altitude sickness</div>
+      <div class="health-item" data-title="amyloidosis" data-letter="A">Amyloidosis</div>
+      <div class="health-item" data-title="anal fistula" data-letter="A">Anal fistula</div>
+      <div class="health-item" data-title="angina" data-letter="A">Angina</div>
+      <div class="health-item" data-title="ankylosing spondylitis" data-letter="A">Ankylosing spondylitis</div>
+      <div class="health-item" data-title="appendicitis" data-letter="A">Appendicitis</div>
+      <div class="health-item" data-title="aspergillosis" data-letter="A">Aspergillosis</div>
+      <div class="health-item" data-title="atherosclerosis" data-letter="A">Atherosclerosis</div>
+      <div class="health-item" data-title="attention deficit hyperactivity disorder (adhd)" data-letter="A">Attention deficit hyperactivity disorder (ADHD)</div>
+      <div class="health-item" data-title="auditory processing disorder (apd)" data-letter="A">Auditory processing disorder (APD)</div>
+
+      <!-- B -->
+      <div class="health-item" data-title="baby - caring for a newborn baby - nappy rash" data-letter="B">Baby - Caring for a newborn baby - Nappy rash</div>
+      <div class="health-item" data-title="back pain" data-letter="B">Back pain</div>
+      <div class="health-item" data-title="bacterial vaginosis" data-letter="B">Bacterial vaginosis</div>
+      <div class="health-item" data-title="bad breath" data-letter="B">Bad breath</div>
+      <div class="health-item" data-title="baker's cyst" data-letter="B">Baker's cyst</div>
+      <div class="health-item" data-title="balanitis" data-letter="B">Balanitis</div>
+      <div class="health-item" data-title="barium enema" data-letter="B">Barium enema</div>
+      <div class="health-item" data-title="bartholin's cyst" data-letter="B">Bartholin's cyst</div>
+      <div class="health-item" data-title="bedbugs" data-letter="B">Bedbugs</div>
+      <div class="health-item" data-title="bedwetting in children" data-letter="B">Bedwetting in children</div>
+      <div class="health-item" data-title="behçet's disease" data-letter="B">Behçet's disease</div>
+      <div class="health-item" data-title="bell's palsy" data-letter="B">Bell's palsy</div>
+      <div class="health-item" data-title="benign prostate enlargement" data-letter="B">Benign prostate enlargement</div>
+      <div class="health-item" data-title="bile duct cancer (cholangiocarcinoma)" data-letter="B">Bile duct cancer (cholangiocarcinoma)</div>
+      <div class="health-item" data-title="bird flu" data-letter="B">Bird flu</div>
+      <div class="health-item" data-title="birthmarks" data-letter="B">Birthmarks</div>
+      <div class="health-item" data-title="black eye" data-letter="B">Black eye</div>
+      <div class="health-item" data-title="bladder cancer" data-letter="B">Bladder cancer</div>
+      <div class="health-item" data-title="bladder pain syndrome (bps)" data-letter="B">Bladder pain syndrome (BPS)</div>
+      <div class="health-item" data-title="bladder pain syndrome (interstitial cystitis)" data-letter="B">Bladder pain syndrome (interstitial cystitis)</div>
+      <div class="health-item" data-title="bladder stones" data-letter="B">Bladder stones</div>
+      <div class="health-item" data-title="blepharitis" data-letter="B">Blepharitis</div>
+      <div class="health-item" data-title="blisters" data-letter="B">Blisters</div>
+      <div class="health-item" data-title="blood groups" data-letter="B">Blood groups</div>
+      <div class="health-item" data-title="blood pressure test" data-letter="B">Blood pressure test</div>
+      <div class="health-item" data-title="blood transfusion" data-letter="B">Blood transfusion</div>
+      <div class="health-item" data-title="body odour (bo)" data-letter="B">Body odour (BO)</div>
+      <div class="health-item" data-title="boils" data-letter="B">Boils</div>
+      <div class="health-item" data-title="bone cancer" data-letter="B">Bone cancer</div>
+      <div class="health-item" data-title="bone cyst" data-letter="B">Bone cyst</div>
+      <div class="health-item" data-title="bone density scan (dexa scan)" data-letter="B">Bone density scan (DEXA scan)</div>
+      <div class="health-item" data-title="botulism" data-letter="B">Botulism</div>
+      <div class="health-item" data-title="bowel cancer" data-letter="B">Bowel cancer</div>
+      <div class="health-item" data-title="bowel cancer screening" data-letter="B">Bowel cancer screening</div>
+      <div class="health-item" data-title="bowel incontinence" data-letter="B">Bowel incontinence</div>
+      <div class="health-item" data-title="bowel polyps" data-letter="B">Bowel polyps</div>
+      <div class="health-item" data-title="bowen's disease" data-letter="B">Bowen's disease</div>
+      <div class="health-item" data-title="braces and orthodontics" data-letter="B">Braces and orthodontics</div>
+      <div class="health-item" data-title="brain abscess" data-letter="B">Brain abscess</div>
+      <div class="health-item" data-title="brain aneurysm" data-letter="B">Brain aneurysm</div>
+      <div class="health-item" data-title="brain death" data-letter="B">Brain death</div>
+      <div class="health-item" data-title="brain tumours" data-letter="B">Brain tumours</div>
+      <div class="health-item" data-title="breast abscess" data-letter="B">Breast abscess</div>
+      <div class="health-item" data-title="breast cancer in men" data-letter="B">Breast cancer in men</div>
+      <div class="health-item" data-title="breast cancer in women" data-letter="B">Breast cancer in women</div>
+      <div class="health-item" data-title="breast pain" data-letter="B">Breast pain</div>
+      <div class="health-item" data-title="breast reduction on the nhs" data-letter="B">Breast reduction on the NHS</div>
+      <div class="health-item" data-title="breast screening (mammogram)" data-letter="B">Breast screening (mammogram)</div>
+      <div class="health-item" data-title="breath-holding in babies and children" data-letter="B">Breath-holding in babies and children</div>
+      <div class="health-item" data-title="broken ankle" data-letter="B">Broken ankle</div>
+      <div class="health-item" data-title="broken arm or wrist" data-letter="B">Broken arm or wrist</div>
+      <div class="health-item" data-title="broken collarbone" data-letter="B">Broken collarbone</div>
+      <div class="health-item" data-title="broken finger or thumb" data-letter="B">Broken finger or thumb</div>
+      <div class="health-item" data-title="broken hip" data-letter="B">Broken hip</div>
+      <div class="health-item" data-title="broken leg" data-letter="B">Broken leg</div>
+      <div class="health-item" data-title="broken nose" data-letter="B">Broken nose</div>
+      <div class="health-item" data-title="broken or bruised ribs" data-letter="B">Broken or bruised ribs</div>
+      <div class="health-item" data-title="broken toe" data-letter="B">Broken toe</div>
+      <div class="health-item" data-title="bronchiectasis" data-letter="B">Bronchiectasis</div>
+      <div class="health-item" data-title="bronchiolitis" data-letter="B">Bronchiolitis</div>
+      <div class="health-item" data-title="bronchitis" data-letter="B">Bronchitis</div>
+      <div class="health-item" data-title="bronchodilators" data-letter="B">Bronchodilators</div>
+      <div class="health-item" data-title="brucellosis" data-letter="B">Brucellosis</div>
+      <div class="health-item" data-title="brugada syndrome" data-letter="B">Brugada syndrome</div>
+      <div class="health-item" data-title="burns and scalds" data-letter="B">Burns and scalds</div>
+
+      <!-- C (partial -->
+      <div class="health-item" data-title="cancer" data-letter="C">Cancer</div>
+      <div class="health-item" data-title="carbon monoxide poisoning" data-letter="C">Carbon monoxide poisoning</div>
+      <div class="health-item" data-title="cardiac catheterisation and coronary angiography" data-letter="C">Cardiac catheterisation and coronary angiography</div>
+      <div class="health-item" data-title="cardiomyopathy" data-letter="C">Cardiomyopathy</div>
+      <div class="health-item" data-title="cardiovascular disease" data-letter="C">Cardiovascular disease</div>
+      <div class="health-item" data-title="carotid endarterectomy" data-letter="C">Carotid endarterectomy</div>
+      <div class="health-item" data-title="carpal tunnel syndrome" data-letter="C">Carpal tunnel syndrome</div>
+      <div class="health-item" data-title="cataract surgery" data-letter="C">Cataract surgery</div>
+      <div class="health-item" data-title="cataracts in adults" data-letter="C">Cataracts in adults</div>
+      <div class="health-item" data-title="catarrh" data-letter="C">Catarrh</div>
+      <div class="health-item" data-title="cavernoma" data-letter="C">Cavernoma</div>
+      <div class="health-item" data-title="cavernous sinus thrombosis" data-letter="C">Cavernous sinus thrombosis</div>
+      <div class="health-item" data-title="cellulitis" data-letter="C">Cellulitis</div>
+      <div class="health-item" data-title="cerebral palsy" data-letter="C">Cerebral palsy</div>
+      <div class="health-item" data-title="cervical cancer" data-letter="C">Cervical cancer</div>
+      <div class="health-item" data-title="cervical screening" data-letter="C">Cervical screening</div>
+      <div class="health-item" data-title="cervical spondylosis" data-letter="C">Cervical spondylosis</div>
+      <div class="health-item" data-title="charcot-marie-tooth disease" data-letter="C">Charcot-Marie-Tooth disease</div>
+      <div class="health-item" data-title="charles bonnet syndrome" data-letter="C">Charles Bonnet syndrome</div>
+      <div class="health-item" data-title="chest infection" data-letter="C">Chest infection</div>
+      <div class="health-item" data-title="chest pain" data-letter="C">Chest pain</div>
+      <div class="health-item" data-title="chickenpox" data-letter="C">Chickenpox</div>
+      <div class="health-item" data-title="chilblains" data-letter="C">Chilblains</div>
+      <div class="health-item" data-title="chlamydia" data-letter="C">Chlamydia</div>
+      <div class="health-item" data-title="cholera" data-letter="C">Cholera</div>
+      <div class="health-item" data-title="chronic kidney disease" data-letter="C">Chronic kidney disease</div>
+      <div class="health-item" data-title="common cold" data-letter="C">Common cold</div>
+      <div class="health-item" data-title="conjunctivitis" data-letter="C">Conjunctivitis</div>
+      <div class="health-item" data-title="constipation" data-letter="C">Constipation</div>
+      <div class="health-item" data-title="contact dermatitis" data-letter="C">Contact dermatitis</div>
+      <div class="health-item" data-title="crohn's disease" data-letter="C">Crohn's disease</div>
+      <div class="health-item" data-title="cystitis" data-letter="C">Cystitis</div>
+      <!-- ===== D (Static Names) ===== -->
+<div class="health-item" data-title="dvt (deep vein thrombosis)" data-letter="D">DVT (deep vein thrombosis)</div>
+<div class="health-item" data-title="dandruff" data-letter="D">Dandruff</div>
+<div class="health-item" data-title="deafblindness" data-letter="D">Deafblindness</div>
+<div class="health-item" data-title="dehydration" data-letter="D">Dehydration</div>
+
+<div class="health-item" data-title="dementia with lewy bodies" data-letter="D">Dementia with Lewy bodies</div>
+<div class="health-item" data-title="dengue" data-letter="D">Dengue</div>
+<div class="health-item" data-title="dental abscess" data-letter="D">Dental abscess</div>
+<div class="health-item" data-title="detached retina (retinal detachment)" data-letter="D">Detached retina (retinal detachment)</div>
+
+<div class="health-item" data-title="developmental co-ordination disorder (dyspraxia) in children" data-letter="D">
+  Developmental co-ordination disorder (dyspraxia) in children
+</div>
+
+<div class="health-item" data-title="developmental dysplasia of the hip" data-letter="D">Developmental dysplasia of the hip</div>
+<div class="health-item" data-title="digeorge syndrome (22q11 deletion)" data-letter="D">DiGeorge syndrome (22q11 deletion)</div>
+<div class="health-item" data-title="diabetes" data-letter="D">Diabetes</div>
+
+<div class="health-item" data-title="diabetes insipidus" data-letter="D">Diabetes insipidus</div>
+<div class="health-item" data-title="diabetic eye screening" data-letter="D">Diabetic eye screening</div>
+<div class="health-item" data-title="diabetic ketoacidosis" data-letter="D">Diabetic ketoacidosis</div>
+<div class="health-item" data-title="diabetic retinopathy" data-letter="D">Diabetic retinopathy</div>
+
+<div class="health-item" data-title="differences in sex development" data-letter="D">Differences in sex development</div>
+<div class="health-item" data-title="diphtheria" data-letter="D">Diphtheria</div>
+<div class="health-item" data-title="discoid eczema" data-letter="D">Discoid eczema</div>
+<div class="health-item" data-title="dislocated kneecap" data-letter="D">Dislocated kneecap</div>
+
+<div class="health-item" data-title="dislocated shoulder" data-letter="D">Dislocated shoulder</div>
+<div class="health-item" data-title="diverticular disease and diverticulitis" data-letter="D">Diverticular disease and diverticulitis</div>
+
+<div class="health-item" data-title="do not attempt cardiopulmonary resuscitation (dnacpr) decisions" data-letter="D">
+  Do not attempt cardiopulmonary resuscitation (DNACPR) decisions
+</div>
+
+<div class="health-item" data-title="down's syndrome" data-letter="D">Down's syndrome</div>
+
+<div class="health-item" data-title="dry eyes" data-letter="D">Dry eyes</div>
+<div class="health-item" data-title="dry mouth" data-letter="D">Dry mouth</div>
+<div class="health-item" data-title="dupuytren's contracture" data-letter="D">Dupuytren's contracture</div>
+<div class="health-item" data-title="dysarthria (difficulty speaking)" data-letter="D">Dysarthria (difficulty speaking)</div>
+
+<div class="health-item" data-title="dysentery" data-letter="D">Dysentery</div>
+<div class="health-item" data-title="dyslexia" data-letter="D">Dyslexia</div>
+
+<div class="health-item" data-title="dyspraxia (developmental co-ordination disorder) in adults" data-letter="D">
+  Dyspraxia (developmental co-ordination disorder) in adults
+</div>
+
+<div class="health-item" data-title="dystonia" data-letter="D">Dystonia</div>
+
+
+      <!-- E, F, G, H, I, J, K, L, M ... Z (aapke last screenshots wali) -->
+      <div class="health-item" data-title="ear infections" data-letter="E">Ear infections</div>
+      <div class="health-item" data-title="earwax build-up" data-letter="E">Earwax build-up</div>
+      <div class="health-item" data-title="ebola virus disease" data-letter="E">Ebola virus disease</div>
+      <div class="health-item" data-title="endometriosis" data-letter="E">Endometriosis</div>
+      <div class="health-item" data-title="epilepsy" data-letter="E">Epilepsy</div>
+      <div class="health-item" data-title="erectile dysfunction (impotence)" data-letter="E">Erectile dysfunction (impotence)</div>
+
+      <div class="health-item" data-title="falls" data-letter="F">Falls</div>
+      <div class="health-item" data-title="flu" data-letter="F">Flu</div>
+      <div class="health-item" data-title="food poisoning" data-letter="F">Food poisoning</div>
+      <div class="health-item" data-title="frozen shoulder" data-letter="F">Frozen shoulder</div>
+      <div class="health-item" data-title="fungal nail infection" data-letter="F">Fungal nail infection</div>
+
+      <div class="health-item" data-title="gallstones" data-letter="G">Gallstones</div>
+      <div class="health-item" data-title="gastritis" data-letter="G">Gastritis</div>
+      <div class="health-item" data-title="gender dysphoria" data-letter="G">Gender dysphoria</div>
+      <div class="health-item" data-title="glaucoma" data-letter="G">Glaucoma</div>
+      <div class="health-item" data-title="gout" data-letter="G">Gout</div>
+
+      <!-- H block (aapka latest add) -->
+      <div class="health-item" data-title="hereditary haemorrhagic telangiectasia (hht)" data-letter="H">Hereditary haemorrhagic telangiectasia (HHT)</div>
+      <div class="health-item" data-title="hereditary spastic paraplegia" data-letter="H">Hereditary spastic paraplegia</div>
+      <div class="health-item" data-title="hernia" data-letter="H">Hernia</div>
+      <div class="health-item" data-title="herpes simplex eye infections" data-letter="H">Herpes simplex eye infections</div>
+      <div class="health-item" data-title="herpetic whitlow (whitlow finger)" data-letter="H">Herpetic whitlow (whitlow finger)</div>
+      <div class="health-item" data-title="hiatus hernia" data-letter="H">Hiatus hernia</div>
+      <div class="health-item" data-title="hiccups" data-letter="H">Hiccups</div>
+      <div class="health-item" data-title="hidradenitis suppurativa (hs)" data-letter="H">Hidradenitis suppurativa (HS)</div>
+      <div class="health-item" data-title="high blood pressure" data-letter="H">High blood pressure</div>
+      <div class="health-item" data-title="high blood sugar (hyperglycaemia)" data-letter="H">High blood sugar (hyperglycaemia)</div>
+      <div class="health-item" data-title="high cholesterol" data-letter="H">High cholesterol</div>
+      <div class="health-item" data-title="hip pain in adults" data-letter="H">Hip pain in adults</div>
+      <div class="health-item" data-title="hives" data-letter="H">Hives</div>
+      <div class="health-item" data-title="how to check your breasts or chest" data-letter="H">How to check your breasts or chest</div>
+      <div class="health-item" data-title="how to check your testicles" data-letter="H">How to check your testicles</div>
+      <div class="health-item" data-title="human papillomavirus (hpv)" data-letter="H">Human papillomavirus (HPV)</div>
+      <div class="health-item" data-title="huntington's disease" data-letter="H">Huntington's disease</div>
+      <div class="health-item" data-title="hydrocephalus" data-letter="H">Hydrocephalus</div>
+      <div class="health-item" data-title="hydronephrosis" data-letter="H">Hydronephrosis</div>
+      <div class="health-item" data-title="hyperparathyroidism" data-letter="H">Hyperparathyroidism</div>
+      <div class="health-item" data-title="hypoparathyroidism" data-letter="H">Hypoparathyroidism</div>
+      <div class="health-item" data-title="hypothermia" data-letter="H">Hypothermia</div>
+      <div class="health-item" data-title="hysteroscopy" data-letter="H">Hysteroscopy</div>
+
+      <!-- I -->
+      <div class="health-item" data-title="ichthyosis" data-letter="I">Ichthyosis</div>
+      <div class="health-item" data-title="impetigo" data-letter="I">Impetigo</div>
+      <div class="health-item" data-title="indigestion" data-letter="I">Indigestion</div>
+      <div class="health-item" data-title="infected piercings" data-letter="I">Infected piercings</div>
+      <div class="health-item" data-title="infertility" data-letter="I">Infertility</div>
+      <div class="health-item" data-title="inflammatory bowel disease" data-letter="I">Inflammatory bowel disease</div>
+      <div class="health-item" data-title="ingrown toenail" data-letter="I">Ingrown toenail</div>
+      <div class="health-item" data-title="intracranial hypertension" data-letter="I">Intracranial hypertension</div>
+      <div class="health-item" data-title="iron deficiency anaemia" data-letter="I">Iron deficiency anaemia</div>
+      <div class="health-item" data-title="irritable bowel syndrome (ibs)" data-letter="I">Irritable bowel syndrome (IBS)</div>
+
+      <!-- J/K/L (aapke screenshots wali) -->
+      <div class="health-item" data-title="jaundice" data-letter="J">Jaundice</div>
+      <div class="health-item" data-title="japanese encephalitis" data-letter="J">Japanese encephalitis</div>
+      <div class="health-item" data-title="jet lag" data-letter="J">Jet lag</div>
+
+      <div class="health-item" data-title="kawasaki disease" data-letter="K">Kawasaki disease</div>
+      <div class="health-item" data-title="kidney stones" data-letter="K">Kidney stones</div>
+      <div class="health-item" data-title="knee replacement" data-letter="K">Knee replacement</div>
+      <div class="health-item" data-title="knock knees" data-letter="K">Knock knees</div>
+      <div class="health-item" data-title="kyphosis" data-letter="K">Kyphosis</div>
+
+      <div class="health-item" data-title="labial fusion" data-letter="L">Labial fusion</div>
+      <div class="health-item" data-title="lactose intolerance" data-letter="L">Lactose intolerance</div>
+      <div class="health-item" data-title="laryngitis" data-letter="L">Laryngitis</div>
+      <div class="health-item" data-title="learning disabilities" data-letter="L">Learning disabilities</div>
+      <div class="health-item" data-title="liver disease" data-letter="L">Liver disease</div>
+      <div class="health-item" data-title="long covid" data-letter="L">Long COVID</div>
+      <div class="health-item" data-title="lung cancer" data-letter="L">Lung cancer</div>
+      <div class="health-item" data-title="lupus" data-letter="L">Lupus</div>
+
+      <!-- M to Z (aapke last screenshots me jo clear hai) -->
+      <div class="health-item" data-title="molar pregnancy" data-letter="M">Molar pregnancy</div>
+      <div class="health-item" data-title="moles" data-letter="M">Moles</div>
+      <div class="health-item" data-title="molluscum contagiosum" data-letter="M">Molluscum contagiosum</div>
+      <div class="health-item" data-title="morton's neuroma" data-letter="M">Morton's neuroma</div>
+      <div class="health-item" data-title="motion sickness" data-letter="M">Motion sickness</div>
+      <div class="health-item" data-title="mouth ulcers" data-letter="M">Mouth ulcers</div>
+      <div class="health-item" data-title="multiple sclerosis" data-letter="M">Multiple sclerosis</div>
+      <div class="health-item" data-title="mumps" data-letter="M">Mumps</div>
+      <div class="health-item" data-title="myasthenia gravis" data-letter="M">Myasthenia gravis</div>
+      <div class="health-item" data-title="myositis" data-letter="M">Myositis</div>
+
+      <div class="health-item" data-title="narcolepsy" data-letter="N">Narcolepsy</div>
+      <div class="health-item" data-title="necrotising fasciitis" data-letter="N">Necrotising fasciitis</div>
+      <div class="health-item" data-title="nhs screening" data-letter="N">NHS screening</div>
+      <div class="health-item" data-title="nosebleed" data-letter="N">Nosebleed</div>
+      <div class="health-item" data-title="norovirus (vomiting bug)" data-letter="N">Norovirus (vomiting bug)</div>
+
+      <div class="health-item" data-title="obesity" data-letter="O">Obesity</div>
+      <div class="health-item" data-title="oesophageal cancer" data-letter="O">Oesophageal cancer</div>
+      <div class="health-item" data-title="oral thrush (mouth thrush)" data-letter="O">Oral thrush (mouth thrush)</div>
+      <div class="health-item" data-title="osteoporosis" data-letter="O">Osteoporosis</div>
+      <div class="health-item" data-title="ovarian cyst" data-letter="O">Ovarian cyst</div>
+      <div class="health-item" data-title="overactive thyroid (hyperthyroidism)" data-letter="O">Overactive thyroid (hyperthyroidism)</div>
+
+      <div class="health-item" data-title="pancreatic cancer" data-letter="P">Pancreatic cancer</div>
+      <div class="health-item" data-title="parkinson's disease" data-letter="P">Parkinson's disease</div>
+      <div class="health-item" data-title="pneumonia" data-letter="P">Pneumonia</div>
+      <div class="health-item" data-title="polio" data-letter="P">Polio</div>
+      <div class="health-item" data-title="psoriasis" data-letter="P">Psoriasis</div>
+      <div class="health-item" data-title="pulmonary embolism" data-letter="P">Pulmonary embolism</div>
+
+      <div class="health-item" data-title="q fever" data-letter="Q">Q fever</div>
+
+      <div class="health-item" data-title="rabies" data-letter="R">Rabies</div>
+      <div class="health-item" data-title="raynaud's" data-letter="R">Raynaud's</div>
+      <div class="health-item" data-title="rheumatoid arthritis" data-letter="R">Rheumatoid arthritis</div>
+      <div class="health-item" data-title="ringworm" data-letter="R">Ringworm</div>
+
+      <div class="health-item" data-title="scabies" data-letter="S">Scabies</div>
+      <div class="health-item" data-title="shingles" data-letter="S">Shingles</div>
+      <div class="health-item" data-title="sleep apnoea" data-letter="S">Sleep apnoea</div>
+      <div class="health-item" data-title="sleep paralysis" data-letter="S">Sleep paralysis</div>
+      <div class="health-item" data-title="stroke" data-letter="S">Stroke</div>
+      <div class="health-item" data-title="syphilis" data-letter="S">Syphilis</div>
+
+      <div class="health-item" data-title="tetanus" data-letter="T">Tetanus</div>
+      <div class="health-item" data-title="threadworms" data-letter="T">Threadworms</div>
+      <div class="health-item" data-title="tinnitus" data-letter="T">Tinnitus</div>
+      <div class="health-item" data-title="tonsillitis" data-letter="T">Tonsillitis</div>
+      <div class="health-item" data-title="tooth decay" data-letter="T">Tooth decay</div>
+      <div class="health-item" data-title="tourette syndrome" data-letter="T">Tourette syndrome</div>
+      <div class="health-item" data-title="tuberculosis (tb)" data-letter="T">Tuberculosis (TB)</div>
+      <div class="health-item" data-title="type 1 diabetes" data-letter="T">Type 1 diabetes</div>
+      <div class="health-item" data-title="type 2 diabetes" data-letter="T">Type 2 diabetes</div>
+      <div class="health-item" data-title="typhoid fever" data-letter="T">Typhoid fever</div>
+      <div class="health-item" data-title="typhus" data-letter="T">Typhus</div>
+
+      <div class="health-item" data-title="ulcerative colitis" data-letter="U">Ulcerative colitis</div>
+      <div class="health-item" data-title="umbilical hernia" data-letter="U">Umbilical hernia</div>
+      <div class="health-item" data-title="urethritis" data-letter="U">Urethritis</div>
+      <div class="health-item" data-title="urinary incontinence" data-letter="U">Urinary incontinence</div>
+      <div class="health-item" data-title="urinary tract infections (utis)" data-letter="U">Urinary tract infections (UTIs)</div>
+      <div class="health-item" data-title="uveitis" data-letter="U">Uveitis</div>
+
+      <div class="health-item" data-title="vaginitis" data-letter="V">Vaginitis</div>
+      <div class="health-item" data-title="varicose veins" data-letter="V">Varicose veins</div>
+      <div class="health-item" data-title="vertigo" data-letter="V">Vertigo</div>
+      <div class="health-item" data-title="vision loss" data-letter="V">Vision loss</div>
+      <div class="health-item" data-title="vitiligo" data-letter="V">Vitiligo</div>
+      <div class="health-item" data-title="vomiting blood" data-letter="V">Vomiting blood</div>
+
+      <div class="health-item" data-title="warts and verrucas" data-letter="W">Warts and verrucas</div>
+      <div class="health-item" data-title="whooping cough" data-letter="W">Whooping cough</div>
+      <div class="health-item" data-title="wisdom tooth removal" data-letter="W">Wisdom tooth removal</div>
+
+      <div class="health-item" data-title="yellow fever" data-letter="Y">Yellow fever</div>
+
+      <div class="health-item" data-title="zika virus" data-letter="Z">Zika virus</div>
+
+    </div>
+
+    <div class="health-empty" id="healthEmpty" style="display:none;">
+      No results found.
+    </div>
+
+  </div>
+</section>
+
+
+{% endblock %}
+
+{% block extra_scripts %}
+  <!-- JS file (inline nahi) -->
+  <script src="{% static 'js/health_az.js' %}" defer></script>
+{% endblock %}

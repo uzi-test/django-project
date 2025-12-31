@@ -1,0 +1,21 @@
+{% extends "home/base.html" %}
+
+{% block title %}Home - My Pharmacy{% endblock %}
+
+{% block content %}
+  <!-- ✅ Slider -->
+  {% include "home/partials/slider.html" %}
+
+  <!-- ✅ Services Section -->
+  {% include "home/partials/services.html" %}
+
+  <!-- ✅ Quality Healthcare Section -->
+  {% include "home/partials/quality.html" %}
+
+  <!-- ✅ Testimonials Section -->
+{% include "home/partials/testimonials.html" %}
+
+{% include "home/partials/find_branch.html" %}
+
+
+{% endblock %}

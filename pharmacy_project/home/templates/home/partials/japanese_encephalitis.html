@@ -1,0 +1,167 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Japanese Encephalitis Vaccine - My Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/dengue-vaccine.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-8 col-md-10">
+        <div class="hero-content">
+
+          <!-- ✳️ Travel Clinic Heading -->
+          <h6 class="fw-bold animate-fade"
+              style="color:#7fffb3; letter-spacing:2px; text-shadow:0 0 8px rgba(127,255,179,0.4);
+                     font-size:1.1rem;">
+            Travel Clinic
+          </h6>
+
+          <!-- Main Heading -->
+          <h1 class="fw-bold text-uppercase text-light fade-in fade-delay-1" 
+              style="font-size:2.3rem;">
+            Japanese Encephalitis Vaccine
+          </h1>
+
+          <!-- Description -->
+          <p class="mt-3 text-light fade-in fade-delay-2" 
+             style="font-size:1rem; line-height:1.6; max-width:700px;">
+            Get protected and travel with peace of mind by getting your Japanese Encephalitis vaccination. 
+            Don't let this deadly disease ruin your trip and future health. Schedule your vaccination today.
+          </p>
+
+          <!-- Info Section -->
+          <div class="mt-4 text-start fade-in fade-delay-2" style="font-size:1rem;">
+            <div class="d-flex justify-content-between" style="max-width:350px;">
+              <p class="mb-1"><strong>Price</strong></p>
+              <p class="mb-1">From £105 per dose</p>
+            </div>
+            <hr style="border-top: 1px solid #ffffff; margin: 5px 0; width:350px;">
+
+            <div class="d-flex justify-content-between" style="max-width:350px;">
+              <p class="mb-1"><strong>No of Doses</strong></p>
+              <p class="mb-1">2</p>
+            </div>
+            <hr style="border-top: 1px solid #ffffff; margin: 5px 0; width:350px;">
+
+            <div class="d-flex justify-content-between" style="max-width:350px;">
+              <p class="mb-1"><strong>Ages</strong></p>
+              <p class="mb-1">over 2 months</p>
+            </div>
+            <hr style="border-top: 1px solid #ffffff; margin: 5px 0; width:350px;">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ✅ Japanese Encephalitis Information -->
+<section class="py-5" style="background-color:#f8fdf9;">
+  <div class="container-fluid px-5">
+    <div class="p-4 bg-white rounded-4 shadow-sm">
+
+      <!-- What is it -->
+      <h4 class="fw-bold mb-3 text-success">What is it?</h4>
+      <p>
+        Japanese Encephalitis is a mosquito borne illness that can cause inflammation of the brain, and is potentially fatal. It is spread through infected mosquitos
+mainly from sunset to sunrise.
+      </p>
+
+      <!-- Risk areas -->
+      <h4 class="fw-bold mt-4 mb-3 text-success">Risk areas</h4>
+      <p>
+        
+        Despite the name, Japanese Encephalitis is endemic in 24 countries across Asia and the Western Pacific, not just in Japan. It is most common in rural areas where there is rice growing and pig farming, although it can occur in urban areas too.<br>
+<br>
+        The risk to travellers is generally very low, however it can increase significantly for persons who intend to live or travel in risk areas for long periods of time or who visit rural areas during transmission seasons. It should be noted that even short trips (fieldwork, camping or night time exposure) can significantly increase the risk to travellers.
+      </p>
+      
+
+      <!-- Prevention -->
+      <h4 class="fw-bold mt-4 mb-3 text-success">Prevention</h4>
+      <p>
+      Bite avoidance, especially between dusk and dawn, can help reduce the risk of getting Japanese Encephalitis.
+      </p>
+
+      <!-- Length of protection -->
+      <h4 class="fw-bold mt-4 mb-3 text-success">Vaccine Schedule</h4>
+      <p>
+        There is a licensed Japanese Encephalitis vaccine that is recommended for individuals who plan to stay in rural areas where 
+        Japanese Encephalitis occurs during the main transmission season or those whose activities put them at greater risk.
+      </p>
+
+      <!-- Vaccine Schedule -->
+      <h3 class="fw-bold mt-5 mb-3 text-success">Vaccine Schedule</h3>
+       <div class="table-responsive mt-3">
+        <table class="table table-bordered align-middle text-center">
+          <thead class="table-success">
+            <tr>
+              <th>Vaccine</th>
+              <th>Schedule</th>
+              <th>Age Range</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Japanese Encephalitis</td>
+              <td>2 dose: day 0 and 28. Booster not recommended.</td>
+              <td>2 months and over.</td>
+              <td>£210</td>
+            </tr>
+            <tr>
+              <td>Japanese Encephalitis</td>
+              <td>2 dose: day 0 and 28. Booster: 1 dose and at 12 to 24 months later. Second booster recommended 10 years 
+                after first booster dose.</td>
+              <td>Adults 18 to 65 years.</td>
+              <td>£210</td>
+            </tr>
+            <tr>
+              <td>Japanese Encephalitis</td>
+              <td>SAccelerated schedule: day 0 and 7. Only recommended when time before exposure is short. 
+                Booster: 1 dose at 12 to 24 months later. Second booster recommended 10 years after first booster dose.</td>
+              <td>Adults 18 to 65 years.</td>
+              <td>£210</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+<!-- ✅ Bottom Service Section -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy offers a wide range of services to meet your needs.
+        From prescription refills to vaccination and advice,  
+        our knowledgeable staff is here to assist you.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="#" class="btn btn-success px-4 py-2">Services</a>
+        <a href="{% url 'travel_clinic' %}" class="btn btn-success px-4 py-2">Back to Travel Clinic</a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">Our Branches</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

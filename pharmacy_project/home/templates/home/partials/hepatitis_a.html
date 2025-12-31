@@ -1,0 +1,184 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Hepatitis A Vaccine – Travel Clinic{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/dengue-vaccine.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-8 col-md-10">
+        <div class="hero-content">
+
+          <!-- ✳️ Travel Clinic Heading -->
+          <h6 class="fw-bold animate-fade"
+              style="color:#7fffb3; letter-spacing:2px; text-shadow:0 0 8px rgba(127,255,179,0.4);
+                     font-size:1.1rem;">
+            Travel Clinic
+          </h6>
+
+          <!-- Main Heading -->
+          <h1 class="fw-bold text-uppercase text-light fade-in fade-delay-1" 
+              style="font-size:2.3rem;">
+            Hepatitis A Vaccine
+          </h1>
+
+          <!-- Description -->
+          <p class="mt-3 text-light fade-in fade-delay-2" 
+             style="font-size:1rem; line-height:1.6; max-width:700px;">
+            Protect yourself from Hepatitis A before you travel. The Hepatitis A vaccine provides long-term protection against this highly infectious virus, which spreads through contaminated food or water. Stay safe on your journeys with our expert travel vaccination service.
+          </p>
+
+          <!-- Info Section -->
+          <div class="mt-4 text-start fade-in fade-delay-2" style="font-size:1rem;">
+            <div class="d-flex justify-content-between" style="max-width:350px;">
+              <p class="mb-1"><strong>Price</strong></p>
+              <p class="mb-1">From £50 Per Dose</p>
+            </div>
+            <hr style="border-top: 1px solid #ffffff; margin: 5px 0; width:350px;">
+
+            <div class="d-flex justify-content-between" style="max-width:350px;">
+              <p class="mb-1"><strong>No of Doses</strong></p>
+              <p class="mb-1">2</p>
+            </div>
+            <hr style="border-top: 1px solid #ffffff; margin: 5px 0; width:350px;">
+
+            <div class="d-flex justify-content-between" style="max-width:350px;">
+              <p class="mb-1"><strong>Ages</strong></p>
+              <p class="mb-1">From 1 Year</p>
+            </div>
+            <hr style="border-top: 1px solid #ffffff; margin: 5px 0; width:350px;">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ✅ Hepatitis A Information -->
+<section class="py-5" style="background-color:#f8fdf9;">
+  <div class="container-fluid px-5">
+    <div class="p-4 bg-white rounded-4 shadow-sm">
+
+      <!-- What is it -->
+      <h4 class="fw-bold mb-3 text-success">What is it?</h4>
+      <p>
+        Hepatitis A is a highly infectious virus that can cause inflammation of the liver. The virus is most commonly transmitted through food or water that has been contaminated by human faeces or by direct contact with an infected person.
+      </p>
+
+      <!-- Risk areas -->
+      <h4 class="fw-bold mt-4 mb-3 text-success">Risk areas</h4>
+      <p>
+        Hepatitis A occurs worldwide, but areas with high levels of infection include low-income countries where there is poor sanitation or hygiene practices.
+      </p>
+      <p>High risk areas include:</p>
+      <ul>
+        <li>The Indian subcontinent</li>
+        <li>Sub-Saharan and North Africa</li>
+        <li>Parts of South East Asia</li>
+        <li>South & Central America</li>
+        <li>The Middle East</li>
+      </ul>
+
+      <!-- Prevention -->
+      <h4 class="fw-bold mt-4 mb-3 text-success">Prevention</h4>
+      <p>
+        The most common route of infection in travellers is consumption of contaminated food or water. Simple measures to reduce the risk of infection include:
+      </p>
+      <ul>
+        <li>Drinking water from a sealed source or boiled water</li>
+        <li>Avoiding ice made from impure water</li>
+        <li>Avoiding salad that may be washed with tap water</li>
+        <li>Ensuring food has been freshly cooked and is hot</li>
+      </ul>
+
+      <!-- Length of protection -->
+      <h4 class="fw-bold mt-4 mb-3 text-success">Length of protection</h4>
+      <p>The duration of protection from a completed course of Hepatitis A vaccine is a minimum of 25 years.</p>
+
+      <!-- Vaccine Schedule -->
+      <h3 class="fw-bold mt-5 mb-3 text-success">Vaccine Schedule</h3>
+      <p>
+        There are several effective Hepatitis A vaccines available for travellers who intend to visit areas where Hepatitis A is common.
+      </p>
+
+      <div class="table-responsive mt-3">
+        <table class="table table-bordered align-middle text-center">
+          <thead class="table-success">
+            <tr>
+              <th>Vaccine</th>
+              <th>Schedule</th>
+              <th>Age Range</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hepatitis A (adult)</td>
+              <td>2 doses, given 6–12 months apart.</td>
+              <td>Adults.</td>
+              <td>£45</td>
+            </tr>
+            <tr>
+              <td>Hepatitis A (junior)</td>
+              <td>2 doses, given 6–12 months apart.</td>
+              <td>Children over 1 year.</td>
+              <td>£45</td>
+            </tr>
+            <tr>
+              <td>Hepatitis A & B (junior)</td>
+              <td>3 doses at 0, 1, and 6 months.</td>
+              <td>Children older than 1 year.</td>
+              <td>£60</td>
+            </tr>
+            <tr>
+              <td>Hepatitis A & B (adult)</td>
+              <td>4 doses, days 0, 7, and 21, 4th dose at 12 months.</td>
+              <td>Adults 18 years and over.</td>
+              <td>£60</td>
+            </tr>
+            <tr>
+              <td>Hepatitis A & Typhoid</td>
+              <td>1 dose then a single Hepatitis A vaccine 6–12 months later.</td>
+              <td>Adults 15 years and over.</td>
+              <td>£75</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Bottom Service Section -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy offers a wide range of services to meet your needs.
+        From prescription refills to vaccination and advice,  
+        our knowledgeable staff is here to assist you.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="#" class="btn btn-success px-4 py-2">Services</a>
+        <a href="{% url 'travel_clinic' %}" class="btn btn-success px-4 py-2">Back to Travel Clinic</a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">Our Branches</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

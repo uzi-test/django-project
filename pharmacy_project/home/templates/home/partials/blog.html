@@ -1,0 +1,176 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Section -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/bloghero.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.6);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-6 col-md-8">
+        <div class="hero-content animate-slide-up text-start">
+
+          <h1 class="fw-bold fs-2 text-light">
+            Cockerton Pharmacy Blog's
+          </h1>
+
+          <p class="mt-3 fs-6 lh-base" style="max-width:520px; color:#f0f0f0;">
+            Welcome to the UK's latest local pharmacy blog page! We are dedicated to providing 
+            the most up-to-date information and tips on health, wellness, and the latest medical 
+            advancements in the UK. Stay informed and connected with your community through our 
+            blog page. Thank you for supporting your local pharmacy.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 🆕 Stay Protected Section (Below Hero) -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- Left Image -->
+      <div class="col-lg-5 col-md-6">
+        <img src="{% static 'images/blow.webp' %}" 
+             alt="Stay Protected This Winter" 
+             class="img-fluid rounded-4 shadow-sm">
+      </div>
+
+      <!-- Right Text -->
+      <div class="col-lg-7 col-md-6">
+        <h2 class="fw-bold mb-3 text-dark">Stay Protected This Winter – Flu & COVID-19 Vaccinations at Your Community Pharmacy</h2>
+        <p style="font-size: 1rem; line-height: 1.7; color: #222;">
+         As the colder months approach, flu and COVID-19 infections tend to rise – especially among older adults, pregnant women, children, 
+         and people with certain health conditions. Vaccination is the best way to protect yourself, your family, and the wider community. <br> 
+         This autumn and winter, our pharmacy is offering both flu and COVID-19 vaccines as part of the NHS programme.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 🩺 Eligibility Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- Left Image -->
+      <div class="col-lg-5 col-md-6">
+        <img src="{% static 'images/fluvac.jpg' %}" 
+             alt="Flu and COVID Vaccination" 
+             class="img-fluid rounded-4 shadow-sm">
+      </div>
+
+      <!-- Right Text -->
+      <div class="col-lg-7 col-md-6">
+        <h2 class="fw-bold mb-3">Who can get the COVID-19 autumn/winter booster or Flu vaccine?</h2>
+        
+        <div class="mb-4">
+          <p>You’ll be offered a COVID-19 vaccine if you are:</p>
+          <ul>
+            <li>Aged 75 or over</li>
+            <li>Living in a care home for older adults</li>
+            <li>6 months and older and have a weakened immune system (as advised by the NHS “Green Book”)</li>
+          </ul>
+        </div>
+
+        <div>
+          <p>The NHS recommends a free flu vaccine if you are:</p>
+          <ul>
+            <li>Pregnant</li>
+            <li>A child in an eligible age group (2–3 years offered in pharmacy)</li>
+            <li>An adult in an eligible risk group (such as those with certain long-term health conditions)</li>
+            <li>Aged 65 or over (or turning 65 by 31 March 2026)</li>
+            <li>A carer or frontline health/social care worker</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 💚 Booking Info Cards Section -->
+<section class="py-5" style="background-color:#eaf2ed;">
+  <div class="container text-center">
+    <div class="row g-4 justify-content-center">
+
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+          <img src="{% static 'images/book_online.jpg' %}" 
+               alt="How to Book" 
+               class="rounded-circle mx-auto mb-3" 
+               style="width:120px; height:120px; object-fit:cover;">
+          <h5 class="fw-bold text-dark">How to book</h5>
+          <p class="text-dark mt-3" style="font-size:0.95rem;">
+            Online via the NHS National Booking Service from <strong>1 September 2025</strong><br>
+            By phone – contact our pharmacy directly<br>
+            <a href="https://www.cockertonpharmacy.co.uk" class="text-success fw-semibold" target="_blank">
+              www.cockertonpharmacy.co.uk
+            </a><br>
+            Walk-in (subject to availability)
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+          <img src="{% static 'images/vaccine_info.jpg' %}" 
+               alt="What to Expect" 
+               class="rounded-circle mx-auto mb-3" 
+               style="width:120px; height:120px; object-fit:cover;">
+          <h5 class="fw-bold text-dark">What to expect</h5>
+          <p class="text-dark mt-3" style="font-size:0.95rem;">
+            We’ll check your eligibility and answer any questions.<br>
+            You’ll give your verbal consent.<br>
+            The vaccine is given in your upper arm – it only takes a few seconds.<br>
+            You may be asked to wait briefly before leaving, just to be safe.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+          <img src="{% static 'images/why.jpg' %}" 
+               alt="Why it Matters" 
+               class="rounded-circle mx-auto mb-3" 
+               style="width:120px; height:120px; object-fit:cover;">
+          <h5 class="fw-bold text-dark">Why it matters</h5>
+          <p class="text-dark mt-3" style="font-size:0.95rem;">
+            Getting vaccinated helps prevent serious illness,<br>
+            reduces the risk of spreading flu and COVID-19 to vulnerable people,<br>
+            and supports the NHS during its busiest time of year.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="mt-5 text-dark" style="font-size:0.95rem;">
+      Don’t wait until the first winter coughs and colds appear – book your vaccination today. 
+      Together, we can keep our community healthy this winter.
+    </p>
+
+    <p class="text-success fw-semibold mt-2" style="font-size:0.9rem;">
+      * Subject to pharmacist approval
+    </p>
+  </div>
+</section>
+
+{% endblock %}

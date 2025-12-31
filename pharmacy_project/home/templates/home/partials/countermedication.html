@@ -1,0 +1,70 @@
+
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Counter Medication – Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/counterhero.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.6);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-6 col-md-8">
+        <div class="hero-content animate-slide-up">
+          <h1 class="fw-bold fs-2 text-light">Counter Medicines</h1>
+          <p class="mt-3 fs-6 lh-base">
+            All of our branches stock an extensive range of GSL and P medication 
+            to treat all of the common minor ailment conditions.
+          </p>
+          <p class="mt-3 fst-italic fw-semibold text-emerald animate-fade fs-6">
+            Cockerton Pharmacy – Helping the local community in Darlington, 
+            Newcastle upon Tyne, Wallsend and beyond.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Hero ke niche line -->
+<section class="py-5 text-center">
+  <div class="container">
+    <p class="fs-6 text-dark">
+      Please come in branch and speak to one of our highly trained staff members who can help advise you.
+    </p>
+  </div>
+</section>
+<!-- ✅ Bottom Service Section -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy offers a wide range of services to meet your needs.
+        From prescription refills to medication counseling,
+        our knowledgeable staff is here to assist you.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <!-- Placeholder Services button -->
+        <a href="{% url '3service' %}" class="btn btn-success px-4 py-2">
+          Services
+        </a>
+        <a href="{% url 'pharmacy_first' %}" class="btn btn-success px-4 py-2">
+          Pharmacy First
+        </a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">
+          Our Branches
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

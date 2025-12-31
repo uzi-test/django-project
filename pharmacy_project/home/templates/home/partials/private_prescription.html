@@ -1,0 +1,178 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Private Prescription – Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/heroprivate.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-7 col-md-9">
+        <div class="hero-content animate-slide-up">
+
+          <h1 class="fw-bold text-white" style="font-size:1.9rem;">
+            What is a private prescription?
+          </h1>
+
+          <p class="mt-3 text-white" style="font-size:0.95rem; line-height:1.6; max-width:500px;">
+            A private prescription is a service that allows you to obtain prescription medications
+            directly without visiting your GP's practice.
+          </p>
+
+          <p class="mt-3 text-white" style="font-size:0.95rem; line-height:1.6; max-width:500px;">
+            This streamlined approach is ideal for individuals with busy schedules or limited access
+            to healthcare facilities. Our service aims to make your healthcare journey more convenient
+            and efficient.
+          </p>
+
+         <p class="mt-3 fst-italic fw-bold text-emerald animate-fade"
+             style="font-size:0.95rem; max-width:550px;">
+            Cockerton Pharmacy – Your trusted partner for health and wellbeing  
+            in Darlington, Newcastle upon Tyne, and Wallsend.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ✅ How Our Private Prescription Service Works -->
+<section class="py-5" style="background-color:#f7fdf8;">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-5 text-dark-green">
+      How does our private prescription service work?
+    </h2>
+
+    <div class="row g-4">
+
+      <!-- Step 1 -->
+      <div class="col-md-6 col-lg-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center" style="border-left:5px solid #28a745;">
+          <div class="icon mb-3 text-success">
+            <i class="bi bi-globe fs-1"></i>
+          </div>
+          <h6 class="text-success fw-bold mb-1">Step 1.</h6>
+          <h4 class="fw-bold">Online Consultation</h4>
+          <p class="text-muted mt-2" style="font-size:0.95rem;">
+            We will send you a link in your booking confirmation email to complete a 
+            patient questionnaire and provide relevant details about your medical history, 
+            current symptoms, and any medications you may be taking. This information helps 
+            our healthcare professionals gain a comprehensive understanding of your situation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="col-md-6 col-lg-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center" style="border-left:5px solid #28a745;">
+          <div class="icon mb-3 text-success">
+            <i class="bi bi-clipboard2-check fs-1"></i>
+          </div>
+          <h6 class="text-success fw-bold mb-1">Step 2.</h6>
+          <h4 class="fw-bold">Professional Evaluation</h4>
+          <p class="text-muted mt-2" style="font-size:0.95rem;">
+            Regular physical activity, such as brisk walking, jogging, swimming, or cycling, 
+            can help you lose weight. Our qualified prescribers will thoroughly review your 
+            information. They will assess your condition and contact you to discuss this. 
+            If appropriate, they will recommend suitable treatment options tailored to your needs. 
+            Our experienced team ensures that you receive expert guidance and appropriate prescriptions.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="col-md-6 col-lg-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center" style="border-left:5px solid #28a745;">
+          <div class="icon mb-3 text-success">
+            <i class="bi bi-file-medical fs-1"></i>
+          </div>
+          <h6 class="text-success fw-bold mb-1">Step 3.</h6>
+          <h4 class="fw-bold">Prescription</h4>
+          <p class="text-muted mt-2" style="font-size:0.95rem;">
+            If our prescribers determine that a prescription is necessary, we will issue it 
+            electronically and send it to one of our branches for you to collect. You can also 
+            have this sent to another pharmacy of your choice. You will need to pay for the 
+            medication prescribed when you collect it.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="col-md-6 col-lg-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center" style="border-left:5px solid #28a745;">
+          <div class="icon mb-3 text-success">
+            <i class="bi bi-chat-dots fs-1"></i>
+          </div>
+          <h6 class="text-success fw-bold mb-1">Step 4.</h6>
+          <h4 class="fw-bold">Ongoing Support</h4>
+          <p class="text-muted mt-2" style="font-size:0.95rem;">
+            Our commitment to your well-being extends beyond issuing prescriptions. 
+            We offer ongoing support and are available to address any questions or 
+            concerns you may have regarding your treatment. Our team is dedicated to 
+            providing the highest level of care throughout your healthcare journey.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Private Prescription CTA Section -->
+<section class="py-5" style="background-color:#e3f0e8;">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3 text-dark-green">Start your private prescription journey today</h2>
+    <p class="mb-3" style="font-size:1rem; max-width:800px; margin:auto;">
+      Take control of your healthcare with our private prescription service. Whether you need a repeat prescription, 
+      treatment for a specific condition, or expert advice, we are here to support you every step of the way. 
+      Our commitment to convenience, personalised care, and your well-being make us the ideal choice for your prescription needs.
+    </p>
+    <p class="text-danger fw-bold">
+      ⚠️ Our private prescription service is unsuitable for emergencies or urgent medical situations. 
+      In case of a medical emergency, please call 999.
+    </p>
+  </div>
+</section>
+
+
+
+
+<!-- ✅ Bottom Service Section (same as COVID-19) -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy offers a wide range of services to meet your needs.
+        From prescription refills to medication counseling,
+        our knowledgeable staff is here to assist you.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="#" class="btn btn-success px-4 py-2">
+          Services
+        </a>
+        <a href="{% url 'pharmacy_first' %}" class="btn btn-success px-4 py-2">
+          Pharmacy First
+        </a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">
+          Our Branches
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Electronic Prescription Service – Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/herolady.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-7 col-md-9">
+        <div class="hero-content animate-slide-up">
+
+          <h1 class="fw-bold text-white" style="font-size:1.9rem; color:#ffffff;">
+            Electronic Prescription Service (EPS)
+          </h1>
+
+          <p class="mt-3" style="font-size:0.95rem; line-height:1.6; max-width:500px; color:#ffffff;">
+           The Electronic Prescription Service (EPS) is an NHS service that allows your GP to send your prescription electronically from their computer to your chosen pharmacy.
+          </p>
+
+        </div>
+        <p class="mt-3 fst-italic fw-bold text-emerald animate-fade"
+             style="font-size:0.95rem; max-width:550px;">
+            Cockerton Pharmacy – Making your prescription collection simpler, faster, and paper-free across Darlington, Newcastle upon Tyne, and Wallsend.
+          </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ EPS Information Section -->
+<section class="py-5" style="background-color:#f8fdf9;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+
+        <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+          The Electronic Prescription Service (EPS) is an NHS service. The service allows your GP to send your prescription electronically from their computer to your chosen pharmacy.
+        </p>
+
+        <h5 class="fw-bold mt-4" style="color:#004d26;">What does this mean for you?</h5>
+        <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+          Using EPS means you don't need a paper copy of your prescription. As it is sent by your GP electronically, you don't need to collect the prescription from your GP in person.
+          You will have more choice about where to get your medicines from because they can be collected from a pharmacy near to where you live, work, or shop.
+          You may not have to wait as long at our pharmacy as there will be time for your repeat prescriptions to be prepared before you arrive.
+        </p>
+
+        <h5 class="fw-bold mt-4" style="color:#004d26;">Why should I use EPS?</h5>
+        <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+          Using EPS means you don't have to visit your GP every time you need a new prescription.
+        </p>
+
+        <h5 class="fw-bold mt-4" style="color:#004d26;">Is EPS reliable, secure, and confidential?</h5>
+        <p style="font-size:0.95rem; line-height:1.7; color:#222;">
+          Yes. Your electronic prescription will be seen by the same people in GP practices, pharmacies, and NHS prescription payment and fraud agencies that see your current paper prescriptions.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Bottom Service Section -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy provides a full range of services including private prescriptions,
+        health consultations, and travel vaccines.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="{% url 'private_prescription' %}" class="btn btn-success px-4 py-2">
+          Private Prescription
+        </a>
+        <a href="{% url 'pharmacy_first' %}" class="btn btn-success px-4 py-2">
+          Pharmacy First
+        </a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">
+          Our Branches
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

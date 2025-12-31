@@ -1,0 +1,204 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Repeat Prescription – Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/herorx.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-7 col-md-9">
+        <div class="hero-content animate-slide-up">
+
+          <h1 class="fw-bold text-white" style="font-size:1.9rem; color:#ffffff;">
+            What is a repeat prescription?
+          </h1>
+
+          <p class="mt-3" style="font-size:0.95rem; line-height:1.6; max-width:500px; color:#ffffff;">
+            A repeat prescription allows you to easily reorder your regular medications
+            without needing to see your GP each time. This service is designed to make
+            managing ongoing treatments more convenient and efficient.
+          </p>
+
+          <p class="mt-3" style="font-size:0.95rem; line-height:1.6; max-width:500px; color:#ffffff;">
+            Our team works closely with your GP practice to ensure that your prescriptions
+            are processed accurately and ready for collection at your preferred branch.
+            We aim to provide a quick, reliable, and stress-free experience.
+          </p>
+
+          <p class="mt-3 fst-italic fw-bold text-emerald animate-fade"
+             style="font-size:0.95rem; max-width:550px;">
+            Cockerton Pharmacy – Your trusted partner for health and wellbeing  
+            in Darlington, Newcastle upon Tyne, and Wallsend.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ✅ Repeat Prescription Info Cards Section -->
+<section class="py-5" style="background-color:#f7fdf8;">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-5 text-dark-green">
+      How does our repeat prescription service work?
+    </h2>
+
+    <div class="row g-4">
+
+      <!-- Card 1: How to order -->
+      <div class="col-md-6 col-lg-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center" style="border-left:5px solid #28a745;">
+          <div class="icon mb-3 text-success">
+            <i class="bi bi-bag-plus fs-1"></i>
+          </div>
+          <h4 class="fw-bold">How to order</h4>
+          <p class="text-muted mt-2" style="font-size:0.95rem;">
+            Patients can order repeat prescriptions through their GP surgery using their NHS account,
+            online services, or by contacting the surgery.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2: Repeat dispensing -->
+      <div class="col-md-6 col-lg-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center" style="border-left:5px solid #28a745;">
+          <div class="icon mb-3 text-success">
+            <i class="bi bi-arrow-repeat fs-1"></i>
+          </div>
+          <h4 class="fw-bold">Repeat dispensing</h4>
+          <p class="text-muted mt-2" style="font-size:0.95rem;">
+            If a GP has set up repeat dispensing, a patient may be able to ask their pharmacy directly for their medication.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3: Electronic repeat prescriptions -->
+      <div class="col-md-6 col-lg-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center" style="border-left:5px solid #28a745;">
+          <div class="icon mb-3 text-success">
+            <i class="bi bi-file-earmark-medical fs-1"></i>
+          </div>
+          <h4 class="fw-bold">Electronic repeat prescriptions</h4>
+          <p class="text-muted mt-2" style="font-size:0.95rem;">
+            eRD allows a prescriber to authorize a batch of repeatable prescriptions for up to 12 months.
+            The prescriptions are automatically downloaded to the patient’s pharmacy at set intervals.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 4: Emergency repeat medications -->
+      <div class="col-md-6 col-lg-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center" style="border-left:5px solid #28a745;">
+          <div class="icon mb-3 text-success">
+            <i class="bi bi-exclamation-triangle fs-1"></i>
+          </div>
+          <h4 class="fw-bold">Emergency repeat medications</h4>
+          <p class="text-muted mt-2" style="font-size:0.95rem;">
+            In clinically exceptional circumstances, NHS 111 may supply emergency repeat medications outside of hours.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 5: Checking prescriptions -->
+      <div class="col-md-6 offset-md-3 col-lg-6 offset-lg-3">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center" style="border-left:5px solid #28a745;">
+          <div class="icon mb-3 text-success">
+            <i class="bi bi-clipboard-check fs-1"></i>
+          </div>
+          <h4 class="fw-bold">Checking prescriptions</h4>
+          <p class="text-muted mt-2" style="font-size:0.95rem;">
+            When collecting or having prescriptions delivered, patients should check the bag before leaving the pharmacy. 
+            If there are any medications that the patient doesn't need, they can return them to the pharmacy.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ✅ How to Order Detailed Section with Image -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="{% static 'images/thumbup.webp' %}" alt="Doctor and patient smiling" class="img-fluid rounded-4 shadow-sm">
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-3">How to order a repeat prescription</h2>
+        <p style="font-size:0.95rem;">
+          If you take medicine regularly, you'll usually have a repeat prescription. This means you can order your medicine when you need it, without having to see a GP every time.
+        </p>
+        <p style="font-size:0.95rem;">
+          You might be able to ask your pharmacy directly for your medicine if your GP has set this up (repeat dispensing).
+          If not, you'll need to order your medicines through a repeat prescription from your GP surgery.
+        </p>
+        <p class="mb-2 fw-semibold">There are 3 ways to order a repeat prescription from your GP surgery:</p>
+        <ul style="font-size:0.95rem;">
+          <li>Using your NHS account.</li>
+          <li>Using other online services or apps.</li>
+          <li>Contacting your GP surgery.</li>
+        </ul>
+        <a href="https://www.nhs.uk/nhs-services/prescriptions/how-to-order-a-repeat-prescription/" class="btn btn-success px-4 mt-3" target="_blank" rel="noopener noreferrer">
+          Learn more
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ✅ CTA Section -->
+<section class="py-5" style="background-color:#e3f0e8;">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3 text-dark-green">Simplify your medication routine today</h2>
+    <p class="mb-3" style="font-size:1rem; max-width:800px; margin:auto;">
+      Let us take the hassle out of managing your repeat prescriptions.  
+      With our seamless service, we coordinate with your GP, prepare your medicines promptly,  
+      and keep you informed every step of the way.
+    </p>
+    <p class="text-danger fw-bold">
+      ⚠️ Please order your repeat prescription at least 5 days before you run out of medication.
+    </p>
+  </div>
+</section>
+
+
+<!-- ✅ Bottom Service Section -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy provides a full range of services including private prescriptions,
+        travel vaccines, and health consultations.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="{% url 'private_prescription' %}" class="btn btn-success px-4 py-2">
+          Private Prescription
+        </a>
+        <a href="{% url 'pharmacy_first' %}" class="btn btn-success px-4 py-2">
+          Pharmacy First
+        </a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">
+          Our Branches
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

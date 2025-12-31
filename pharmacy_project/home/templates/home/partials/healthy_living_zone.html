@@ -1,0 +1,144 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Healthy Living Zone – Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Section -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/heroheart.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-7 col-md-9">
+        <div class="hero-content animate-slide-up text-start">
+
+          <h1 class="fw-bold text-uppercase text-dark-green" style="font-size:2.1rem;">
+            Welcome to the
+          </h1>
+          <h2 class="fw-bold mt-2 text-dark-green" style="font-size:1.7rem;">
+            Healthy Living Zone
+          </h2>
+
+          <p class="mt-3" style="font-size:1rem; line-height:1.5; max-width:550px;">
+            Welcome to the Healthy Living Zone, where we are dedicated to helping you achieve a healthier lifestyle. 
+            Find tips, resources, and inspiration to make positive changes in your life.
+          </p>
+
+          <p class="mt-3" style="font-size:1rem; line-height:1.5; max-width:550px;">
+            Say goodbye to unhealthy habits and hello to a vibrant, energetic you. 
+            Let us be your partner in creating a better, more fulfilling life. 
+            Together, we can make a difference and inspire others to do the same.
+          </p>
+
+          <p class="mt-3" style="font-size:1rem; line-height:1.5; max-width:550px;">
+            So come on in and explore the Healthy Living Zone — your one-stop destination for all things health and wellness.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🆕 Cards Section (under hero) -->
+<section class="py-5" style="background-color:#022b14;">
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+
+      <!-- Card 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-3" style="border-radius: 1.5rem;">
+          <img src="{% static 'images/weight.jpg' %}" class="card-img-top rounded-3" alt="Lose Weight">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-dark">Lose Weight</h5>
+            <p class="card-text" style="font-size:0.95rem; color:#333;">
+              By shedding extra pounds, individuals can significantly decrease their chances of developing serious health issues...
+            </p>
+            <a href="{% url 'lose_weight' %}" class="fw-semibold text-success text-decoration-none">
+              Read More <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-3" style="border-radius: 1.5rem;">
+          <img src="{% static 'images/alcohol.jpg' %}" class="card-img-top rounded-3" alt="Alcohol Support">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-dark">Alcohol Support</h5>
+            <p class="card-text" style="font-size:0.95rem; color:#333;">
+              Recognizing that you’re grappling with an alcohol-related issue represents a crucial first step toward seeking assistance...
+            </p>
+            <a href="{% url 'alcohol_support' %}" class="fw-semibold text-success text-decoration-none">
+              Read More <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-3" style="border-radius: 1.5rem;">
+          <img src="{% static 'images/smoke.jpg' %}" class="card-img-top rounded-3" alt="Quit Smoking">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-dark">Quit Smoking</h5>
+            <p class="card-text" style="font-size:0.95rem; color:#333;">
+              Deciding to quit smoking is one of the most impactful choices you can make for your health and well-being...
+            </p>
+            <a href="{% url 'quit_smoking' %}" class="fw-semibold text-success text-decoration-none">
+              Read More <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🆕 NHS Health A-Z Section -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row align-items-center justify-content-center g-4">
+
+      <!-- Image (Left) -->
+      <div class="col-lg-5 col-md-6">
+        <img src="{% static 'images/a-z.webp' %}" 
+             alt="NHS Health" 
+             class="img-fluid rounded-4 shadow-sm">
+      </div>
+
+      <!-- Text (Right) -->
+      <div class="col-lg-6 col-md-6">
+        <img src="{% static 'images/nhs.webp' %}" 
+             alt="NHS Logo" 
+             style="width:90px; margin-bottom: 10px;">
+        
+        <h3 class="fw-bold mb-3">Health A-Z</h3>
+
+        <p style="font-size: 1rem; line-height: 1.6; color: #222;">
+          Accessing reliable health information is crucial for making informed decisions about our well-being. 
+          It empowers us to take control of our health and live a happier, healthier life. 
+          That's why it's important to turn to trusted sources like the NHS for accurate and up-to-date information. 
+          With their expertise and resources, we can make informed choices and prioritize our health and well-being.
+        </p>
+
+        <a href="https://www.nhs.uk/conditions/" 
+           target="_blank" 
+           class="btn btn-success fw-semibold px-4 py-2 rounded-3 mt-3">
+          Browse Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

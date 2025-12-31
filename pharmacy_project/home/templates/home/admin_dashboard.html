@@ -1,0 +1,350 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Appointments{% endblock %}
+
+{% block content %}
+
+<style>
+  /* ✅ FIX 1: Admin pages par navbar padding-top disable */
+  body { padding-top: 0 !important; }
+  html, body { height: 100%; }
+</style>
+
+<div class="ap-layout">
+
+  <!-- ===================== SIDEBAR (LEFT) ===================== -->
+  <aside class="ap-sidebar">
+    <div class="ap-logo">
+      <div class="ap-logo-mark">+</div>
+      <div class="ap-logo-text">
+        <div class="ap-logo-title">PHARMACY</div>
+        <div class="ap-logo-sub">Admin Panel</div>
+      </div>
+    </div>
+
+    <nav class="ap-nav">
+      <a class="ap-nav-item" href="javascript:void(0)">
+        <i class="bi bi-bag"></i><span>Orders</span>
+      </a>
+      <a class="ap-nav-item" href="javascript:void(0)">
+        <i class="bi bi-chat-left-text"></i><span>Communications</span>
+      </a>
+      <a class="ap-nav-item active" href="javascript:void(0)">
+        <i class="bi bi-calendar3"></i><span>Appointments</span>
+      </a>
+      <a class="ap-nav-item" href="javascript:void(0)">
+        <i class="bi bi-people"></i><span>Patients</span>
+      </a>
+      <a class="ap-nav-item" href="javascript:void(0)">
+        <i class="bi bi-megaphone"></i><span>Campaigns</span>
+      </a>
+
+      <div class="ap-nav-divider"></div>
+
+      <a class="ap-nav-item" href="javascript:void(0)">
+        <i class="bi bi-gear"></i><span>Practice Management</span>
+      </a>
+      <a class="ap-nav-item" href="javascript:void(0)">
+        <i class="bi bi-shield-lock"></i><span>Pharmacy Admin</span>
+      </a>
+
+      <a class="ap-nav-item" href="{% url 'admin_reports' %}">
+        <i class="bi bi-bar-chart"></i><span>Reports</span>
+      </a>
+
+      <a class="ap-nav-item" href="javascript:void(0)">
+        <i class="bi bi-tags"></i><span>Labels Printing</span>
+      </a>
+      <a class="ap-nav-item" href="javascript:void(0)">
+        <i class="bi bi-sliders"></i><span>Settings</span>
+      </a>
+
+      <div class="ap-nav-divider"></div>
+
+      <a class="ap-nav-item logout" href="{% url 'logout' %}">
+        <i class="bi bi-box-arrow-right"></i><span>Logout</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- ===================== MAIN (RIGHT) ===================== -->
+  <main class="ap-main">
+
+    <!-- Top bar -->
+    <div class="ap-topbar">
+      <div class="ap-user">
+        <div class="ap-avatar">
+          {{ request.user.username|slice:":1"|upper }}
+        </div>
+        <div class="ap-user-text">
+          <div class="ap-welcome">
+            Welcome, <strong>{{ request.user.username }}</strong>!
+            <a class="ap-change-user" href="javascript:void(0)">change user</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ap-topbar-right">
+        <div class="ap-location">
+          <i class="bi bi-geo-alt"></i>
+          <span>Cockerton Pharmacy Darlington</span>
+        </div>
+
+        <div class="ap-search">
+          <i class="bi bi-search"></i>
+          <input type="text" placeholder="Search..." />
+        </div>
+      </div>
+    </div>
+
+    <!-- Page title -->
+    <div class="ap-pagehead">
+      <h2 class="ap-title">Appointments</h2>
+    </div>
+
+    <!-- Filters row (like screenshot) -->
+    <div class="ap-filters">
+      <div class="ap-filter-item"><span class="lbl">Filters:</span></div>
+
+      <div class="ap-filter-item">
+        Package: <span class="muted">All</span> <i class="bi bi-caret-down-fill"></i>
+      </div>
+
+      <!-- ✅ SERVICES FILTER -->
+      <div class="ap-filter-item ap-filter-services" id="servicesFilterWrap">
+        <button type="button" class="ap-filter-btn" id="servicesFilterBtn">
+          Services: <span class="muted" id="servicesFilterLabel">All</span>
+          <i class="bi bi-caret-down-fill"></i>
+        </button>
+
+        <!-- Dropdown -->
+        <div class="ap-filter-dropdown" id="servicesFilterDropdown">
+          <div class="services-dd-search">
+            <i class="bi bi-search"></i>
+            <input id="servicesFilterSearch" type="text" placeholder="Search service..." autocomplete="off">
+          </div>
+
+          <div id="servicesFilterList" class="services-dd-list">
+            <div class="services-dd-loading">Loading services…</div>
+          </div>
+
+          <div class="services-dd-actions">
+            <button type="button" id="servicesFilterClear" class="services-dd-clear">Clear</button>
+            <button type="button" id="servicesFilterApply" class="services-dd-apply">Apply</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ap-filter-item">Rooms: <span class="muted">All</span> <i class="bi bi-caret-down-fill"></i></div>
+      <div class="ap-filter-item">Type: <span class="muted">All</span> <i class="bi bi-caret-down-fill"></i></div>
+
+      <div class="ap-filter-item status">
+        Status:
+        <span class="ap-pill">
+          <span class="dot"></span> Active
+        </span>
+      </div>
+
+      <!-- ✅ FIXED: actions HTML clean -->
+      <div class="ap-filter-actions">
+        <a href="javascript:void(0)" class="ap-link" id="btnClearFilters">Clear Filters</a>
+        <a href="javascript:void(0)" class="ap-link" id="btnPrintList">
+          <i class="bi bi-printer"></i> Print
+        </a>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="ap-tabs">
+      <button class="ap-tab active" id="tabAppointments">Appointments</button>
+      <button class="ap-tab" id="tabIntake">Intake Forms</button>
+      <button class="ap-tab ghost" id="tabSaveView">Save View</button>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="ap-toolbar">
+      <div class="ap-toolbar-left">
+        <button class="ap-icon-btn" id="btnPrevWeek"><i class="bi bi-chevron-left"></i></button>
+        <button class="ap-chip" id="btnThisWeek">This week</button>
+        <button class="ap-icon-btn" id="btnNextWeek"><i class="bi bi-chevron-right"></i></button>
+
+        <div class="ap-view-switch">
+          <button class="ap-view-btn" data-view="month">Month</button>
+          <button class="ap-view-btn active" data-view="week">Week</button>
+          <button class="ap-view-btn" data-view="day">Day</button>
+          <button class="ap-view-btn" data-view="list">List</button>
+        </div>
+      </div>
+
+      <div class="ap-toolbar-right">
+        <div class="ap-date-range" id="dateRangeText">Oct 26 - Nov 1, 2025</div>
+
+        <button class="ap-btn light" id="btnBlockOut">Add block out date</button>
+        <button class="ap-btn green" id="btnCreateAppointment">Create Appointment</button>
+
+        <div class="ap-tz">
+          <span>GMT</span> <i class="bi bi-caret-down-fill"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== CALENDAR GRID (Week) ===================== -->
+    <section class="ap-calendar">
+
+      <!-- Day headers -->
+      <div class="ap-cal-head">
+        <div class="ap-cal-head-cell time"></div>
+        <div class="ap-cal-head-cell">SUN<br><strong>26</strong></div>
+        <div class="ap-cal-head-cell">MON<br><strong>27</strong></div>
+        <div class="ap-cal-head-cell">TUE<br><strong>28</strong></div>
+        <div class="ap-cal-head-cell">WED<br><strong>29</strong></div>
+        <div class="ap-cal-head-cell">THU<br><strong>30</strong></div>
+        <div class="ap-cal-head-cell">FRI<br><strong>31</strong></div>
+        <div class="ap-cal-head-cell">SAT<br><strong>01</strong></div>
+      </div>
+
+      <!-- Time rows -->
+      <div class="ap-cal-body" id="calendarBody">
+
+        <!-- 9 AM -->
+        <div class="ap-row">
+          <div class="ap-time">9 AM</div>
+          <div class="ap-cell" data-day="sun" data-time="09:00"></div>
+          <div class="ap-cell" data-day="mon" data-time="09:00"></div>
+          <div class="ap-cell" data-day="tue" data-time="09:00"></div>
+          <div class="ap-cell" data-day="wed" data-time="09:00"></div>
+          <div class="ap-cell" data-day="thu" data-time="09:00"></div>
+          <div class="ap-cell" data-day="fri" data-time="09:00"></div>
+          <div class="ap-cell" data-day="sat" data-time="09:00"></div>
+        </div>
+
+        <!-- 10 AM -->
+        <div class="ap-row">
+          <div class="ap-time">10 AM</div>
+          <div class="ap-cell" data-day="sun" data-time="10:00"></div>
+          <div class="ap-cell" data-day="mon" data-time="10:00"></div>
+          <div class="ap-cell" data-day="tue" data-time="10:00"></div>
+          <div class="ap-cell" data-day="wed" data-time="10:00"></div>
+          <div class="ap-cell" data-day="thu" data-time="10:00"></div>
+          <div class="ap-cell" data-day="fri" data-time="10:00"></div>
+          <div class="ap-cell" data-day="sat" data-time="10:00"></div>
+        </div>
+
+        <!-- 11 AM -->
+        <div class="ap-row">
+          <div class="ap-time">11 AM</div>
+          <div class="ap-cell" data-day="sun" data-time="11:00"></div>
+          <div class="ap-cell" data-day="mon" data-time="11:00"></div>
+          <div class="ap-cell" data-day="tue" data-time="11:00"></div>
+          <div class="ap-cell" data-day="wed" data-time="11:00"></div>
+          <div class="ap-cell" data-day="thu" data-time="11:00"></div>
+          <div class="ap-cell" data-day="fri" data-time="11:00"></div>
+          <div class="ap-cell" data-day="sat" data-time="11:00"></div>
+        </div>
+
+        <!-- 12 PM -->
+        <div class="ap-row">
+          <div class="ap-time">12 PM</div>
+          <div class="ap-cell" data-day="sun" data-time="12:00"></div>
+          <div class="ap-cell" data-day="mon" data-time="12:00"></div>
+          <div class="ap-cell" data-day="tue" data-time="12:00"></div>
+          <div class="ap-cell" data-day="wed" data-time="12:00"></div>
+          <div class="ap-cell" data-day="thu" data-time="12:00"></div>
+          <div class="ap-cell" data-day="fri" data-time="12:00"></div>
+          <div class="ap-cell" data-day="sat" data-time="12:00"></div>
+        </div>
+
+        <!-- 1 PM -->
+        <div class="ap-row">
+          <div class="ap-time">1 PM</div>
+          <div class="ap-cell" data-day="sun" data-time="13:00"></div>
+          <div class="ap-cell" data-day="mon" data-time="13:00"></div>
+          <div class="ap-cell" data-day="tue" data-time="13:00"></div>
+          <div class="ap-cell" data-day="wed" data-time="13:00"></div>
+          <div class="ap-cell" data-day="thu" data-time="13:00"></div>
+          <div class="ap-cell" data-day="fri" data-time="13:00"></div>
+          <div class="ap-cell" data-day="sat" data-time="13:00"></div>
+        </div>
+
+        <!-- 2 PM -->
+        <div class="ap-row">
+          <div class="ap-time">2 PM</div>
+          <div class="ap-cell" data-day="sun" data-time="14:00"></div>
+          <div class="ap-cell" data-day="mon" data-time="14:00"></div>
+          <div class="ap-cell" data-day="tue" data-time="14:00"></div>
+          <div class="ap-cell" data-day="wed" data-time="14:00"></div>
+          <div class="ap-cell" data-day="thu" data-time="14:00"></div>
+          <div class="ap-cell" data-day="fri" data-time="14:00"></div>
+          <div class="ap-cell" data-day="sat" data-time="14:00"></div>
+        </div>
+
+        <!-- 3 PM -->
+        <div class="ap-row">
+          <div class="ap-time">3 PM</div>
+          <div class="ap-cell" data-day="sun" data-time="15:00"></div>
+          <div class="ap-cell" data-day="mon" data-time="15:00"></div>
+          <div class="ap-cell" data-day="tue" data-time="15:00"></div>
+          <div class="ap-cell" data-day="wed" data-time="15:00"></div>
+          <div class="ap-cell" data-day="thu" data-time="15:00"></div>
+          <div class="ap-cell" data-day="fri" data-time="15:00"></div>
+          <div class="ap-cell" data-day="sat" data-time="15:00"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== RIGHT DETAIL PANEL ===================== -->
+    <aside class="ap-detail" id="apDetailPanel">
+      <div class="ap-detail-head">
+        <div>
+          <div class="ap-detail-title" id="apDetailTitle">Appointment</div>
+          <div class="ap-detail-sub" id="apDetailDate">—</div>
+        </div>
+        <button type="button" class="ap-detail-close" id="apDetailCloseBtn">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <div class="ap-detail-body">
+        <div class="ap-detail-section">
+          <div class="ap-detail-label">Service</div>
+          <div class="ap-detail-value" id="apDetailService">—</div>
+        </div>
+
+        <div class="ap-detail-section">
+          <div class="ap-detail-label">Patient</div>
+          <div class="ap-detail-value" id="apDetailName">—</div>
+          <div class="ap-detail-mini">
+            <div><span class="k">DOB:</span> <span id="apDetailDob">—</span></div>
+            <div><span class="k">Postcode:</span> <span id="apDetailPostcode">—</span></div>
+          </div>
+        </div>
+
+        <div class="ap-detail-section">
+          <div class="ap-detail-label">Contact</div>
+          <div class="ap-detail-mini">
+            <div><span class="k">Email:</span> <span id="apDetailEmail">—</span></div>
+            <div><span class="k">Phone:</span> <span id="apDetailPhone">—</span></div>
+            <div><span class="k">NHS:</span> <span id="apDetailNhs">—</span></div>
+          </div>
+        </div>
+
+        <div class="ap-detail-section">
+          <div class="ap-detail-label">Note</div>
+          <div class="ap-detail-value" id="apDetailNote">—</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ✅ ONLY ONE printArea -->
+    <div id="printArea" style="display:none;"></div>
+
+  </main>
+</div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'js/admin_dashboard.js' %}" defer></script>
+{% endblock %}

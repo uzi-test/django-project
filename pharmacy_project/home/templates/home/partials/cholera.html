@@ -1,0 +1,179 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Cholera – Travel Clinic{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/cholerahero.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-8 col-md-10">
+        <div class="hero-content">
+
+          <!-- ✳️ Travel Clinic Heading (Enhanced Style) -->
+          <h6 class="fw-bold animate-fade"
+              style="color:#7fffb3; letter-spacing:2px; text-shadow:0 0 8px rgba(127,255,179,0.4);
+                     font-size:1.1rem;">
+            Travel Clinic
+          </h6>
+
+          <!-- Main Heading -->
+          <h1 class="fw-bold text-uppercase text-light fade-in fade-delay-1" 
+              style="font-size:2.3rem;">
+            Cholera
+          </h1>
+
+          <!-- Description -->
+          <p class="mt-3 text-light fade-in fade-delay-2" 
+             style="font-size:1rem; line-height:1.6; max-width:700px;">
+            Cholera is a bacterial infection that is characterised by watery diarrhoea. 
+            It is commonly caused by contaminated food and water.
+          </p>
+
+          <!-- Info Section -->
+          <div class="mt-4 text-start fade-in fade-delay-2" style="font-size:1rem;">
+            <div class="d-flex justify-content-between" style="max-width:350px;">
+              <p class="mb-1"><strong>Price</strong></p>
+              <p class="mb-1">£40 Per Dose</p>
+            </div>
+            <hr style="border-top: 1px solid #ffffff; margin: 5px 0; width:350px;">
+
+            <div class="d-flex justify-content-between" style="max-width:350px;">
+              <p class="mb-1"><strong>No of Doses</strong></p>
+              <p class="mb-1">2</p>
+            </div>
+            <hr style="border-top: 1px solid #ffffff; margin: 5px 0; width:350px;">
+
+            <div class="d-flex justify-content-between" style="max-width:350px;">
+              <p class="mb-1"><strong>Ages</strong></p>
+              <p class="mb-1">2 Years and over</p>
+            </div>
+            <hr style="border-top: 1px solid #ffffff; margin: 5px 0; width:350px;">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ✅ About Cholera Section (Styled Box Format) -->
+<section class="py-5" style="background-color:#f8fdf9;">
+  <div class="container-fluid px-5">
+    <h3 class="section-title mb-4">About this Vaccine</h3>
+
+    <div class="info-box p-4 bg-white rounded-4 shadow-sm" style="width:100%;">
+
+      <!-- What is it -->
+      <h4 class="fw-bold mb-2">What is it?</h4>
+      <p style="font-size:1rem; line-height:1.6;">
+        Cholera is a bacterial infection that is characterised by watery diarrhoea.
+        It is commonly caused by contaminated food and water.
+      </p>
+
+      <!-- Risk Areas -->
+      <h4 class="fw-bold mt-4 mb-2">Risk areas</h4>
+      <p style="font-size:1rem; line-height:1.6;">
+        Common in many low-income countries and is associated with poor sanitation and poor access to clean water.
+        The overall risk for travellers is very low but the risk is far greater for those living in unsanitary conditions,
+        for example relief workers in disaster or refugee areas. The disease is endemic in Africa, Asia, Central and South America
+        and is prevalent in areas where there is poor sanitation.
+      </p>
+
+      <!-- Prevention -->
+      <h4 class="fw-bold mt-4 mb-2">Prevention</h4>
+      <p style="font-size:1rem; line-height:1.6;">
+        Following good personal hygiene and safe food and water practices can help reduce the risk of acquiring cholera.
+      </p>
+
+      <!-- Dukoral Vaccine -->
+      <h4 class="fw-bold mt-4 mb-3">Dukoral Vaccine</h4>
+      <p style="font-size:1rem; line-height:1.6;">
+        A licensed vaccine effective against cholera, is available in the UK. It is not recommended for most travellers
+        but for those whose activities or medical history puts them at increased risk. This includes:
+      </p>
+
+      <ul style="font-size:1rem; line-height:1.6;">
+        <li>Aid workers</li>
+        <li>Those going to areas of cholera outbreak and who will have limited access to safe water</li>
+      </ul>
+
+      <!-- Vaccine Table -->
+      <div class="table-responsive mt-4">
+        <table class="table table-bordered align-middle">
+          <thead style="background-color:#e8f3ec; font-weight:600;">
+            <tr>
+              <th>Age</th>
+              <th>Primary Course</th>
+              <th>Booster Required</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Adults & children older than 6 years</td>
+              <td>2 doses at least one week apart. If more than six weeks have passed between doses, the primary course should be restarted.</td>
+              <td>Single dose at two years. If more than 2 years have elapsed since initial course, the whole course should be restarted.</td>
+              <td>£75</td>
+            </tr>
+            <tr>
+              <td>Age 2 to 6 years</td>
+              <td>3 doses at least one week apart. If more than six weeks have passed between doses, the primary course should be restarted.</td>
+              <td>Single dose at six months. If more than 2 years have elapsed since, restart the course.</td>
+              <td>£75</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mt-3 fst-italic" style="font-size:0.95rem;">
+        * If more than 6 weeks have elapsed between doses the primary course should be restarted.
+        If more than 2 years (or 6 months for children aged 2 to below 6 years of age) has elapsed since the last dose of vaccine,
+        the primary course should be repeated.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Bottom Service Section -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy offers a wide range of services to meet your needs.
+        From prescription refills to vaccination and advice,  
+        our knowledgeable staff is here to assist you.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <!-- ✅ Services Button -->
+        <a href="#" class="btn btn-success px-4 py-2">
+          Services
+        </a>
+
+        <!-- ✅ Back to Travel Clinic Button -->
+        <a href="{% url 'travel_clinic' %}" class="btn btn-success px-4 py-2">
+          Back to Travel Clinic
+        </a>
+
+        <!-- ✅ Branches Button -->
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">
+          Our Branches
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

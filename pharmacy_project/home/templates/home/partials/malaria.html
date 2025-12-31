@@ -1,0 +1,176 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Malaria – Travel Clinic{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/dengue-vaccine.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-8 col-md-10">
+        <div class="hero-content">
+          <h6 class="fw-bold animate-fade"
+              style="color:#7fffb3; letter-spacing:2px; text-shadow:0 0 8px rgba(127,255,179,0.4);
+                     font-size:1.1rem;">
+            Travel Clinic
+          </h6>
+
+          <h1 class="fw-bold text-uppercase text-light fade-in fade-delay-1" 
+              style="font-size:2.3rem;">
+            Malaria Prevention
+          </h1>
+
+          <p class="mt-3 text-light fade-in fade-delay-2" 
+             style="font-size:1rem; line-height:1.6; max-width:700px;">
+           Take the necessary precaution and get the Malaria tablets or capsules before
+            embarking on your travel adventure to tropical destinations where the disease is prevalent.
+          </p>
+
+          <div class="mt-4 text-start fade-in fade-delay-2" style="font-size:1rem;">
+            <div class="d-flex justify-content-between" style="max-width:350px;">
+              <p class="mb-1"><strong>Price</strong></p>
+              <p class="mb-1">Variable</p>
+            </div>
+            <hr style="border-top: 1px solid #ffffff; margin: 5px 0; width:350px;">
+
+            <div class="d-flex justify-content-between" style="max-width:350px;">
+              <p class="mb-1"><strong>Daily</strong></p>
+              <p class="mb-1">Available after consultation</p>
+            </div>
+            <hr style="border-top: 1px solid #ffffff; margin: 5px 0; width:350px;">
+
+            <div class="d-flex justify-content-between" style="max-width:350px;">
+              <p class="mb-1"><strong>Ages</strong></p>
+              <p class="mb-1">over 3 months</p>
+            </div>
+            <hr style="border-top: 1px solid #ffffff; margin: 5px 0; width:350px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Malaria Information Section -->
+<section class="py-5" style="background-color:#f8fdf9;">
+  <div class="container-fluid px-5">
+    <div class="info-box p-4 bg-white rounded-4 shadow-sm">
+      
+      <!-- What is it -->
+      <h3 class="fw-bold mb-3 text-success">What is it?</h3>
+      <p>Malaria is a common and life-threatening disease that affects thousands of travellers every year. It is spread through the bite of an infected mosquito, of which there are five different species worldwide that can spread the disease to humans.</p>
+      <p>Mosquitos that transmit malaria normally feed from sunset to sunrise. Symptoms of malaria may vary but include fever, headache, fatigue and muscle aches.</p>
+
+      <!-- Risk areas -->
+      <h3 class="fw-bold mt-4 mb-3 text-success">Risk areas</h3>
+      <p>Malaria is widely distributed in tropical regions around the world, including parts of Africa, Asia, Central and South America, the Caribbean and the Middle East.</p>
+      <p>All travellers to countries or areas where malaria occurs are at risk of infection. Migrants to the UK that were born in malaria risk areas are at high risk when visiting friends and relatives in their country of birth. This is because of an assumption that they have immunity from having being born there. Immunity however, disappears very quickly upon moving to an area with no malaria risk.</p>
+
+      <!-- Prevention -->
+      <h3 class="fw-bold mt-4 mb-3 text-success">Prevention</h3>
+      <p>Prevention of malaria follows four important steps:</p>
+      <ul style="line-height:1.8;">
+        <li>Awareness of the risk (understanding if travelling to an area of risk)</li>
+        <li>Bite prevention (particularly at night-time)</li>
+        <li>Chemoprophylaxis (use of appropriate malaria prevention tablets)</li>
+        <li>Diagnosis (prompt recognition of symptoms and treatment)</li>
+      </ul>
+
+      <!-- Choice of malaria tablets -->
+      <h3 class="fw-bold mt-4 mb-3 text-success">Choice of malaria tablets</h3>
+      <p>The choice of tablets is dependent upon the type of malaria present in the area visited and if there is any resistance to any of the available medicines.</p>
+      <p>We can provide medication to prevent malaria that is appropriate for the area of the world you are visiting. We also make sure you know what steps to take to help avoid insect bites, including the use of WHO recommended insect repellents.</p>
+
+      <!-- ✅ Prices Table -->
+      <div class="mt-5">
+        <h3 class="fw-bold mb-4 text-success">Malaria Prevention Prices</h3>
+        <div class="table-responsive">
+          <table class="table table-bordered align-middle text-center">
+            <thead class="table-success text-dark">
+              <tr>
+                <th>Antimalarial</th>
+                <th>Price per Tab/Cap</th>
+                <th>1 Week Supply</th>
+                <th>2 Weeks Supply</th>
+                <th>4 Weeks Supply</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Malarone</td>
+                <td>£2.87</td>
+                <td>£38.75</td>
+                <td>£56.83</td>
+                <td>£98.99</td>
+              </tr>
+              <tr>
+                <td>Malarone Paediatric (subject to weight)</td>
+                <td>£0.78</td>
+                <td colspan="3">Subject to weight</td>
+              </tr>
+              <tr>
+                <td>Atovaquone/Proguanil (generic Malarone)</td>
+                <td>£1.95</td>
+                <td>£29.25</td>
+                <td>£38.61</td>
+                <td>£63.18</td>
+              </tr>
+              <tr>
+                <td>Doxycycline</td>
+                <td>£0.30</td>
+                <td>£11.10</td>
+                <td>£13.20</td>
+                <td>£17.40</td>
+              </tr>
+              <tr>
+                <td>Lariam</td>
+                <td>£2.73</td>
+                <td>£19.11</td>
+                <td>£21.84</td>
+                <td>£27.30</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ✅ Included Services -->
+        <div class="mt-4">
+          <h4 class="fw-bold text-success mb-3">Services included in your in-store anti-malarial prices</h4>
+          <ul class="list-unstyled ps-3" style="line-height:1.8;">
+            <li>✅ Full bespoke consultation with our experienced travel Pharmacist or Nurse that will take into account your personal travel plans, current recommendations & your budget</li>
+            <li>✅ Advice on the most appropriate anti-malarial with respect to any medical conditions or current medication</li>
+            <li>✅ Advice on how to take your anti-malarial medication to ensure maximum protection</li>
+            <li>✅ Advice on what steps to take to help avoid insect bites, including the use of WHO recommended insect repellents</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Bottom CTA -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy offers expert travel health advice and preventive care to keep you safe abroad.
+      </p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="#" class="btn btn-success px-4 py-2">Services</a>
+        <a href="{% url 'travel_clinic' %}" class="btn btn-success px-4 py-2">Back to Travel Clinic</a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">Our Branches</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

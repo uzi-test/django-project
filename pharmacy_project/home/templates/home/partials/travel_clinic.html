@@ -1,0 +1,458 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Travel Clinic – Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/Travelhero.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-7 col-md-9">
+        <div class="hero-content animate-slide-up">
+
+          <!-- ✅ Headings -->
+          <h1 class="fw-bold text-uppercase text-dark-green" style="font-size:2.1rem;">
+            Travel Clinic
+          </h1>
+          <h2 class="fw-bold mt-2 text-dark-green" style="font-size:1.7rem;">
+            Vaccinations & Advice
+          </h2>
+
+          <!-- ✅ Short paragraph -->
+          <p class="mt-3" style="font-size:1rem; line-height:1.5; max-width:550px;">
+            Are you planning to travel? Don't forget to book an appointment at our travel vaccination clinic for protection against dangerous diseases like malaria, typhoid, hepatitis and yellow fever.
+             Don't wait until it's too late. We can provide necessary vaccinations, medications and advice for a safe and healthy trip.
+          </p>
+
+          <p class="mt-3 fst-italic fw-bold text-emerald animate-fade"
+             style="font-size:0.95rem; max-width:550px;">
+            Cockerton Pharmacy – Helping you travel safely from Darlington,  
+            Newcastle upon Tyne, Wallsend,  
+            and across the UK.
+          </p>
+
+          <!-- ✅ Buttons for booking -->
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="#" class="btn btn-success px-4 py-2 btn-hover-effect" style="min-width:220px;">
+              Book Travel Vaccine <br> Darlington Branch
+            </a>
+            <a href="#" class="btn btn-success px-4 py-2 btn-hover-effect" style="min-width:220px;">
+              Book Travel Vaccine <br> Newcastle Branch
+            </a>
+          </div>
+          <div class="mt-3">
+            <a href="#" class="btn btn-success px-4 py-2 btn-hover-effect" style="min-width:220px;">
+              Book Travel Vaccine <br> Wallsend Branch
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Travel Info Section -->
+<section class="travel-info-section py-5" style="background-color:#f8fdf9;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+
+        <div class="info-content animate-on-scroll">
+          
+          <!-- First Question -->
+          <h3 class="section-title">Where are you travelling to ?</h3>
+          <div class="info-box p-4 bg-white rounded-4 shadow-sm mb-4">
+            <p>
+              Are you planning your dream trip to multiple countries but unsure about what vaccinations you may need? 
+              We've got you covered! Our team of experts will custom create a vaccination program tailored to your specific 
+              travel destinations. Whether you are jetting off to exotic locations in Asia or exploring the breathtaking 
+              landscapes of South America, we will ensure that you are fully protected against any potential health risks. 
+              Leave your worries behind and let us take care of your vaccination needs for a worry-free journey.
+            </p>
+          </div>
+
+          <!-- Second Question -->
+          <h3 class="section-title mt-5">Which vaccinations will I need to protect me in the country I am visiting ?</h3>
+          <div class="info-box p-4 bg-white rounded-4 shadow-sm">
+            <p>
+              When planning a trip to a new country, one of the most important things to consider is which vaccinations you will need. 
+              Different regions of the world have different diseases and health risks, so it's crucial to protect yourself by getting the necessary shots. 
+              Some common vaccinations to ask about include those for yellow fever, hepatitis A and B, typhoid, and malaria.
+            </p>
+            <p>
+              It’s also important to inquire about any required vaccinations for entry into the country, such as for COVID-19. 
+              Don’t forget to schedule your vaccinations at least 4-6 weeks before your trip to ensure full protection. 
+              Your health and safety should always be a top priority while traveling.
+            </p>
+            <a href="https://travelhealthpro.org.uk/" target="_blank" 
+   class="text-success text-decoration-none">
+  <i class="bi bi-pin-angle"></i> Find out more information about your destination 
+  and how to protect yourself ahead of your visit
+</a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     16 Service Cards Section
+     ========================= -->
+<section class="services-section py-5">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-4">
+      <h2 class="fw-bold text-success">Travel Services</h2>
+      <h7 class="fw-bold">Ready to embark on your next adventure? Book a travel related service today 
+      and let us take care of all your specific requirements.</h7>
+    </div>
+
+    <!-- Green Rounded Block -->
+    <div class="services-wrapper p-4 p-md-5 rounded-4">
+
+      <div class="row g-4 justify-content-center">
+
+     <div class="row g-4">
+  <!-- Card 1: Altitude Sickness Treatment -->
+  <div class="col-md-4">
+  <!-- ✅ Wrap the entire card in an <a> tag -->
+  <a href="{% url 'altitude_sickness' %}" style="text-decoration: none; color: inherit;">
+    <div class="card h-100 shadow-sm border-0 rounded-4">
+      <img src="{% static 'images/alt.jpg' %}" class="card-img-top rounded-top-4" alt="Altitude Sickness">
+      <div class="card-body text-center">
+        <h5 class="fw-bold">Altitude Sickness Treatment</h5>
+        <p class="text-muted">
+          As you set off on your high-altitude adventures, don’t let altitude sickness 
+          get in the way of your enjoyment. Our pharmacy is proud to offer a comprehensive 
+          Altitude Sickness Treatment Service to help manage and prevent this condition.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+ <!-- Card 2: Cholera -->
+<div class="col-md-4">
+  <a href="{% url 'cholera' %}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow-sm border-0 rounded-4 hover-zoom">
+      <img src="{% static 'images/cholera.jpg' %}" class="card-img-top rounded-top-4" alt="Cholera">
+      <div class="card-body text-center">
+        <h5 class="fw-bold">Cholera</h5>
+        <p class="text-muted">
+          Cholera disease is a highly contagious bacterial infection that causes severe 
+          diarrhoea, vomiting, and dehydration. It can be fatal if not treated promptly 
+          with antibiotics and rehydration therapy.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+  <!-- Card 3: DTP -->
+  <div class="col-md-4">
+  <!-- Wrap card in <a> tag -->
+  <a href="{% url 'dtp' %}" style="text-decoration: none; color: inherit;">
+    <div class="card h-100 shadow-sm border-0 rounded-4">
+      <img src="{% static 'images/DTP.jpg' %}" class="card-img-top rounded-top-4" alt="DTP">
+      <div class="card-body text-center">
+        <h5 class="fw-bold">DTP</h5>
+        <p class="text-muted">
+          Diphtheria, tetanus, and polio are all dangerous diseases that can have severe 
+          impacts on people’s health. Vaccines like DTP are crucial in protecting against 
+          these deadly illnesses.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<!-- ✅ New Row Start -->
+<div class="col-md-4">
+  <!-- Wrap card in <a> tag -->
+  <a href="{% url 'dengue' %}" style="text-decoration: none; color: inherit;">
+    <div class="card h-100 shadow-sm border-0 rounded-4">
+      <img src="{% static 'images/Dengue.jpg' %}" class="card-img-top rounded-top-4" alt="Dengue Fever">
+      <div class="card-body text-center">
+        <h5 class="fw-bold">Dengue Fever</h5>
+        <p class="text-muted">
+          Dengue Fever is a mosquito-borne viral infection common in tropical regions. 
+          Protect yourself with the Qdenga vaccine, available at our pharmacy. 
+          Get expert advice and stay safe before you travel.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+  <!-- Card 5: Diarrhoea -->
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm border-0 rounded-4">
+      <img src="{% static 'images/diarrhoea.jpg' %}" class="card-img-top rounded-top-4" alt="Diarrhoea">
+      <div class="card-body text-center">
+        <h5 class="fw-bold">Diarrhoea</h5>
+        <p class="text-muted">
+          Diarrhoea is passing looser, watery or more frequent stools than is normal for you. 
+          It affects most people from time to time and is usually nothing to worry about. 
+          It can be distressing and unpleasant. It normally clears quickly or our pharmacist can help you.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 6: Hepatitis A -->
+  <div class="col-md-4">
+  <a href="{% url 'hepatitis_a' %}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow-sm border-0 rounded-4" style="cursor: pointer;">
+      <img src="{% static 'images/hepA.jpg' %}" class="card-img-top rounded-top-4" alt="Hepatitis A">
+      <div class="card-body text-center">
+        <h5 class="fw-bold">Hepatitis A</h5>
+        <p class="text-muted">
+          Hepatitis A is a highly contagious liver disease caused by the hepatitis A virus. 
+          It can be prevented through vaccination and proper hygiene practices such as washing hands regularly.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+ <!-- end row 2 -->
+
+ <!-- Card 7: Hepatitis B -->
+<div class="col-md-4">
+  <a href="{% url 'hepatitis_b' %}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow-sm border-0 rounded-4 hover-shadow">
+      <img src="{% static 'images/hepB.jpg' %}" class="card-img-top rounded-top-4" alt="Hepatitis B">
+      <div class="card-body text-center">
+        <h5 class="fw-bold">Hepatitis B</h5>
+        <p class="text-muted">
+          Hepatitis B is a serious disease caused by a virus that attacks the liver, leading 
+          to inflammation and potentially life-threatening complications if left untreated. 
+          It can be prevented by vaccination.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<!-- Card 8: Japanese Encephalitis -->
+<div class="col-md-4">
+  <a href="{% url 'japanese_encephalitis' %}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow-sm border-0 rounded-4 hover-shadow">
+      <img src="{% static 'images/japanes.jpg' %}" class="card-img-top rounded-top-4" alt="Japanese Encephalitis">
+      <div class="card-body text-center">
+        <h5 class="fw-bold">Japanese Encephalitis</h5>
+        <p class="text-muted">
+          A mosquito-borne viral infection found mainly in rural Asia. Protect yourself with the Japanese Encephalitis vaccine before traveling.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<!-- Card 9: Jet Lag -->
+<div class="col-md-4">
+  <a href="{% url 'jet_lag' %}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow-sm border-0 rounded-4 hover-zoom">
+      <img src="{% static 'images/jet.jpg' %}" class="card-img-top rounded-top-4" alt="Jet Lag">
+      <div class="card-body text-center">
+        <h5 class="fw-bold">Jet Lag</h5> <!-- removed text-success -->
+        <p class="text-muted">
+          Jet lag, also known as desynchronosis, is a common experience for travelers crossing 
+          multiple time zones. It can cause fatigue, insomnia, and difficulty concentrating.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+
+
+<!-- Card 10: MMR -->
+<div class="col-md-4">
+  <a href="{% url 'mmr' %}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow-sm border-0 rounded-4 hover-shadow">
+      <img src="{% static 'images/mmr.jpg' %}" class="card-img-top rounded-top-4" alt="MMR Vaccine">
+      <div class="card-body text-center">
+        <h5 class="fw-bold">MMR Vaccine</h5>
+        <p class="text-muted">
+          Protects against Measles, Mumps, and Rubella — three contagious viral infections 
+          that can lead to serious complications. 
+          Essential for both children and adults.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<!-- Card 11: Malaria -->
+<div class="col-md-4">
+  <a href="{% url 'malaria' %}" style="text-decoration:none; color:inherit;">
+    <div class="card h-100 shadow-sm border-0 rounded-4">
+      <img src="{% static 'images/malaria.jpg' %}" class="card-img-top rounded-top-4" alt="Malaria">
+      <div class="card-body text-center">
+        <h5 class="fw-bold">Malaria Prevention</h5>
+        <p class="text-muted">
+          Malaria is a mosquito-borne disease that can cause severe illness. 
+          Preventive medicines and mosquito protection are key to staying safe while traveling.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<!-- Card 12: Meningitis ACWY -->
+<div class="col-md-4">
+  <a href="{% url 'menacwy' %}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow-sm border-0 rounded-4 hover-scale">
+      <img src="{% static 'images/acwy.jpg' %}" class="card-img-top rounded-top-4" alt="Meningitis ACWY">
+      <div class="card-body text-center">
+        <h5 class="fw-bold">Meningitis ACWY (MenACWY)</h5>
+        <p class="text-muted">
+          Meningitis ACWY (MenACWY) is a serious bacterial infection that can cause meningitis 
+          and septicaemia (blood poisoning). The MenACWY vaccine protects against the A, C, W, 
+          and Y strains of meningococcal bacteria. It’s recommended for teenagers and can be 
+          given up to age 25.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+        <!-- Card 13: Meningitis B -->
+<div class="col-md-4">
+  <a href="{% url 'menb' %}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow-sm border-0 rounded-4 hover-shadow">
+      <img src="{% static 'images/menB.jpg' %}" 
+           class="card-img-top rounded-top-4" 
+           alt="Meningitis B (MenB)">
+      <div class="card-body text-center">
+        <h5 class="fw-bold">Meningitis B (MenB)</h5>
+        <p class="text-muted mb-0">
+          Meningitis B (MenB) is a serious bacterial
+          infection that can cause meningitis and 
+          septicaemia. It’s most common in babies and
+          young children, but can affect people of
+          any age.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+ <!-- ✅ Card 13: Tick-borne Encephalitis -->
+<div class="col-md-4">
+  <a href="{% url 'tick_borne' %}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow-sm border-0 rounded-4 hover-shadow">
+      <img src="{% static 'images/tick.jpg' %}" 
+           class="card-img-top rounded-top-4" 
+           alt="Tick-borne Encephalitis">
+      <div class="card-body text-center">
+        <h5 class="fw-bold">Tick-borne Encephalitis</h5>
+        <p class="text-muted mb-0">
+          Tick-borne Encephalitis is a serious disease 
+          caused by a virus carried by ticks. Symptoms include 
+          fever, headache, and brain inflammation — making early 
+          detection and prevention crucial.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<!-- Card: Typhoid -->
+<div class="col-md-4">
+  <a href="{% url 'typhoid' %}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow-sm border-0 rounded-4">
+      <img src="{% static 'images/typhoid.jpg' %}" class="card-img-top rounded-top-4" alt="Typhoid">
+      <div class="card-body text-center">
+        <h5 class="fw-bold">Typhoid</h5>
+        <p class="text-muted">
+          Typhoid is a highly contagious disease caused
+          by Salmonella bacteria, spread through 
+          contaminated food and water. Symptoms include
+          high fever, abdominal pain, and diarrhoea. 
+          Vaccination is recommended for prevention.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+
+<<!-- Card: Yellow Fever -->
+<div class="col-md-4">
+  <a href="{% url 'yellow_fever' %}" style="text-decoration:none; color:inherit;">
+    <div class="card h-100 shadow-sm border-0 rounded-4">
+      <img src="{% static 'images/yellow.jpg' %}" class="card-img-top rounded-top-4" alt="Yellow Fever">
+      <div class="card-body text-center">
+        <h5 class="fw-bold">Yellow Fever</h5>
+        <p class="text-muted">
+          Yellow Fever is a viral disease transmitted by mosquitoes, causing symptoms 
+          such as fever, headache, and jaundice. It can be prevented by getting 
+          vaccinated and avoiding mosquito bites.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+
+  </div>
+</section>
+
+
+
+<!-- ✅ Bottom Service Section -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy offers a wide range of services to meet your needs.
+        From prescription refills to vaccination and advice,  
+        our knowledgeable staff is here to assist you.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="{% url 'pharmacy_first' %}" class="btn btn-success px-4 py-2">
+          Pharmacy First
+        </a>
+        <a href="{% url 'covid19' %}" class="btn btn-success px-4 py-2">
+          Covid-19
+        </a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">
+          Our Branches
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

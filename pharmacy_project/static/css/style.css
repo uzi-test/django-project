@@ -1,0 +1,2846 @@
+/* =========================================================
+   Global Styles
+   ========================================================= */
+html {
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+:root{
+  --font-main: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --text: #0b0c0c;
+  --green: #006400;
+}
+
+/* Global */
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--text);
+  -webkit-tap-highlight-color: transparent;
+  background: #fff;
+}
+
+
+/* Sirf non-home pages pe spacing chahiye to yahan use karo */
+main{
+  padding-top: 80px;
+}
+
+
+/* =========================================================
+   Logo (Navbar optimized)
+   ========================================================= */
+.site-logo {
+  height: 44px;      /* 40–48px ideal */
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+@media (max-width: 991.98px) {
+  .site-logo {
+    height: 38px;
+  }
+}
+
+
+/* =========================================================
+   Navbar
+   ========================================================= */
+#mainNavbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+#mainNavbar .navbar-brand,
+#mainNavbar .nav-link,
+#mainNavbar .navbar-text,
+#mainNavbar .bi,
+#mainNavbar svg {
+  color: #00a000 !important;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.25s ease;
+}
+
+#mainNavbar.scrolled {
+  background-color: #fff;
+  color: black;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+#mainNavbar.scrolled .navbar-brand,
+#mainNavbar.scrolled .nav-link,
+#mainNavbar.scrolled .navbar-text,
+#mainNavbar.scrolled .bi,
+#mainNavbar.scrolled svg {
+  color: #006400 !important;
+}
+
+.navbar-toggler {
+  border-color: #00a000;
+}
+
+#mainNavbar.scrolled .navbar-toggler {
+  border-color: #006400;
+}
+
+
+/* =========================================================
+   Navbar Buttons
+   ========================================================= */
+.order-btn,
+.appointment-btn,
+.login-btn {
+  background-color: #006400;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 0.3s ease-in-out;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+}
+
+.order-btn:hover,
+.appointment-btn:hover,
+.login-btn:hover {
+  background-color: #004d00;
+  color: #fff;
+}
+
+#mainNavbar.scrolled .login-btn {
+  background-color: #006400;
+  color: #fff;
+  border: none;
+}
+
+#mainNavbar.scrolled .login-btn:hover {
+  background-color: #004d00;
+}
+
+/* =========================================================
+   Carousel / Slider
+   ========================================================= */
+   
+.carousel-item img,
+.carousel-item video {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  position: relative;
+}
+
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  z-index: 2;
+  color: #fff;
+  max-width: 750px;
+  text-align: left;
+}
+
+.carousel-caption h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+
+
+.carousel-caption p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Slider Buttons */
+.carousel-caption .btn-group {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 0.7rem;
+  max-width: 600px;
+}
+
+.carousel-caption .btn-slider {
+  background-color: #006400;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.3;
+  min-height: 70px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.carousel-caption .btn-slider:hover {
+  background-color: #004d00;
+  transform: translateY(-2px);
+}
+
+/* Single Button Slide */
+.single-btn-wrapper {
+  margin-top: 1.2rem;
+}
+
+.single-btn-wrapper .btn-slider {
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+  max-width: 200px;
+}
+
+/* Advice Slide */
+.advice-slide {
+  bottom: 15%;
+}
+
+/* =========================
+   Slider Typography (smaller)
+   ========================= */
+.carousel-caption h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-bottom: 6px;
+}
+
+.carousel-caption h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.carousel-caption p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  max-width: 620px;
+}
+
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5%;
+  z-index: 15;
+}
+
+/* =========================================================
+   Services Section
+   ========================================================= */
+.services-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.services-wrapper {
+  background: linear-gradient(135deg, #004d00, #002800);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  border-radius: 25px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+}
+
+.service-card {
+  border: none;
+  border-radius: 15px;
+  background-color: #fff;
+  overflow: hidden;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-in-out;
+}
+
+.service-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.service-card img {
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.service-card .card-body {
+  padding: 1rem;
+}
+
+.service-card .card-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #006400;
+}
+
+.service-card .card-text {
+  font-size: 0.85rem;
+  color: #333;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   Quality Healthcare
+   ========================================================= */
+.quality-healthcare h2 {
+  color: #111;
+  font-weight: 700;
+}
+
+.quality-healthcare p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Image Corners */
+.rounded-custom {
+  border-top-right-radius: 110px;
+  border-bottom-left-radius: 110px;
+  border-top-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  overflow: hidden;
+}
+
+/* Quality List */
+.quality-list {
+  text-align: left;
+}
+
+.quality-list .d-flex {
+  align-items: center;
+}
+
+.quality-list i {
+  color: #198754;
+  font-size: 1.4rem;
+  margin-right: 12px;
+}
+
+.quality-list span {
+  font-size: 1rem;
+  color: #222;
+}
+
+/* =========================================================
+   Find Branch Section
+   ========================================================= */
+.find-branch-section {
+  background-color: #012b1f;
+  color: #fff;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.find-branch-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.find-branch-section .branch-btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.find-branch-section .branch-btn:hover {
+  background-color: #0b5c38;
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+.footer {
+  background: #fff;
+  padding: 3rem 0 2rem;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.footer-logo {
+  max-width: 180px;
+  margin-bottom: 1rem;
+}
+
+.footer h6 {
+  color: #006400;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  color: #006400;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #004d00;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* =========================================================
+   Map Container
+   ========================================================= */
+#map,
+#branch-map {
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================================
+   Responsive Design
+   ========================================================= */
+@media (max-width: 768px) {
+  .carousel-caption {
+    top: 12%;
+    left: 5%;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .carousel-caption h1 {
+    font-size: 1.8rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  .carousel-caption .btn-group {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .carousel-caption .btn-slider {
+    font-size: 1rem;
+    padding: 0.9rem 1rem;
+  }
+
+  .single-btn-wrapper .btn-slider {
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem;
+    max-width: 180px;
+  }
+
+  .services-wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .service-card img {
+    height: 130px;
+  }
+
+  .service-card .card-title {
+    font-size: 0.95rem;
+  }
+
+  .services-section h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ================= Sidebar (Mobile Menu) ================= */
+#mobileSidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 260px;
+  height: 100vh;
+  background: #fff;
+  color: #333;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  transition: left 0.4s ease;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+}
+
+#mobileSidebar.active {
+  left: 0;
+}
+
+#mobileSidebar .sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+#mobileSidebar .sidebar-header h5 {
+  color: #006400;
+  font-weight: 700;
+  margin: 0;
+}
+
+#mobileSidebar #closeSidebar {
+  border: none;
+  background: none;
+  font-size: 1.8rem;
+  color: #333;
+  cursor: pointer;
+}
+
+#mobileSidebar .sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+#mobileSidebar .sidebar-content a {
+  display: block;
+  color: #006400;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#mobileSidebar .sidebar-content a:hover {
+  color: #004d00;
+}
+
+#mobileSidebar ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#mobileSidebar hr {
+  margin: 1rem 0;
+  border-color: #ccc;
+}
+
+/* Collapsible dropdown */
+.collapsible {
+  margin-bottom: 1rem;
+}
+
+.collapsible-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  color: #006400;
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+
+.collapsible-header .arrow {
+  transition: transform 0.3s ease;
+}
+
+.collapsible-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.collapsible-body.active {
+  max-height: 1000px;
+}
+
+.collapsible.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* Overlay for sidebar */
+#sidebarOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1500;
+  transition: opacity 0.4s ease, visibility 0.4s;
+}
+
+#sidebarOverlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hide Bootstrap dropdowns on mobile */
+@media (max-width: 991px) {
+  #navbarNav {
+    display: none !important;
+  }
+}
+
+/* ================= LOGIN MODAL STYLING ================= */
+.login-modal {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.login-logo {
+  width: 80px;
+}
+
+.login-modal .form-control {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  padding-left: 0;
+  box-shadow: none !important;
+}
+
+.login-modal .form-control:focus {
+  border-color: #28a745;
+}
+
+.login-modal .btn-success {
+  background-color: #28a745;
+  border: none;
+  transition: 0.3s;
+}
+
+.login-modal .btn-success:hover {
+  background-color: #218838;
+}
+
+.login-modal .btn-outline-primary {
+  border: 2px solid #0078d4;
+  color: #0078d4;
+  background-color: #fff;
+}
+
+.login-modal .btn-outline-primary:hover {
+  background-color: #0078d4;
+  color: #fff;
+}
+
+.toggle-password:hover {
+  color: #28a745;
+}
+
+/* Forgot Password */
+#forgotForm {
+  transition: all 0.3s ease;
+}
+#forgotForm .form-label {
+  font-weight: 500;
+}
+#forgotForm .btn-success {
+  background-color: #28a745;
+  border: none;
+}
+#forgotForm .btn-success:hover {
+  background-color: #218838;
+}
+
+.password-strength {
+  height: 6px;
+  width: 100%;
+}
+.password-bar {
+  height: 6px;
+  width: 0%;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+
+
+#signupForm small.form-text {
+  display: block;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+.is-invalid {
+  border-color: red !important;
+}
+
+.toggle-signup-password {
+  font-size: 1.1rem;
+  color: #6c757d;
+  transition: color 0.2s ease;
+}
+
+.toggle-signup-password:hover {
+  color: #198754;
+  transition: color 0.2s ease;
+}
+
+/* admin login css */
+
+/* =========================================================
+   ADMIN LOGIN PAGE STYLING (Advanced)
+   ========================================================= */
+.admin-login-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a192f, #1b4332);
+  font-family: "Poppins", sans-serif;
+}
+
+.admin-login-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  padding: 2rem 1.8rem;
+  animation: fadeInUp 0.9s ease;
+}
+
+.admin-login-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+.admin-login-icon {
+  width: 75px;
+  height: 75px;
+  background: linear-gradient(135deg, #74c69d, #52b788);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  box-shadow: 0 0 18px rgba(82, 183, 136, 0.4);
+}
+
+.admin-login-icon i {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.admin-login-card h3 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.admin-login-card p {
+  color: #bcd0c7;
+  font-size: 0.9rem;
+  margin-bottom: 1.8rem;
+}
+
+.admin-login-card .form-label {
+  color: #bcd0c7;
+  font-weight: 500;
+}
+
+.admin-login-card .form-control {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.admin-login-card .form-control:focus {
+  border-color: #74c69d;
+  box-shadow: 0 0 6px #74c69d;
+}
+
+.btn-admin-login {
+  background: linear-gradient(135deg, #74c69d, #40916c);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  width: 100%;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.btn-admin-login:hover {
+  background: linear-gradient(135deg, #95d5b2, #52b788);
+  transform: translateY(-2px);
+}
+
+.admin-login-card small {
+  color: #bcd0c7;
+}
+
+.admin-login-card .alert {
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-login-card {
+    padding: 1.5rem 1.2rem;
+  }
+  .admin-login-card h3 {
+    font-size: 1.4rem;
+  }
+}
+/* =========================================================
+   ADMIN LOGIN PAGE STYLING (Full Gradient)
+   ========================================================= */
+.admin-login-page {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #081c15, #1b4332, #2d6a4f);
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-login-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-login-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  padding: 2rem 1.8rem;
+  transition: all 0.4s ease;
+  animation: fadeInUp 0.9s ease;
+}
+
+.admin-login-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+.admin-login-icon {
+  width: 75px;
+  height: 75px;
+  background: linear-gradient(135deg, #52b788, #40916c);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  box-shadow: 0 0 18px rgba(82, 183, 136, 0.4);
+}
+
+.admin-login-icon i {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.admin-login-card h3 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.admin-login-card p {
+  color: #bcd0c7;
+  font-size: 0.9rem;
+  margin-bottom: 1.8rem;
+}
+
+.admin-login-card .form-label {
+  color: #bcd0c7;
+  font-weight: 500;
+}
+
+.admin-login-card .form-control {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.admin-login-card .form-control:focus {
+  border-color: #74c69d;
+  box-shadow: 0 0 6px #74c69d;
+}
+
+.btn-admin-login {
+  background: linear-gradient(135deg, #74c69d, #40916c);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  width: 100%;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.btn-admin-login:hover {
+  background: linear-gradient(135deg, #95d5b2, #52b788);
+  transform: translateY(-2px);
+}
+
+.admin-login-card small {
+  color: #bcd0c7;
+}
+
+.admin-login-card .alert {
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-login-card {
+    padding: 1.5rem 1.2rem;
+  }
+  .admin-login-card h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/* =========================================================
+   ADMIN LOGIN PAGE - Pharmacy Theme (Floating Capsules)
+   ========================================================= */
+.admin-login-page {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0b3d2e, #1b4332, #2d6a4f);
+  background-attachment: fixed;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Floating Capsules Background */
+.floating-capsules {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.capsule {
+  position: absolute;
+  width: 70px;
+  height: 28px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #95d5b2, #52b788);
+  box-shadow: 0 0 10px rgba(82, 183, 136, 0.4);
+  opacity: 0.7;
+  animation: floatCapsule 12s infinite ease-in-out;
+}
+
+.c1 { top: 20%; left: 10%; animation-delay: 0s; }
+.c2 { top: 60%; left: 25%; width: 80px; height: 30px; animation-delay: 2s; background: linear-gradient(90deg, #b7e4c7, #74c69d); }
+.c3 { top: 30%; right: 15%; width: 60px; animation-delay: 3s; background: linear-gradient(90deg, #52b788, #2d6a4f); }
+.c4 { bottom: 15%; left: 40%; width: 90px; height: 32px; animation-delay: 1s; background: linear-gradient(90deg, #40916c, #1b4332); }
+.c5 { bottom: 30%; right: 20%; width: 70px; animation-delay: 4s; background: linear-gradient(90deg, #95d5b2, #52b788); }
+
+@keyframes floatCapsule {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.6; }
+  50% { transform: translateY(-25px) rotate(15deg); opacity: 1; }
+}
+
+/* Glass Login Card */
+.admin-login-card {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  padding: 2rem 1.8rem;
+  animation: fadeInUp 0.9s ease;
+}
+
+.admin-login-icon {
+  width: 75px;
+  height: 75px;
+  background: linear-gradient(135deg, #52b788, #40916c);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  box-shadow: 0 0 18px rgba(82, 183, 136, 0.4);
+}
+
+.admin-login-icon i {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.admin-login-card h3 {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.admin-login-card p {
+  color: #bcd0c7;
+  font-size: 0.9rem;
+  margin-bottom: 1.8rem;
+}
+
+.admin-login-card .form-label {
+  color: #bcd0c7;
+  font-weight: 500;
+}
+
+.admin-login-card .form-control {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+}
+
+.admin-login-card .form-control:focus {
+  border-color: #74c69d;
+  box-shadow: 0 0 6px #74c69d;
+}
+
+.btn-admin-login {
+  background: linear-gradient(135deg, #74c69d, #40916c);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  width: 100%;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.btn-admin-login:hover {
+  background: linear-gradient(135deg, #95d5b2, #52b788);
+  transform: translateY(-2px);
+}
+
+.admin-login-card small {
+  color: #bcd0c7;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Remove default white border/margin for admin login page */
+html, body.admin-login-body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: linear-gradient(135deg, #0b3d2e, #1b4332, #2d6a4f) !important;
+}
+
+.admin-login-page {
+  overflow: hidden; /* Only disables scroll inside login page visuals */
+}
+
+
+body.admin-login-body main {
+  margin: 0;
+  padding: 0;
+}
+
+/* admin_dashboard.css */
+
+/* Full clean background */
+body {
+  background: #f8f9fa !important;
+}
+
+.admin-dashboard-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 3rem 4rem;
+  text-align: center;
+  animation: fadeIn 0.7s ease;
+}
+
+.dashboard-card h1 {
+  color: #2d6a4f;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.dashboard-card p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-dashboard {
+  background: #40916c;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.btn-dashboard:hover {
+  background: #2d6a4f;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= APPOINTMENTS ADMIN DASHBOARD ================= */
+
+.ap-layout {
+  display: flex;
+  height: 100vh;
+  background: #f5f6f8;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ========== SIDEBAR ========== */
+.ap-sidebar {
+  width: 260px;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+.ap-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ap-logo-mark {
+  width: 36px;
+  height: 36px;
+  background: #2e7d32;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ap-logo-title {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.ap-logo-sub {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.ap-nav {
+  padding: 10px;
+  flex: 1;
+}
+
+.ap-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  margin-bottom: 4px;
+  border-radius: 8px;
+  color: #374151;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ap-nav-item i {
+  font-size: 16px;
+}
+
+.ap-nav-item:hover {
+  background: #f0fdf4;
+}
+
+.ap-nav-item.active {
+  background: #e6f4ea;
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.ap-nav-item.logout {
+  color: #b91c1c;
+}
+
+.ap-nav-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 12px 0;
+}
+/* =========================================================
+   ✅ FIX: Admin pages ka layout base navbar padding se shift ho raha tha
+   ========================================================= */
+.ap-layout{
+  margin-top: -80px;          /* base.html body padding-top ko cancel */
+  height: 100vh;              /* full screen */
+}
+
+.ap-sidebar,
+.ap-main{
+  height: 100vh;
+}
+
+.ap-calendar{
+  height: calc(100vh - 220px); /* topbar + filters + tabs + toolbar approx */
+  overflow: auto;
+}
+
+
+/* ========== MAIN AREA ========== */
+.ap-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Top bar */
+.ap-topbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ap-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ap-avatar {
+  width: 34px;
+  height: 34px;
+  background: #2e7d32;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ap-welcome {
+  font-size: 14px;
+}
+
+.ap-change-user {
+  font-size: 12px;
+  color: #2e7d32;
+  margin-left: 6px;
+  text-decoration: none;
+}
+
+.ap-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.ap-location {
+  font-size: 13px;
+  color: #374151;
+}
+
+.ap-search {
+  position: relative;
+}
+
+.ap-search input {
+  padding: 6px 10px 6px 28px;
+  border-radius: 20px;
+  border: 1px solid #d1d5db;
+  font-size: 13px;
+}
+
+.ap-search i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Page heading */
+.ap-pagehead {
+  padding: 16px 20px 6px;
+}
+
+.ap-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Filters */
+.ap-filters {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 20px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.ap-filter-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ap-filter-item .muted {
+  color: #6b7280;
+}
+
+.ap-filter-item.status .ap-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #e6f4ea;
+  color: #2e7d32;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.ap-pill .dot {
+  width: 6px;
+  height: 6px;
+  background: #2e7d32;
+  border-radius: 50%;
+}
+
+.ap-filter-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+}
+
+.ap-link {
+  text-decoration: none;
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+/* Tabs */
+.ap-tabs {
+  display: flex;
+  gap: 18px;
+  padding: 8px 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ap-tab {
+  background: none;
+  border: none;
+  padding: 6px 2px;
+  font-size: 14px;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.ap-tab.active {
+  color: #2e7d32;
+  border-bottom: 2px solid #2e7d32;
+  font-weight: 600;
+}
+
+.ap-tab.ghost {
+  color: #9ca3af;
+}
+
+/* Toolbar */
+.ap-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.ap-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ap-icon-btn {
+  border: 1px solid #d1d5db;
+  background: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.ap-chip {
+  border: 1px solid #d1d5db;
+  background: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.ap-view-switch {
+  display: flex;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ap-view-btn {
+  border: none;
+  background: #fff;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.ap-view-btn.active {
+  background: #e6f4ea;
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.ap-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ap-btn {
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  border: 1px solid transparent;
+}
+
+.ap-btn.light {
+  border-color: #d1d5db;
+  background: #fff;
+}
+
+.ap-btn.green {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.ap-tz {
+  font-size: 13px;
+  color: #374151;
+}
+
+/* Calendar */
+.ap-calendar {
+  flex: 1;
+  overflow: auto;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.ap-cal-head,
+.ap-row {
+  display: grid;
+  grid-template-columns: 80px repeat(7, 1fr);
+}
+
+.ap-cal-head-cell {
+  padding: 8px;
+  font-size: 12px;
+  text-align: center;
+  border-right: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.ap-cal-head-cell.time {
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+}
+
+.ap-row {
+  min-height: 60px;
+}
+
+.ap-time {
+  padding: 10px;
+  font-size: 12px;
+  color: #6b7280;
+  border-right: 1px solid #e5e7eb;
+}
+
+.ap-cell {
+  border-right: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* ================= BOOKING MODAL (FRONTEND) ================= */
+.booking-modal {
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+  min-height: 75vh;
+}
+
+.booking-x {
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  font-size: 30px;
+  line-height: 30px;
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  z-index: 10;
+}
+
+.booking-header {
+  padding: 26px 24px 10px;
+  text-align: center;
+}
+
+.booking-title {
+  font-size: 32px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.booking-chips {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  background: #e9f7fb;
+  border: 1px solid #d6eef5;
+  color: #1f2937;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.booking-body {
+  padding: 10px 22px 0;
+  min-height: 52vh;
+}
+
+.booking-subtitle {
+  text-align: center;
+  margin: 10px 0 18px;
+  font-weight: 500;
+}
+
+.booking-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 18px;
+  background: #fff;
+}
+
+.booking-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.booking-search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+}
+
+.service-list {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 18px;
+}
+
+.service-item .tick {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #116c3a;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.service-item.selected .tick {
+  background: #116c3a;
+  position: relative;
+}
+.service-item.selected .tick::after {
+  content: "✓";
+  position: absolute;
+  color: #fff;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+}
+
+.dt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 16px;
+}
+
+@media (max-width: 992px) {
+  .dt-grid { grid-template-columns: 1fr; }
+}
+
+.cal-head {
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cal-nav {
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  color: #374151;
+}
+
+.cal-month {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  color: #0f6b3b;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.cal-day {
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.cal-day.blank {
+  background: transparent;
+  cursor: default;
+}
+
+.cal-day.selected {
+  background: #0f6b3b;
+  color: #fff;
+}
+
+.time-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 55vh;
+  overflow: auto;
+  padding-right: 6px;
+}
+
+.time-group-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: #111827;
+}
+.time-group-head .muted {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.slots {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 992px) {
+  .slots { grid-template-columns: repeat(3, 1fr); }
+}
+
+.slot {
+  border: 1px solid #d1d5db;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px 8px;
+  font-size: 15px;
+}
+
+.slot.selected {
+  border-color: #0f6b3b;
+  background: #e7f6ee;
+  font-weight: 600;
+}
+
+.choice-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding: 20px 0;
+}
+
+.choice-btn {
+  border: 2px solid #0f6b3b;
+  color: #0f6b3b;
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px 22px;
+  font-size: 20px;
+}
+
+.choice-btn.solid {
+  background: #0f6b3b;
+  color: #fff;
+}
+
+.form-card {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .two-col { grid-template-columns: 1fr; }
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+}
+
+.field input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.tos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-top: 10px;
+}
+
+.tos a { color: #0f6b3b; }
+
+.booking-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px 22px;
+}
+
+.spacer { flex: 1; }
+
+.booking-btn {
+  min-width: 160px;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 18px;
+  border: 2px solid transparent;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking-btn.outline {
+  background: #fff;
+  border-color: #0f6b3b;
+  color: #0f6b3b;
+}
+
+.booking-btn.green {
+  background: #0f6b3b;
+  border-color: #0f6b3b;
+  color: #fff;
+}
+
+.confirm-wrap {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.confirm-icon {
+  font-size: 70px;
+  color: #0f6b3b;
+  margin: 12px 0 8px;
+}
+
+.confirm-title {
+  font-size: 34px;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+
+.confirm-text {
+  color: #374151;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.confirm-big {
+  font-size: 30px;
+  margin: 12px 0 10px;
+}
+
+.confirm-small {
+  color: #374151;
+  font-size: 16px;
+}
+.cal-day.disabled {
+  background: #ececec;
+  color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.slot.disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+
+/* ✅ Service list fixed height + scroll */
+.service-list{
+  max-height: 360px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* ===========================
+   ADMIN - Services Filter Dropdown
+   =========================== */
+
+.ap-filter-item.filter-services {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.ap-filter-item.filter-services .muted {
+  max-width: 160px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#servicesFilterDropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 320px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  padding: 10px;
+  z-index: 9999;
+  display: none; /* JS controls */
+}
+
+.services-dd-head {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 6px 6px 10px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.services-dd-search {
+  flex: 1;
+  position: relative;
+}
+
+.services-dd-search input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 8px 10px 8px 30px;
+  font-size: 13px;
+  outline: none;
+}
+
+.services-dd-search i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  color: #6b7280;
+}
+
+#servicesFilterList {
+  max-height: 260px;
+  overflow: auto;
+  padding: 6px;
+}
+
+.services-dd-actions {
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.services-dd-actions button {
+  flex: 1;
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-size: 13px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+}
+
+.services-dd-actions button.apply {
+  background: #2e7d32;
+  border-color: #2e7d32;
+  color: #fff;
+}
+
+.services-dd-actions button:hover {
+  filter: brightness(0.98);
+}
+
+/* ================= SERVICES FILTER DROPDOWN (ADMIN) ================= */
+
+/* wrapper positioning */
+.ap-filter-services {
+  position: relative;
+}
+
+/* button same line text jaisa */
+.ap-filter-btn {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* dropdown box */
+.ap-filter-dropdown {
+  display: none;
+  position: absolute;
+  top: 32px;
+  left: 0;
+  z-index: 2000;
+  width: 340px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+  padding: 12px;
+}
+
+/* search input */
+.services-dd-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.services-dd-search i {
+  opacity: 0.7;
+}
+
+.services-dd-search input {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* list scrolling */
+.services-dd-list {
+  margin-top: 10px;
+  max-height: 260px;
+  overflow: auto;
+  padding-right: 6px;
+}
+
+/* item row (booking jaisa) */
+.services-dd-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.services-dd-item:hover {
+  background: #f0fdf4;
+}
+
+/* checkbox look booking tick jaisa */
+.services-dd-item .tick {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #2e7d32;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.services-dd-item.checked .tick {
+  background: #2e7d32;
+}
+
+.services-dd-item.checked .tick::after {
+  content: "✓";
+  position: absolute;
+  color: #fff;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+}
+
+/* text */
+.services-dd-item .name {
+  font-size: 14px;
+  color: #111827;
+  line-height: 1.2;
+}
+
+/* footer buttons */
+.services-dd-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.services-dd-clear {
+  border: 1px solid #d1d5db;
+  background: #fff;
+  color: #111827;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.services-dd-apply {
+  border: 1px solid #2e7d32;
+  background: #2e7d32;
+  color: #fff;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.services-dd-apply:hover {
+  filter: brightness(0.95);
+}
+
+/* small loading text */
+.services-dd-loading {
+  padding: 10px;
+  opacity: 0.7;
+  font-size: 13px;
+}
+
+/* =========================================================
+   ADMIN DASHBOARD – RIGHT DETAIL PANEL
+   ========================================================= */
+
+/* ap-main relative so panel slide ho */
+.ap-main {
+  position: relative;
+}
+
+/* Right panel base */
+.ap-detail {
+  position: absolute;
+  top: 0;
+  right: -420px; /* hidden */
+  width: 420px;
+  height: 100%;
+  background: #ffffff;
+  border-left: 1px solid #e5e7eb;
+  box-shadow: -12px 0 30px rgba(0,0,0,0.12);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.28s ease-in-out;
+}
+
+/* open state */
+.ap-detail.open {
+  right: 0;
+}
+
+/* Header */
+.ap-detail-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px 18px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ap-detail-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.ap-detail-sub {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* close btn */
+.ap-detail-close {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+
+.ap-detail-close:hover {
+  color: #111827;
+}
+
+/* Body */
+.ap-detail-body {
+  padding: 16px 18px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Sections */
+.ap-detail-section {
+  margin-bottom: 16px;
+}
+
+.ap-detail-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: 6px;
+}
+
+.ap-detail-value {
+  font-size: 14px;
+  color: #111827;
+  line-height: 1.4;
+}
+
+/* Mini rows */
+.ap-detail-mini {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.ap-detail-mini .k {
+  color: #6b7280;
+  margin-right: 4px;
+}
+
+/* Appointment card hover (click feel) */
+.ap-apt {
+  background: #e6f4ea;
+  border-left: 4px solid #2e7d32;
+  padding: 6px 8px;
+  margin: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ap-apt:hover {
+  background: #dff3e6;
+}
+
+/* When panel open, reduce calendar width feel */
+.ap-detail.open ~ .ap-calendar {
+  opacity: 0.95;
+}
+/* ===================== RIGHT DETAIL PANEL ===================== */
+
+.ap-main {
+  position: relative;
+}
+
+/* panel base */
+.ap-detail {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 360px;
+  height: 100%;
+  background: #ffffff;
+  border-left: 1px solid #e5e7eb;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.08);
+  transform: translateX(110%);
+  transition: transform 0.25s ease;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+}
+
+/* open state */
+.ap-detail.open {
+  transform: translateX(0);
+}
+
+.ap-detail-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ap-detail-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.ap-detail-sub {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.ap-detail-close {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.ap-detail-body {
+  padding: 14px 16px;
+  overflow: auto;
+}
+
+.ap-detail-section {
+  padding: 12px 0;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+.ap-detail-label {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.ap-detail-value {
+  font-size: 14px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.ap-detail-mini {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #111827;
+  display: grid;
+  gap: 6px;
+}
+
+.ap-detail-mini .k {
+  color: #6b7280;
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+/* ===========================
+   APPOINTMENTS - MONTH VIEW
+   =========================== */
+
+.ap-month {
+  padding: 14px 16px 18px;
+}
+
+.ap-month-head {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  font-size: 12px;
+  color: #6b7280;
+  padding: 8px 0 10px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.ap-month-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.ap-month-day {
+  min-height: 110px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.ap-month-day.muted {
+  background: #f9fafb;
+  opacity: 0.75;
+}
+
+.ap-month-date {
+  font-size: 12px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.ap-month-items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ap-month-item {
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: #e6f4ea;
+  color: #1f2937;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+.ap-month-item:hover {
+  filter: brightness(0.98);
+}
+
+/* ===========================
+   DAY VIEW
+   =========================== */
+.ap-day {
+  padding: 14px 16px 18px;
+}
+
+.ap-day-title {
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.ap-day-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ap-day-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.ap-day-time {
+  font-weight: 700;
+  color: #111827;
+}
+
+.ap-day-service {
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+.ap-day-name {
+  font-size: 13px;
+  color: #374151;
+}
+
+/* ===========================
+   LIST VIEW (DOB + NHS + PRINT READY)
+   =========================== */
+.ap-list {
+  padding: 14px 16px 18px;
+  width: 100%;
+}
+
+.ap-list-head,
+.ap-list-row {
+  display: grid;
+  /* Date | Time | Service | Name | DOB | NHS | Email */
+  grid-template-columns: 120px 80px 2fr 1.2fr 110px 140px 1.6fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.ap-list-head {
+  font-size: 12px;
+  color: #6b7280;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 700;
+
+  /* header sticky so scroll me bhi sahi rahe */
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #fff;
+}
+
+.ap-list-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.ap-list-row {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.ap-list-row:hover {
+  background: #f9fafb;
+}
+
+.ap-list-row > div,
+.ap-list-head > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ap-empty {
+  padding: 18px 10px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* responsive */
+@media (max-width: 1100px) {
+  .ap-list-head,
+  .ap-list-row {
+    grid-template-columns: 110px 70px 2fr 1fr 100px 120px 1.2fr;
+  }
+}
+
+
+
+
+/* ================= REPORTS PAGE ================= */
+.rp-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 16px 20px 24px;
+}
+
+.rp-card{
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.rp-card-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.rp-card-title{
+  font-weight: 700;
+  font-size: 14px;
+  color: #111827;
+}
+
+.rp-card-sub{
+  font-size: 12px;
+  color: #6b7280;
+}
+
+@media (max-width: 992px){
+  .rp-grid{ grid-template-columns: 1fr; }
+}
+
+/* ===== Health A-Z Page ===== */
+.health-hero {
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  background: url("/static/images/health-hero.jpg") center/cover no-repeat;
+}
+
+.health-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 40, 25, 0.86), rgba(10, 40, 25, 0.35));
+}
+
+.health-hero__content {
+  position: relative;
+  padding: 90px 0 70px;
+  color: #fff;
+}
+
+.health-badge {
+  display: inline-block;
+  background: #005eb8; /* NHS blue */
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+
+.health-title {
+  font-size: clamp(34px, 4vw, 56px);
+  font-weight: 900;
+  margin: 0 0 12px;
+  letter-spacing: -0.3px;
+}
+
+.health-subtitle {
+  max-width: 680px;
+  opacity: 0.92;
+  margin: 0;
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+.health-wrap {
+  padding: 40px 0 70px;
+  background: #fff;
+}
+
+.health-search {
+  position: relative;
+  max-width: 520px;
+  margin: 0 0 18px;
+}
+
+.health-search i {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  opacity: 0.6;
+  font-size: 16px;
+}
+
+.health-search input {
+  width: 100%;
+  padding: 14px 14px 14px 44px;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  outline: none;
+  font-size: 15px;
+}
+
+.health-search input:focus {
+  border-color: #1b7f4a;
+  box-shadow: 0 0 0 0.2rem rgba(27, 127, 74, 0.15);
+}
+
+.az-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.az-btn {
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.az-btn.active {
+  background: #1b7f4a;
+  border-color: #1b7f4a;
+  color: #fff;
+}
+
+.health-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid #f0f0f0;
+}
+
+.health-item {
+  padding: 14px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #111;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.health-item:hover {
+  background: #fafafa;
+  color: #1b7f4a;
+}
+
+.health-empty {
+  margin-top: 18px;
+  padding: 14px;
+  border: 1px dashed #ddd;
+  border-radius: 10px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* responsive */
+@media (max-width: 992px) {
+  .health-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 520px) {
+  .health-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* ===== NHS CONDITION PAGE ===== */
+
+.nhs-page {
+  padding: 120px 0 60px;
+  background: #ffffff;
+}
+
+.nhs-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.nhs-content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.nhs-content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.nhs-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #0b0c0c;
+}
+
+.nhs-content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.nhs-content li {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+/* Green NHS inset box */
+.nhs-inset {
+  border-left: 5px solid #007f3b;
+  padding: 15px 20px;
+  margin: 25px 0;
+  background: #f0f7f4;
+}
+.nhs-detail { padding: 120px 0 60px; }
+.nhs-title { font-size: 44px; font-weight: 500; margin-bottom: 25px; }
+
+.nhs-content { font-size: 18px; line-height: 1.6; color: #111; }
+.nhs-content h2 { font-size: 32px; font-weight: 600; margin-top: 40px; margin-bottom: 15px; }
+.nhs-content h3 { font-size: 24px; font-weight: 700; margin-top: 30px; margin-bottom: 12px; }
+
+.nhs-content ul { padding-left: 22px; }
+.nhs-content li { margin: 6px 0; }
+
+.nhs-inset{
+  border-left: 6px solid #0b5d2a;
+  padding: 18px 22px;
+  margin: 25px 0;
+  background: #fff;
+}
+.nhs-content a { color: #0b5d2a; font-weight: 700; text-decoration: none; }
+.nhs-content a:hover { text-decoration: underline; }

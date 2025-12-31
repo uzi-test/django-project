@@ -1,0 +1,180 @@
+{% load static %}
+
+<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <!-- Slide 1: Video with overlay -->
+    <div class="carousel-item active position-relative">
+      <video
+        id="slideVideo1"
+        class="d-block w-100"
+        muted
+        autoplay
+        playsinline
+        poster="{% static 'images/slider1-poster.jpg' %}"
+      >
+        <source src="{% static 'videos/slider1.mp4' %}" type="video/mp4">
+      </video>
+      <div class="carousel-overlay"></div>
+      <div class="carousel-caption first-slide text-start">
+        <h1>Welcome to Cockerton</h1>
+        <h2>Pharmacy</h2>
+        <p>
+          We are dedicated to providing you with the best healthcare services and
+          products. Our team of experienced pharmacists is here to assist you with any
+          questions or concerns you may have. Our goal is to help you achieve optimal
+          health and well-being.
+        </p>
+
+        <!-- Buttons -->
+        <div class="btn-group">
+          <a href="#" class="btn-slider">Order My<br>Prescription</a>
+          <a href="#" class="btn-slider">Book Free<br>Consultation<br>Darlington Branch</a>
+          <a href="#" class="btn-slider">Book Free<br>Consultation<br>Newcastle Branch</a>
+          <a href="#" class="btn-slider">Book Free<br>Consultation<br>Wallsend Branch</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2: Travel Vaccinations -->
+    <div class="carousel-item position-relative">
+      <img src="{% static 'images/Travelvaccine.jpeg' %}" class="d-block w-100" alt="Travel Vaccine">
+      <div class="carousel-overlay"></div>
+      <div class="carousel-caption advice-slide text-start">
+        <h1>Travel Vaccinations</h1>
+        <p>
+          Planning a trip? Don't forget to get your travel vaccinations with us! Protect
+          yourself from serious illnesses and stay healthy while exploring new destinations.
+          Our friendly and qualified staff will provide all the necessary information
+          and administer the vaccines. Book your appointment today for a worry-free journey!
+        </p>
+
+        <!-- Buttons -->
+        <div class="btn-group">
+          <a href="#" class="btn-slider">More<br>Information</a>
+          <a href="#" class="btn-slider">Book Free<br>Consultation<br>Darlington Branch</a>
+          <a href="#" class="btn-slider">Book Free<br>Consultation<br>Newcastle Branch</a>
+          <a href="#" class="btn-slider">Book Free<br>Consultation<br>Wallsend Branch</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: Weight Loss -->
+    <div class="carousel-item position-relative">
+      <img src="{% static 'images/weightloss.jpeg' %}" class="d-block w-100" alt="Weight Loss">
+      <div class="carousel-overlay"></div>
+      <div class="carousel-caption advice-slide text-start">
+        <h1>Start Losing Weight Today</h1>
+        <p>
+          Start your journey to a healthier you by committing to get fit and lose weight.
+          With dedication and consistency, you can achieve your fitness and weight loss goals.
+          Lose weight effectively with the help of modern weight loss drugs. See real results
+          and achieve your body goals faster with these powerful weight loss supplements.
+        </p>
+
+        <!-- Buttons -->
+        <div class="btn-group">
+          <a href="#" class="btn-slider">More<br>Information</a>
+          <a href="#" class="btn-slider">Book Free<br>Consultation<br>Darlington Branch</a>
+          <a href="#" class="btn-slider">Book Free<br>Consultation<br>Newcastle Branch</a>
+          <a href="#" class="btn-slider">Book Free<br>Consultation<br>Wallsend Branch</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4: Ear Microsuction -->
+    <div class="carousel-item position-relative">
+      <img src="{% static 'images/earmicro.jpeg' %}" class="d-block w-100" alt="Ear Microsuction">
+      <div class="carousel-overlay"></div>
+      <div class="carousel-caption advice-slide text-start">
+        <h1>Ear Microsuction Service</h1>
+        <p>
+          We offer a premier ear microsuction service, catering to those experiencing excessive
+          wax buildup or other ear-related issues. Our experienced staff use the latest technology
+          to safely and effectively remove ear wax, providing relief and improving your hearing.
+        </p>
+
+        <!-- Buttons -->
+        <div class="btn-group">
+          <a href="#" class="btn-slider">More<br>Information</a>
+          <a href="#" class="btn-slider">Book Free<br>Consultation<br>Darlington Branch</a>
+          <a href="#" class="btn-slider">Book Free<br>Consultation<br>Newcastle Branch</a>
+          <a href="#" class="btn-slider">Book Free<br>Consultation<br>Wallsend Branch</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 5: Flu Vaccine -->
+    <div class="carousel-item position-relative">
+      <img src="{% static 'images/fluvaccine.jpeg' %}" class="d-block w-100" alt="Flu Vaccine">
+      <div class="carousel-overlay"></div>
+      <div class="carousel-caption advice-slide text-start">
+        <h1>Flu Vaccinations</h1>
+        <p>
+          As flu season approaches, it is important to protect yourself and others by getting
+          the annual flu vaccination. These vaccinations help prevent the spread of the influenza
+          virus and can reduce the severity of symptoms if you do happen to get sick.
+          Don’t wait, get your flu shot today.
+        </p>
+
+        <!-- Buttons -->
+        <div class="btn-group">
+          <a href="#" class="btn-slider">More<br>Information</a>
+          <a href="#" class="btn-slider">Book Free<br>Consultation<br>Darlington Branch</a>
+          <a href="#" class="btn-slider">Book Free<br>Consultation<br>Newcastle Branch</a>
+          <a href="#" class="btn-slider">Book Free<br>Consultation<br>Wallsend Branch</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 6: COVID Vaccine -->
+    <div class="carousel-item position-relative">
+      <img src="{% static 'images/covid.jpeg' %}" class="d-block w-100" alt="COVID Vaccine">
+      <div class="carousel-overlay"></div>
+      <div class="carousel-caption advice-slide text-start">
+        <h1>COVID Vaccination</h1>
+        <p>
+          Protect yourself and those around you from COVID-19 with safe and efficient vaccination.
+        </p>
+
+        <!-- Buttons -->
+        <div class="btn-group">
+          <a href="#" class="btn-slider">More<br>Information</a>
+          <a href="#" class="btn-slider">Book Free<br>Consultation<br>Darlington Branch</a>
+          <a href="#" class="btn-slider">Book Free<br>Consultation<br>Newcastle Branch</a>
+          <a href="#" class="btn-slider">Book Free<br>Consultation<br>Wallsend Branch</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 7: Advice -->
+<!-- Slide 7: Advice -->
+<div class="carousel-item position-relative">
+  <img src="{% static 'images/advice.jpeg' %}" class="d-block w-100" alt="Advice You Can Trust">
+  <div class="carousel-overlay"></div>
+  <div class="carousel-caption advice-slide text-start">
+    <h1>Advice</h1>
+    <p>
+      From nutrition and exercise to mental health and disease prevention,
+      our reliable information can empower you to make informed decisions
+      about your well-being and overall health.
+    </p>
+
+    <!-- Single Button -->
+    <div class="single-btn-wrapper">
+      <a href="#" class="btn-slider">Read More →</a>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

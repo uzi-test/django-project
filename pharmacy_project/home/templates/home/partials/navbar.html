@@ -1,0 +1,423 @@
+{% load static %}
+
+<!-- ================= NAVBAR ================= -->
+<nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top navbar-dark">
+
+
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand mx-auto" href="{% url 'index' %}">
+      <img src="{% static 'images/logo.png' %}" alt="Pharmacy Logo" class="site-logo" />
+    </a>
+
+    <!-- Hamburger Toggle (mobile) -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto text-center">
+
+        <!-- ========== Services Dropdown ========== -->
+        <li class="nav-item dropdown position-static mx-2">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+
+          <div class="dropdown-menu mega-menu p-4" aria-labelledby="servicesDropdown">
+            <div class="container">
+              <div class="row">
+                <!-- Pharmacy First -->
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Pharmacy First</h6>
+                  <a class="dropdown-item" href="{% url 'pharmacy_first' %}"><i class="bi bi-capsule"></i> All Pharmacy First</a>
+                  <a class="dropdown-item" href="{% url 'ear_infection' %}"><i class="bi bi-ear"></i> Ear Infection</a>
+                  <a class="dropdown-item" href="{% url 'impetigo' %}"><i class="bi bi-clipboard-plus"></i> Impetigo</a>
+                  <a class="dropdown-item" href="{% url 'insect_bite' %}"><i class="bi bi-bug"></i> Insect Bite</a>
+                  <a class="dropdown-item" href="{% url 'shingles' %}"><i class="bi bi-thermometer-half"></i> Shingles</a>
+                  <a class="dropdown-item" href="{% url 'sinusitis' %}"><i class="bi bi-nut"></i> Sinusitis</a>
+                  <a class="dropdown-item" href="{% url 'sorethroat' %}"><i class="bi bi-heart-pulse"></i> Sore Throat</a>
+                  <a class="dropdown-item" href="{% url 'uti' %}"><i class="bi bi-droplet"></i> UTIs</a>
+                </div>
+
+                <!-- Private Services -->
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Private Services</h6>
+                  <a class="dropdown-item" href="{% url 'private_services' %}"><i class="bi bi-capsule"></i> All Private Services</a>
+                  <a class="dropdown-item" href="{% url 'covid19' %}"><i class="bi bi-shield-plus"></i> COVID-19 Vaccination</a>
+                  <a class="dropdown-item" href="{% url 'counter_medication' %}"><i class="bi bi-prescription"></i> Counter Medicines</a>
+                  <a class="dropdown-item" href="{% url 'earwax' %}"><i class="bi bi-ear"></i> Earwax Removal</a>
+                  <a class="dropdown-item" href="{% url 'private_prescription' %}"><i class="bi bi-journal-medical"></i> Private Prescription</a>
+                  <a class="dropdown-item" href="{% url 'travel_clinic' %}"><i class="bi bi-airplane"></i> Travel Clinic</a>
+                  <a class="dropdown-item" href="{% url 'weight_loss' %}"><i class="bi bi-heart"></i> Weight Loss</a>
+                </div>
+
+                <!-- NHS Services -->
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">NHS Services</h6>
+                  <a class="dropdown-item" href="{% url 'nhs_services' %}"><i class="bi bi-heart-pulse"></i> All NHS Services</a>
+                  <a class="dropdown-item" href="{% url 'blood_pressure' %}"><i class="bi bi-speedometer2"></i> Blood Pressure Check</a>
+                  <a class="dropdown-item" href="{% url 'covid19' %}"><i class="bi bi-shield-plus"></i> COVID-19 Vaccination</a>
+                  <a class="dropdown-item" href="{% url 'disposal_unwanted_medication' %}"><i class="bi bi-trash"></i> Unwanted Medicine Disposal</a>
+                  <a class="dropdown-item" href="{% url 'discharge_medication' %}"><i class="bi bi-prescription"></i> Discharge Medicines</a>
+                  <a class="dropdown-item" href="{% url 'electronic_prescription' %}"><i class="bi bi-file-earmark-text"></i> Electronic Prescription</a>
+                  <a class="dropdown-item" href="{% url 'emergency_dispensing' %}"><i class="bi bi-exclamation-triangle"></i> Emergency Dispensing</a>
+                  <a class="dropdown-item" href="{% url 'flu_vaccination' %}"><i class="bi bi-thermometer-half"></i> Flu Vaccination</a>
+                  <a class="dropdown-item" href="{% url 'medication_service' %}"><i class="bi bi-plus-circle"></i> New Medicine Service</a>
+                  <a class="dropdown-item" href="{% url 'repeat_prescription' %}"><i class="bi bi-arrow-repeat"></i> Repeat Prescriptions</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- ========== Branches Dropdown ========== -->
+        <li class="nav-item dropdown mx-2">
+          <a class="nav-link dropdown-toggle" href="#" id="branchesDropdown" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">Our Branches</a>
+
+          <div class="dropdown-menu p-3 branches-dropdown" aria-labelledby="branchesDropdown">
+            <div class="d-flex branch-panel">
+              <div class="branch-left me-3 text-center">
+                <a href="{% url 'branches' %}" class="d-block text-decoration-none text-dark">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!..." width="250" height="180"
+                    style="border:0; border-radius:6px;" allowfullscreen loading="lazy"></iframe>
+                  <div class="mt-2">
+                    <h6 class="dropdown-header">Branch Finder</h6>
+                    <p class="branch-text mb-0 text-success fw-semibold">Click here to find your nearest branch →</p>
+                  </div>
+                </a>
+              </div>
+              <div class="branch-right">
+                <ul class="list-unstyled m-0 p-0">
+                  <li><a class="dropdown-item" href="#"><i class="bi bi-geo-alt me-2"></i> Cockerton Pharmacy Darlington</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="bi bi-geo-alt me-2"></i> Stanhope Street Pharmacy</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="bi bi-geo-alt me-2"></i> Wallsend Pharmacy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- ========== Health & Advice Dropdown ========== -->
+        <li class="nav-item dropdown mx-2">
+          <a class="nav-link dropdown-toggle" href="#" id="healthDropdown" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">Health & Advice</a>
+
+          <div class="dropdown-menu p-3 health-panel" aria-labelledby="healthDropdown">
+          <a class="dropdown-item" href="{% url 'health_az' %}">
+  <i class="bi bi-journal-medical"></i> Health A-Z
+</a>
+
+            <a class="dropdown-item" href="{% url 'healthy_living_zone' %}"><i class="bi bi-heart-pulse"></i> Healthy Living Zone</a>
+            <a class="dropdown-item" href="https://www.nhs.uk/live-well/" target="_blank"><i class="bi bi-heart"></i> NHS – Live Well</a>
+            <a class="dropdown-item" href="https://www.fitfortravel.nhs.uk/" target="_blank"><i class="bi bi-airplane"></i> Fit for Travel</a>
+            <a class="dropdown-item" href="https://travelhealthpro.org.uk/" target="_blank"><i class="bi bi-geo-alt"></i> Travel Health Pro</a>
+            <a class="dropdown-item" href="{% url 'blog' %}"><i class="bi bi-rss"></i> Blog's</a>
+          </div>
+        </li>
+
+      </ul>
+
+      <!-- ================= Right Buttons ================= -->
+      <div class="d-flex flex-column flex-lg-row gap-2 mt-3 mt-lg-0 justify-content-center align-items-center">
+        <a class="btn mx-2 order-btn" href="#">Order Prescription</a>
+
+        <!-- ✅ Booking Button (UPDATED) -->
+        <!-- 1) id="openBookingModal" keep kiya (aapka booking JS isko use karta hai) -->
+        <!-- 2) data-bs-toggle + data-bs-target add kiya (direct open modal) -->
+        <button class="btn mx-2 appointment-btn"
+                type="button"
+                id="openBookingModal"
+                data-bs-toggle="modal"
+                data-bs-target="#bookingModal">
+          Book Appointment
+        </button>
+
+        {% if user.is_authenticated %}
+          <!-- 🟢 Show user initials dropdown -->
+          <div class="dropdown">
+            <div class="user-initial rounded-circle bg-success text-white fw-bold d-flex align-items-center justify-content-center dropdown-toggle"
+                 style="width:40px;height:40px;font-size:1rem;cursor:pointer;"
+                 data-bs-toggle="dropdown"
+                 aria-expanded="false"
+                 title="{{ user.get_full_name }}">
+              {% if user.first_name and user.last_name %}
+                {{ user.first_name|slice:":1"|upper }}{{ user.last_name|slice:":1"|upper }}
+              {% elif user.first_name %}
+                {{ user.first_name|slice:":2"|upper }}
+              {% else %}
+                {{ user.username|slice:":2"|upper }}
+              {% endif %}
+            </div>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm mt-2">
+              <li><a class="dropdown-item text-danger fw-semibold logout-btn" href="#">Logout</a></li>
+            </ul>
+          </div>
+        {% else %}
+          <!-- 🔵 Login button -->
+          <a class="btn mx-2 login-btn" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<!-- ================= LOGIN / SIGNUP MODAL ================= -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content login-modal">
+      <div class="modal-body p-5 position-relative">
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+
+        <div class="text-center mb-4">
+          <img src="{% static 'images/logo.png' %}" alt="Pharmacy Logo" class="login-logo mb-2">
+          <h4 class="text-success fw-bold">Cockerton PHARMACY</h4>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <form id="loginForm" method="post" novalidate>
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-3 position-relative">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+            <i class="bi bi-eye position-absolute top-50 end-0 translate-middle-y me-3 text-muted toggle-password" style="cursor: pointer;"></i>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="rememberMe">
+              <label class="form-check-label" for="rememberMe">Remember Me</label>
+            </div>
+            <a href="#" id="forgotPasswordLink" class="text-success small text-decoration-none">Forgotten Password?</a>
+          </div>
+          <button type="submit" class="btn btn-success w-100 py-2 fw-semibold rounded-pill">Sign In</button>
+
+          <div class="text-center mt-3">
+            <button type="button" class="btn btn-outline-primary w-100 py-2 fw-semibold d-flex align-items-center justify-content-center">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/NHS-Logo.svg" alt="NHS" height="20" class="me-2">
+              Continue to NHS login
+            </button>
+          </div>
+
+          <div class="text-center mt-4">
+            <p class="mb-0">Don’t have an account? <a href="#" class="text-success fw-semibold text-decoration-none">Sign Up</a></p>
+          </div>
+        </form>
+
+        <!-- FORGOT FORM -->
+        <form id="forgotForm" class="d-none">
+          <div class="mb-3">
+            <label for="resetEmail" class="form-label">Enter your registered email</label>
+            <input type="email" id="resetEmail" name="resetEmail" class="form-control" placeholder="example@email.com" required>
+          </div>
+          <button type="submit" class="btn btn-success w-100 py-2 fw-semibold rounded-pill">Send Reset Link</button>
+          <div class="text-center mt-3">
+            <a href="#" id="backToLogin" class="text-success small text-decoration-none"><i class="bi bi-arrow-left"></i> Back to Login</a>
+          </div>
+        </form>
+
+        <!-- SIGNUP FORM -->
+        <form id="signupForm" class="d-none" method="post" novalidate>
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="signupEmail" class="form-label">Email</label>
+            <input type="email" id="signupEmail" name="signupEmail" class="form-control" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-3 position-relative">
+            <label for="signupPassword" class="form-label">Password</label>
+            <div class="position-relative">
+              <input type="password" id="signupPassword" name="signupPassword" class="form-control pe-5" placeholder="Create a password" required>
+              <i class="bi bi-eye toggle-signup-password position-absolute" style="top:50%;right:12px;transform:translateY(-50%);cursor:pointer;color:#6c757d;"></i>
+            </div>
+            <small class="form-text text-muted">Must be at least 8 characters and include uppercase, lowercase, number & symbol.</small>
+          </div>
+          <div class="mb-3">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Re-enter password" required>
+          </div>
+          <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="termsCheck" required>
+            <label class="form-check-label" for="termsCheck">
+              I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+            </label>
+          </div>
+          <button type="submit" class="btn btn-success w-100 py-2 fw-semibold rounded-pill">Sign Up</button>
+          <div class="text-center mt-3">
+            <a href="#" id="backToLoginFromSignup" class="text-success small text-decoration-none">
+              <i class="bi bi-arrow-left"></i> Back to Login
+            </a>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================= BOOK APPOINTMENT MODAL ================= -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content booking-modal">
+
+      <button type="button" class="booking-x" data-bs-dismiss="modal" aria-label="Close">×</button>
+
+      <div class="booking-header">
+        <h2 class="booking-title">Book an Appointment</h2>
+
+        <!-- summary chips (step 2+ show) -->
+        <div class="booking-chips" id="bookingChips" style="display:none;">
+          <span class="chip" id="chipService"><i class="bi bi-person"></i> <span></span></span>
+          <span class="chip" id="chipMode"><i class="bi bi-person"></i> <span>In Person</span></span>
+          <span class="chip" id="chipDuration"><i class="bi bi-clock"></i> <span>5 mins</span></span>
+          <span class="chip" id="chipDateTime"><i class="bi bi-clock"></i> <span></span></span>
+        </div>
+      </div>
+
+      <div class="booking-body">
+
+        <!-- ================= STEP 1 ================= -->
+        <section class="booking-step" id="step1">
+          <h4 class="booking-subtitle">Select a Service</h4>
+
+          <div class="booking-card">
+            <div class="booking-search">
+              <i class="bi bi-search"></i>
+              <input type="text" id="serviceSearch" placeholder="Search services..." autocomplete="off">
+            </div>
+
+            <div class="service-list" id="serviceList">
+              <!-- booking_modal.js yahan services inject karega -->
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= STEP 2 ================= -->
+        <section class="booking-step" id="step2" style="display:none;">
+          <h4 class="booking-subtitle">Select a Date &amp; Time</h4>
+
+          <div class="dt-grid">
+            <div class="dt-calendar booking-card">
+              <div class="cal-head">
+                <button class="cal-nav" id="calPrev"><i class="bi bi-chevron-left"></i></button>
+                <div class="cal-month" id="calMonthLabel">December 2025</div>
+                <button class="cal-nav" id="calNext"><i class="bi bi-chevron-right"></i></button>
+              </div>
+
+              <div class="cal-weekdays">
+                <div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div><div>Su</div>
+              </div>
+
+              <div class="cal-grid" id="calGrid"></div>
+            </div>
+
+            <div class="dt-times booking-card">
+              <div class="time-groups" id="timeGroups"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= STEP 3 ================= -->
+        <section class="booking-step" id="step3" style="display:none;">
+          <div class="choice-wrap">
+            <button class="choice-btn" id="btnLoginChoice">Login to an existing account</button>
+            <button class="choice-btn solid" id="btnGuestChoice">Continue as a guest</button>
+          </div>
+        </section>
+
+        <!-- ================= STEP 4 ================= -->
+        <section class="booking-step" id="step4" style="display:none;">
+          <div class="booking-card form-card">
+
+            <div class="two-col">
+              <div class="field">
+                <i class="bi bi-person"></i>
+                <input id="firstName" type="text" placeholder="First name">
+              </div>
+              <div class="field">
+                <i class="bi bi-person"></i>
+                <input id="lastName" type="text" placeholder="Last name">
+              </div>
+            </div>
+
+            <div class="two-col">
+              <div class="field">
+                <i class="bi bi-calendar3"></i>
+                <input id="dob" type="text" placeholder="DD/MM/YYYY">
+              </div>
+              <div class="field">
+                <i class="bi bi-geo-alt"></i>
+                <input id="postcode" type="text" placeholder="Postcode">
+              </div>
+            </div>
+
+            <div class="field">
+              <i class="bi bi-envelope"></i>
+              <input id="emailBooking" type="email" placeholder="Email">
+            </div>
+
+            <div class="field">
+              <i class="bi bi-telephone"></i>
+              <input id="phone" type="text" placeholder="Phone Number">
+            </div>
+
+            <div class="field">
+              <i class="bi bi-hash"></i>
+              <input id="nhs" type="text" placeholder="NHS Number">
+            </div>
+
+            <div class="field">
+              <i class="bi bi-pencil"></i>
+              <input id="note" type="text" placeholder="Add a Note...">
+            </div>
+
+            <label class="tos">
+              <input type="checkbox" id="tosCheck">
+              <span>I have read and agree with the <a href="#">Terms of Services</a> and <a href="#">Privacy Policy</a></span>
+            </label>
+
+          </div>
+        </section>
+
+        <!-- ================= STEP 5 ================= -->
+        <section class="booking-step" id="step5" style="display:none;">
+          <div class="confirm-wrap">
+            <div class="confirm-icon"><i class="bi bi-calendar-check"></i></div>
+            <h3 class="confirm-title">Booking Confirmed</h3>
+            <p class="confirm-text" id="confirmText"></p>
+            <div class="confirm-big" id="confirmBig"></div>
+            <div class="confirm-small">
+              <div class="confirm-branch">Cockerton Pharmacy Darlington</div>
+              <div class="confirm-address">5 West Auckland Road, Darlington, DL3 9EJ</div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Footer buttons -->
+      <div class="booking-footer">
+        <button class="booking-btn outline" id="btnBack" style="visibility:hidden;">Back</button>
+        <button class="booking-btn outline" id="btnClose">Close</button>
+
+        <div class="spacer"></div>
+
+        <button class="booking-btn green" id="btnNext">Next</button>
+        <button class="booking-btn green" id="btnBook" style="display:none;">Book</button>
+        <button class="booking-btn green" id="btnStartAgain" style="display:none;">Start Again</button>
+      </div>
+
+    </div>
+  </div>
+</div>

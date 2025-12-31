@@ -1,0 +1,173 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Ear Wax Removal – Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Banner -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/earhero.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+   <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-7 col-md-9">
+        <div class="hero-content animate-slide-up">
+
+          <h1 class="fw-bold text-uppercase text-dark-green" style="font-size:2.1rem;">
+            Ear Wax
+          </h1>
+          <h2 class="fw-bold mt-2 text-dark-green" style="font-size:1.7rem;">
+            Removal
+          </h2>
+
+          <p class="mt-3" style="font-size:1rem; line-height:1.5; max-width:550px;">
+            Safe and effective ear wax removal using modern methods.  
+            Relieve discomfort, improve hearing, and protect your ear health.  
+            Available across all our pharmacy branches.
+          </p>
+
+          <p class="mt-3 fst-italic fw-bold text-emerald animate-fade"
+             style="font-size:0.95rem; max-width:550px;">
+            Cockerton Pharmacy – Helping the community in Darlington,  
+            Newcastle upon Tyne, Wallsend,  
+            and surrounding areas with expert ear care.
+          </p>
+
+          <!-- ✅ Buttons -->
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="#" class="btn btn-success px-4 py-2 btn-hover-effect" style="min-width:220px;">
+              Book Free Consultaion <br> Darlington Branch
+            </a>
+            <a href="#" class="btn btn-success px-4 py-2 btn-hover-effect" style="min-width:220px;">
+              Book Free Consultaion <br> Newcastle Branch
+            </a>
+          </div>
+          <div class="mt-3">
+            <a href="#" class="btn btn-success px-4 py-2 btn-hover-effect" style="min-width:220px;">
+              Book Free Consultaion <br> Wallsend Branch
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Info Section -->
+<section class="earwax-info-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+
+        <div class="info-content animate-on-scroll">
+          
+          <h3 class="section-title">How it works</h3>
+          <div class="info-box">
+            <p>
+              A pharmacist uses a microscope and a low-pressure suction device to gently remove earwax from your ear canal.
+            </p>
+          </div>
+
+          <h4 class="section-subtitle mt-5">Benefits</h4>
+          <div class="info-box">
+            <p>
+              Microsuction is a quick procedure that doesn’t use water, making it cleaner and more comfortable than other methods.  
+              Most patients notice an immediate improvement in hearing and symptoms after treatment.
+            </p>
+          </div>
+
+          <h4 class="section-subtitle mt-5">When it’s used</h4>
+          <div class="info-box">
+            <p>
+              Microsuction is recommended for people who shouldn’t have water in their ears, such as those with a perforated eardrum,  
+              a history of thick ear discharge, or patients who have had ear surgery.
+            </p>
+          </div>
+
+          <h4 class="section-subtitle mt-5">Aftercare</h4>
+          <div class="info-box">
+            <p>
+              After the procedure, you should avoid strenuous activity for 1–2 days.  
+              You can take over-the-counter pain relievers if you experience any discomfort.
+            </p>
+          </div>
+
+          <h4 class="section-subtitle mt-5">Side effects</h4>
+          <div class="info-box">
+            <p>
+              Possible side effects include dizziness, mild discomfort, reduced hearing, infection, or trauma to the ear.  
+              Our pharmacists will guide you and ensure the procedure is as safe as possible.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Who needs Earwax Microsuction Section -->
+<section class="earwax-need-section py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Image -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="{% static 'images/ewax.jpg' %}" alt="Ear Cleaning" class="img-fluid rounded shadow">
+      </div>
+
+      <!-- Right Content -->
+      <div class="col-md-6">
+        <h3 class="section-title">Who needs earwax microsuction?</h3>
+        <p>
+          Microsuction is used for people who should not have water in their ears, especially if they have:
+        </p>
+        <ul>
+          <li>Any serious complications from a previous irrigation with water</li>
+          <li>Had a middle ear infection (otitis media) in the last 2 months</li>
+          <li>Had any form of ear surgery apart from grommets in the last 2 years</li>
+          <li>A hole (perforation) in their ear drum or a history of thick discharge</li>
+          <li>A cleft palate (repaired or not)</li>
+          <li>A painful ear infection (acute otitis externa)</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Bottom Service Section -->
+<section class="py-5 service-fade-section" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      <h2 class="fw-bold mb-3">Looking for another service?</h2>
+      <p class="mb-4">
+        Our pharmacy offers a wide range of services to meet your needs.
+        From prescription refills to medication counseling,
+        our knowledgeable staff is here to assist you.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <!-- Placeholder Services button -->
+        <a href="#" class="btn btn-success px-4 py-2">
+          Services
+        </a>
+        <a href="{% url 'pharmacy_first' %}" class="btn btn-success px-4 py-2">
+          Pharmacy First
+        </a>
+        <a href="{% url 'branches' %}" class="btn btn-success px-4 py-2">
+          Our Branches
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

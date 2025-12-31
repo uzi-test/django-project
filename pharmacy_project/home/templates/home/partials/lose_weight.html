@@ -1,0 +1,205 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Lose Weight – Pharmacy{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Hero Section -->
+<section class="hero-banner d-flex align-items-center text-light"
+         style="background: url('{% static "images/herowei.jpg" %}') center/cover no-repeat;
+                height: 75vh; position: relative;">
+  <div class="overlay"
+       style="position:absolute; top:0; left:0; right:0; bottom:0;
+              background: rgba(0,50,0,0.65);"></div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-7 col-md-9">
+        <div class="hero-content animate-slide-up text-start">
+
+          <h1 class="fw-bold text-uppercase text-dark-green" style="font-size:2.1rem;">
+            Your Journey to a Healthier You
+          </h1>
+          <h2 class="fw-bold mt-2 text-dark-green" style="font-size:1.7rem;">
+            Weight Management Support
+          </h2>
+
+          <p class="mt-3" style="font-size:1rem; line-height:1.5; max-width:550px;">
+            Losing weight isn’t just about looking good — it’s about feeling better and living a healthier life. 
+            Our pharmacy offers expert-led advice, tailored plans, and trusted support to help you achieve your goals safely and effectively.
+          </p>
+
+          <p class="mt-3" style="font-size:1rem; line-height:1.5; max-width:550px;">
+            Whether you need guidance on balanced nutrition, exercise, or medication support, we’re here to help you every step of the way.
+          </p>
+
+          <p class="mt-3" style="font-size:1rem; line-height:1.5; max-width:550px;">
+            Take control of your health today and let us support you on your journey toward a more active and confident you.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🧠 Health Benefits Section -->
+<section class="py-5" style="background-color:#022b14;">
+  <div class="container">
+    <h3 class="fw-bold text-center text-light mb-5">Health Benefits of Losing Weight</h3>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Card 1 -->
+      <div class="col-md-3">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100 text-start">
+          <div class="icon-box mb-3">
+            <div class="d-inline-flex justify-content-center align-items-center rounded-3"
+                 style="width:50px; height:50px; background-color:#eaf2ed;">
+              <i class="bi bi-activity text-success fs-4"></i>
+            </div>
+          </div>
+          <h5 class="fw-bold text-dark">Reduce Risk of Serious Health Issues</h5>
+          <p class="text-dark" style="font-size:0.95rem;">
+            One of the most obvious health benefits of losing weight is a reduced risk of chronic diseases. 
+            Excess weight, especially around the waist, has been linked to conditions like heart disease, type 2 diabetes, 
+            and certain cancers. Shedding those extra pounds can significantly decrease these risks.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-3">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100 text-start">
+          <div class="icon-box mb-3">
+            <div class="d-inline-flex justify-content-center align-items-center rounded-3"
+                 style="width:50px; height:50px; background-color:#eaf2ed;">
+              <i class="bi bi-heart text-success fs-4"></i>
+            </div>
+          </div>
+          <h5 class="fw-bold text-dark">Healthy Heart</h5>
+          <p class="text-dark" style="font-size:0.95rem;">
+            Losing weight improves cardiovascular health by reducing the strain on your heart. 
+            It helps lower blood pressure and decreases the risk of heart disease, keeping your heart strong and healthy.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-3">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100 text-start">
+          <div class="icon-box mb-3">
+            <div class="d-inline-flex justify-content-center align-items-center rounded-3"
+                 style="width:50px; height:50px; background-color:#eaf2ed;">
+              <i class="bi bi-person-walking text-success fs-4"></i>
+            </div>
+          </div>
+          <h5 class="fw-bold text-dark">Improve Mobility</h5>
+          <p class="text-dark" style="font-size:0.95rem;">
+            Excess weight puts extra pressure on your joints, especially knees and hips. 
+            Losing weight reduces strain, eases discomfort, and helps improve mobility and flexibility.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-3">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100 text-start">
+          <div class="icon-box mb-3">
+            <div class="d-inline-flex justify-content-center align-items-center rounded-3"
+                 style="width:50px; height:50px; background-color:#eaf2ed;">
+              <i class="bi bi-emoji-smile text-success fs-4"></i>
+            </div>
+          </div>
+          <h5 class="fw-bold text-dark">Improve Mental Health</h5>
+          <p class="text-dark" style="font-size:0.95rem;">
+            Maintaining a healthy weight has a positive effect on mental well-being. 
+            It can boost self-esteem, reduce anxiety and depression, and lead to a more positive outlook on life.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🍎 Healthy Lifestyle Section -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row align-items-center g-4">
+
+      <!-- Image (Left) -->
+      <div class="col-lg-5 col-md-6">
+        <img src="{% static 'images/foo.webp' %}" 
+             alt="Healthy Food Bowl" 
+             class="img-fluid rounded-4 shadow-sm">
+      </div>
+
+      <!-- Text (Right) -->
+      <div class="col-lg-7 col-md-6">
+        <p style="font-size: 1rem; line-height: 1.7; color: #222;">
+          In addition to these physical and mental health benefits, losing weight can also improve overall quality of life. 
+          Carrying excess weight can make everyday tasks, such as climbing stairs or carrying groceries, more difficult. 
+          By losing weight, individuals can increase their energy levels and improve their physical abilities, 
+          making it easier to perform daily activities and enjoy life to the fullest.
+        </p>
+
+        <p style="font-size: 1rem; line-height: 1.7; color: #222;">
+          It's important to note that the health benefits of losing weight are not just limited to those who are considered 
+          overweight or obese. Even individuals who are within a healthy weight range can still benefit from maintaining a healthy weight. 
+          This is because excess weight, regardless of how much, can still put strain on the body and increase the risk of certain health issues.
+        </p>
+
+        <p style="font-size: 1rem; line-height: 1.7; color: #222;">
+          In conclusion, losing weight is not just about achieving a certain appearance, but it is also crucial for maintaining 
+          overall health and well-being. By shedding excess pounds, individuals can reduce their risk of chronic diseases, 
+          improve cardiovascular health, alleviate joint pain, boost mental health, and enhance overall quality of life. 
+          So, if you're looking for motivation to start your weight loss journey, remember the numerous health benefits that come with it.
+        </p>
+
+        <a href="https://www.nhs.uk/better-health/lose-weight/" 
+   target="_blank" 
+   class="btn btn-success fw-semibold px-4 py-2 rounded-3 mt-2">
+  Get Help Now
+</a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ✅ CTA Section -->
+<section class="py-5" style="background-color:#eaf2ed;">
+  <div class="container">
+    <div class="bg-dark rounded-4 text-center text-light p-5">
+      
+      <!-- Heart Icon -->
+      <div class="d-flex justify-content-center mb-3">
+        <div class="d-flex justify-content-center align-items-center rounded-circle bg-light" 
+             style="width:70px; height:70px;">
+          <i class="bi bi-heart-fill text-success fs-2"></i>
+        </div>
+      </div>
+
+      <!-- Heading -->
+      <h2 class="fw-bold text-light mb-3">Healthy Living Zone</h2>
+
+      <!-- Description -->
+      <p class="text-light mx-auto" style="max-width:700px; font-size:1rem; line-height:1.6;">
+        Discover the ultimate guide to a healthier lifestyle in the Healthy Living Zone. 
+        Get tips, resources, and inspiration for a happier, healthier you!
+      </p>
+
+      <!-- Button -->
+      <a href="{% url 'healthy_living_zone' %}" 
+         class="btn btn-success fw-semibold px-4 py-2 mt-3 rounded-3">
+        Visit the Healthy Living Zone
+      </a>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}
