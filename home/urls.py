@@ -38,6 +38,8 @@ urlpatterns = [
     path("sinusitis/", views.sinusitis, name="sinusitis"),
     path("sorethroat/", views.sorethroat, name="sorethroat"),
     path("uti/", views.uti, name="uti"),
+    path("pharmacy-services/", views.pharmacy_services, name="pharmacy_services"),
+
 
     path("private-services/", views.private_services, name="private_services"),
     path("covid19/", views.covid19, name="covid19"),

@@ -34,127 +34,152 @@
 
 
         <!-- Card 2 -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card h-100 shadow-sm service-card text-center">
-            <img src="{% static 'images/loss.jpg' %}" class="card-img-top" alt="Weight Loss Clinic">
-            <div class="card-body">
-              <h5 class="card-title">Weight Loss Clinic</h5>
-              <p class="card-text">
-                Start losing weight with medically proven treatments for
-                clinically appropriate patients.
-              </p>
-            </div>
-          </div>
-        </div>
+       <!-- Card 2 -->
+<div class="col-12 col-sm-6 col-lg-3">
+  <a href="{% url 'weight_loss' %}" class="text-decoration-none">
+    <div class="card h-100 shadow-sm service-card text-center">
+      <img src="{% static 'images/loss.jpg' %}" class="card-img-top" alt="Weight Loss Clinic">
+      <div class="card-body">
+        <h5 class="card-title">Weight Loss Clinic</h5>
+        <p class="card-text">
+          Start losing weight with medically proven treatments for
+          clinically appropriate patients.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
 
-        <!-- Card 3 -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card h-100 shadow-sm service-card text-center">
-            <img src="{% static 'images/Travel.jpg' %}" class="card-img-top" alt="Travel Clinic">
-            <div class="card-body">
-              <h5 class="card-title">Travel Clinic</h5>
-              <p class="card-text">
-                Book an appointment at our travel vaccination clinic for
-                protection against malaria, typhoid, hepatitis and yellow fever.
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <!-- Card 4 -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card h-100 shadow-sm service-card text-center">
-            <img src="{% static 'images/wax.jpg' %}" class="card-img-top" alt="Earwax Removal">
-            <div class="card-body">
-              <h5 class="card-title">Earwax Removal</h5>
-              <p class="card-text">
-                Ear wax microsuction is a highly effective method of removing
-                excess wax that can cause deafness and discomfort.
-              </p>
-            </div>
-          </div>
-        </div>
+   <!-- Card 3 -->
+<div class="col-12 col-sm-6 col-lg-3">
+  <a href="{% url 'travel_clinic' %}" class="text-decoration-none" style="color: inherit;">
+    <div class="card h-100 shadow-sm service-card text-center">
+      <img src="{% static 'images/Travel.jpg' %}" class="card-img-top" alt="Travel Clinic">
+      <div class="card-body">
+        <h5 class="card-title">Travel Clinic</h5>
+        <p class="card-text">
+          Book an appointment at our travel vaccination clinic for
+          protection against malaria, typhoid, hepatitis and yellow fever.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
 
-        <!-- Card 5 -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card h-100 shadow-sm service-card text-center">
-            <img src="{% static 'images/PharmacyService.jpg' %}" class="card-img-top" alt="Pharmacy Services">
-            <div class="card-body">
-              <h5 class="card-title">Pharmacy Services</h5>
-              <p class="card-text">
-                Wide range of medicines and consultations with pharmacists
-                to ensure the best care for your health needs.
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <!-- Card 6 -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card h-100 shadow-sm service-card text-center">
-            <img src="{% static 'images/Our.jpg' %}" class="card-img-top" alt="Our Pharmacies">
-            <div class="card-body">
-              <h5 class="card-title">Our Pharmacies</h5>
-              <p class="card-text">
-                Explore our pharmacies and easily find your way with convenient
-                directions. Visit us today!
-              </p>
-            </div>
-          </div>
-        </div>
+     <!-- Card 4 -->
+<div class="col-12 col-sm-6 col-lg-3">
+  <a href="{% url 'earwax' %}" class="text-decoration-none" style="color: inherit;">
+    <div class="card h-100 shadow-sm service-card text-center">
+      <img src="{% static 'images/wax.jpg' %}" class="card-img-top" alt="Earwax Removal">
+      <div class="card-body">
+        <h5 class="card-title">Earwax Removal</h5>
+        <p class="card-text">
+          Ear wax microsuction is a highly effective method of removing
+          excess wax that can cause deafness and discomfort.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
 
-        <!-- Card 7 -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card h-100 shadow-sm service-card text-center">
-            <img src="{% static 'images/child.jpg' %}" class="card-img-top" alt="Children's Vaccination">
-            <div class="card-body">
-              <h5 class="card-title">Children's Vaccination</h5>
-              <p class="card-text">
-                Vaccinations to help protect your children from viruses
-                and diseases.
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <!-- Card 8 -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card h-100 shadow-sm service-card text-center">
-            <img src="{% static 'images/fluvac.jpg' %}" class="card-img-top" alt="Flu Vaccines">
-            <div class="card-body">
-              <h5 class="card-title">Flu Vaccines</h5>
-              <p class="card-text">
-                We offer flu vaccines to help keep you safe this season.
-              </p>
-            </div>
-          </div>
-        </div>
+      <!-- Card 5 -->
+<div class="col-12 col-sm-6 col-lg-3">
+  <a href="{% url 'pharmacy_services' %}" class="text-decoration-none" style="color: inherit;">
+    <div class="card h-100 shadow-sm service-card text-center">
+      <img src="{% static 'images/PharmacyService.jpg' %}" class="card-img-top" alt="Pharmacy Services">
+      <div class="card-body">
+        <h5 class="card-title">Pharmacy Services</h5>
+        <p class="card-text">
+          Wide range of medicines and consultations with pharmacists
+          to ensure the best care for your health needs.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
 
-        <!-- Card 9 -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card h-100 shadow-sm service-card text-center">
-            <img src="{% static 'images/C19.jpg' %}" class="card-img-top" alt="Covid-19 Vaccine">
-            <div class="card-body">
-              <h5 class="card-title">Covid-19 Vaccine</h5>
-              <p class="card-text">
-                Protect yourself from Covid-19 and get vaccinated at our pharmacy.
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <!-- Card 10 -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card h-100 shadow-sm service-card text-center">
-            <img src="{% static 'images/Order.jpg' %}" class="card-img-top" alt="Order Vaccine">
-            <div class="card-body">
-              <h5 class="card-title">Order Repeat Prescriptions</h5>
-              <p class="card-text">
-                Order your repeat prescriptions easily through the BeWell App.
-              </p>
-            </div>
-          </div>
-        </div>
+     <!-- Card 6 -->
+<div class="col-12 col-sm-6 col-lg-3">
+  <a href="{% url 'branches' %}" class="text-decoration-none" style="color: inherit;">
+    <div class="card h-100 shadow-sm service-card text-center">
+      <img src="{% static 'images/Our.jpg' %}" class="card-img-top" alt="Our Pharmacies">
+      <div class="card-body">
+        <h5 class="card-title">Our Pharmacies</h5>
+        <p class="card-text">
+          Explore our pharmacies and easily find your way with convenient
+          directions. Visit us today!
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+      <!-- Card 7 -->
+<div class="col-12 col-sm-6 col-lg-3">
+  <a href="{% url 'private_services' %}" class="text-decoration-none" style="color: inherit;">
+    <div class="card h-100 shadow-sm service-card text-center">
+      <img src="{% static 'images/child.jpg' %}" class="card-img-top" alt="Children's Vaccination">
+      <div class="card-body">
+        <h5 class="card-title">Children's Vaccination</h5>
+        <p class="card-text">
+          Vaccinations to help protect your children from viruses
+          and diseases.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+<!-- Card 8 -->
+<div class="col-12 col-sm-6 col-lg-3">
+  <a href="{% url 'flu_vaccination' %}" class="text-decoration-none" style="color: inherit;">
+    <div class="card h-100 shadow-sm service-card text-center">
+      <img src="{% static 'images/fluvac.jpg' %}" class="card-img-top" alt="Flu Vaccines">
+      <div class="card-body">
+        <h5 class="card-title">Flu Vaccines</h5>
+        <p class="card-text">
+          We offer flu vaccines to help keep you safe this season.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+    <!-- Card 9 -->
+<div class="col-12 col-sm-6 col-lg-3">
+  <a href="{% url 'covid19' %}" class="text-decoration-none" style="color: inherit;">
+    <div class="card h-100 shadow-sm service-card text-center">
+      <img src="{% static 'images/C19.jpg' %}" class="card-img-top" alt="Covid-19 Vaccine">
+      <div class="card-body">
+        <h5 class="card-title">Covid-19 Vaccine</h5>
+        <p class="card-text">
+          Protect yourself from Covid-19 and get vaccinated at our pharmacy.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+      <!-- Card 10 -->
+<div class="col-12 col-sm-6 col-lg-3">
+  <a href="{% url 'repeat_prescription' %}" class="text-decoration-none" style="color: inherit;">
+    <div class="card h-100 shadow-sm service-card text-center">
+      <img src="{% static 'images/Order.jpg' %}" class="card-img-top" alt="Order Repeat Prescriptions">
+      <div class="card-body">
+        <h5 class="card-title">Order Repeat Prescriptions</h5>
+        <p class="card-text">
+          Order your repeat prescriptions easily through the BeWell App.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
 
       </div> <!-- row end -->
 

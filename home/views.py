@@ -942,3 +942,6 @@ def nhs_condition_detail(request, slug):
         "slug": slug,
         "condition": condition,
     })
+
+def pharmacy_services(request):
+    return render(request, "home/partials/pharmacy_services.html")
