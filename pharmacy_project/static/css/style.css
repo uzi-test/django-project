@@ -744,16 +744,18 @@ main{
   }
 
   /* ✅ LONG paragraph ko clamp kar do (no scroll) */
-  .carousel-caption p{
-    font-size: 0.82rem !important;
-    line-height: 1.35 !important;
-    margin-bottom: 10px !important;
+.carousel-caption p {
+  font-size: 0.82rem !important;
+  line-height: 1.35 !important;
+  margin-bottom: 10px !important;
 
-    display: -webkit-box !important;
-    -webkit-line-clamp: 4;      /* lines adjust: 3 ya 4 */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;   /* Chrome, Edge, Safari */
+  line-clamp: 4;           /* Standard (future / warning fix) */
+
+  overflow: hidden;
+}
 
   /* buttons compact so last button bhi aa jaye */
   .carousel-caption .btn-group{

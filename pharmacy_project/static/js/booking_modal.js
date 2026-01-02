@@ -1,7 +1,7 @@
 /* =========================================================
    BOOKING MODAL (FULL)
    File: static/js/booking_modal.js
-   v20251222-multi-booked
+   v20251222-multi-booked + resume-after-login (event + load)
 ========================================================= */
 
 console.log("BOOKING MODAL JS v20251222-multi-booked ✅ LOADED");
@@ -194,7 +194,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await res.json();
 
       if (res.ok && data.status === "ok" && Array.isArray(data.times)) {
-        // normalize times (keep HH:MM)
         data.times.forEach(t => {
           const hhmm = String(t).slice(0, 5);
           if (hhmm && hhmm.includes(":")) BOOKED_TIMES.add(hhmm);
@@ -333,7 +332,6 @@ document.addEventListener("DOMContentLoaded", () => {
           state.date = dateObj;
           state.time = null;
 
-          // ✅ fetch booked times for selected date then render slots
           await fetchBookedSlots(state.date);
           renderTimeSlots();
 
@@ -463,8 +461,56 @@ document.addEventListener("DOMContentLoaded", () => {
     return true;
   }
 
+  // ✅ APPLY SNAPSHOT (used by both: page-load resume + event resume)
+  async function applySnapshotAndOpen() {
+    const snapRaw = sessionStorage.getItem("booking_snapshot");
+    if (!snapRaw) return;
+
+    let snap;
+    try {
+      snap = JSON.parse(snapRaw);
+    } catch (e) {
+      console.warn("Bad booking_snapshot JSON", e);
+      return;
+    }
+
+    state.services = Array.isArray(snap.services) ? snap.services : [];
+    state.time = snap.time || null;
+    state.account = "login";
+
+    if (snap.date) {
+      const [y, m, d] = snap.date.split("-").map(Number);
+      state.date = new Date(y, m - 1, d);
+      state.date.setHours(0, 0, 0, 0);
+    }
+
+    const base = state.date || new Date();
+    currentYear = base.getFullYear();
+    currentMonth = base.getMonth();
+
+    buildCalendar(currentYear, currentMonth);
+
+    if (state.date) await fetchBookedSlots(state.date);
+    renderTimeSlots();
+
+    // re-select time button if exists
+    if (state.time && timeGroups) {
+      const btn = [...timeGroups.querySelectorAll(".slot")]
+        .find(x => x.textContent.trim() === state.time);
+      if (btn) btn.classList.add("selected");
+    }
+
+    // optional: prefill email from last login if empty
+    const lastEmail = sessionStorage.getItem("last_login_email");
+    if (emailBooking && !emailBooking.value && lastEmail) emailBooking.value = lastEmail;
+
+    bookingModal.show();
+    showStep(typeof snap.resumeStep === "number" ? snap.resumeStep : 3);
+  }
+
   // ---------- Events ----------
   openBtn.addEventListener("click", () => {
+    // ✅ IMPORTANT: normal open should reset
     resetAll();
 
     const now = new Date();
@@ -472,7 +518,7 @@ document.addEventListener("DOMContentLoaded", () => {
     currentMonth = now.getMonth();
 
     buildCalendar(currentYear, currentMonth);
-    renderTimeSlots(); // disabled until date selected
+    renderTimeSlots();
 
     bookingModal.show();
   });
@@ -495,7 +541,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!validateBookingForm()) return;
 
       const payload = {
-        service: servicesLine(), // join multiple services
+        service: servicesLine(),
         date: toISODateOnly(state.date),
         time: state.time,
         first_name: firstName.value.trim(),
@@ -518,9 +564,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const data = await res.json();
 
         if (!res.ok || data.status !== "ok") {
-          // ✅ if backend says slot already booked
           Swal.fire("Error", data.message || "Could not save appointment.", "error");
-          // refresh booked slots + re-render so it becomes disabled instantly
           if (state.date) {
             await fetchBookedSlots(state.date);
             renderTimeSlots();
@@ -528,7 +572,6 @@ document.addEventListener("DOMContentLoaded", () => {
           return;
         }
 
-        // ✅ success -> mark as booked in UI instantly
         BOOKED_TIMES.add(String(state.time).slice(0,5));
         renderTimeSlots();
 
@@ -549,9 +592,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (btnStartAgain) btnStartAgain.addEventListener("click", () => resetAll());
 
+  // ✅ save progress before opening login modal
   if (btnLoginChoice) {
     btnLoginChoice.addEventListener("click", () => {
       state.account = "login";
+
+      const snapshot = {
+        services: state.services,
+        date: state.date ? toISODateOnly(state.date) : null,
+        time: state.time || null,
+        resumeStep: 3, // step4
+      };
+
+      sessionStorage.setItem("resume_booking", "1");
+      sessionStorage.setItem("booking_snapshot", JSON.stringify(snapshot));
+
       const loginModalEl = document.getElementById("loginModal");
       if (loginModalEl) {
         bookingModal.hide();
@@ -563,7 +618,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (btnGuestChoice) btnGuestChoice.addEventListener("click", () => { state.account = "guest"; showStep(3); });
+  if (btnGuestChoice) btnGuestChoice.addEventListener("click", () => {
+    state.account = "guest";
+    showStep(3);
+  });
 
   if (serviceSearch) serviceSearch.addEventListener("input", (e) => renderServices(e.target.value));
 
@@ -582,6 +640,27 @@ document.addEventListener("DOMContentLoaded", () => {
       buildCalendar(currentYear, currentMonth);
     });
   }
+
+  // ✅ RESUME WHEN main.js fires event after successful login (NO reload)
+  window.addEventListener("booking:resume", async () => {
+    if (sessionStorage.getItem("resume_booking") === "1") {
+      await applySnapshotAndOpen();
+      // ✅ clear after successful open
+      sessionStorage.removeItem("resume_booking");
+      sessionStorage.removeItem("booking_snapshot");
+    }
+  });
+
+  // ✅ AUTO RESUME ON PAGE LOAD (if any old flow still reloads)
+  (async () => {
+    const shouldResume = sessionStorage.getItem("resume_booking") === "1";
+    const snapRaw = sessionStorage.getItem("booking_snapshot");
+    if (shouldResume && snapRaw) {
+      await applySnapshotAndOpen();
+      sessionStorage.removeItem("resume_booking");
+      sessionStorage.removeItem("booking_snapshot");
+    }
+  })();
 
   renderServices("");
 });

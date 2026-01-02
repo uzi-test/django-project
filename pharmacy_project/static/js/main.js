@@ -1,7 +1,7 @@
 // ================= NAVBAR SCROLL EFFECT =================
 window.addEventListener("scroll", () => {
   const navbar = document.getElementById("mainNavbar");
-  if (!navbar) return; // ✅ FIX (admin pages me navbar nahi hota)
+  if (!navbar) return; // ✅ admin pages pe navbar nahi hota
 
   if (window.scrollY > 60) {
     navbar.classList.add("scrolled");
@@ -11,7 +11,6 @@ window.addEventListener("scroll", () => {
     navbar.classList.add("over-hero");
   }
 });
-
 
 // ================= MEGA DROPDOWN (HOVER DESKTOP / CLICK MOBILE) =================
 document.querySelectorAll(".nav-item.dropdown").forEach(dropdown => {
@@ -109,7 +108,7 @@ if (toggleBtn && sidebar && overlay) {
 document.querySelectorAll(".collapsible").forEach(section => {
   const header = section.querySelector(".collapsible-header");
   const body = section.querySelector(".collapsible-body");
-  if (header) {
+  if (header && body) {
     header.addEventListener("click", () => {
       section.classList.toggle("open");
       body.classList.toggle("active");
@@ -128,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const signupLink = document.querySelector("#loginForm p a.text-success");
   const backToLoginFromSignup = document.getElementById("backToLoginFromSignup");
 
-  if (forgotLink) {
+  if (forgotLink && loginForm && forgotForm) {
     forgotLink.addEventListener("click", e => {
       e.preventDefault();
       loginForm.classList.add("d-none");
@@ -136,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  if (backToLogin) {
+  if (backToLogin && loginForm && forgotForm) {
     backToLogin.addEventListener("click", e => {
       e.preventDefault();
       forgotForm.classList.add("d-none");
@@ -144,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  if (signupLink) {
+  if (signupLink && loginForm && forgotForm && signupForm) {
     signupLink.addEventListener("click", e => {
       e.preventDefault();
       loginForm.classList.add("d-none");
@@ -153,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  if (backToLoginFromSignup) {
+  if (backToLoginFromSignup && loginForm && signupForm) {
     backToLoginFromSignup.addEventListener("click", e => {
       e.preventDefault();
       signupForm.classList.add("d-none");
@@ -247,17 +246,34 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       const data = await response.json();
+
       if (data.status === "ok") {
         Swal.fire({
           icon: "success",
           title: "Welcome Back!",
           text: "You have logged in successfully.",
           showConfirmButton: false,
-          timer: 1500,
+          timer: 1200,
         });
+
+        // ✅ store last login email for booking autofill (optional)
+        sessionStorage.setItem("last_login_email", email);
+
+        // ✅ close login modal
         const modal = bootstrap.Modal.getInstance(document.getElementById("loginModal"));
         if (modal) modal.hide();
-        setTimeout(() => location.reload(), 1400);
+
+        // ✅ IMPORTANT: if booking was in progress, resume it (NO reload)
+        if (sessionStorage.getItem("resume_booking") === "1") {
+          setTimeout(() => {
+            window.dispatchEvent(new Event("booking:resume"));
+          }, 250);
+          return;
+        }
+
+        // ✅ otherwise normal reload (optional)
+        setTimeout(() => location.reload(), 600);
+
       } else {
         Swal.fire("Login Failed", data.message || "Invalid username or password.", "error");
       }
