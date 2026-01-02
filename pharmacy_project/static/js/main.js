@@ -301,3 +301,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// ================= OPEN BOOKING MODAL FROM SLIDER BUTTONS =================
+document.querySelectorAll(".open-booking").forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // open booking modal using your existing button (keeps your reset + calendar logic)
+    const openBtn = document.getElementById("openBookingModal");
+    if (openBtn) openBtn.click();
+  });
+});
