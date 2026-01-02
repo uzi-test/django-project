@@ -2126,6 +2126,139 @@ body {
   opacity: 0.55;
   cursor: not-allowed;
 }
+/* =========================
+   BOOKING MODAL RESPONSIVE FIX
+   Paste at END of your CSS
+========================= */
+
+/* Modal sizing + safe padding */
+#bookingModal .modal-dialog {
+  max-width: 1100px;
+  width: calc(100% - 24px);
+  margin: 12px auto;
+}
+
+#bookingModal .modal-content.booking-modal {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* Make body scrollable on small screens */
+#bookingModal .booking-body {
+  max-height: calc(100vh - 220px); /* header + footer space */
+  overflow-y: auto;
+  padding: 18px;
+}
+
+/* Footer sticky on small screens */
+#bookingModal .booking-footer {
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  padding: 14px 16px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Make buttons not overflow */
+#bookingModal .booking-footer .booking-btn {
+  min-height: 44px;
+  padding: 10px 16px;
+  white-space: nowrap;
+}
+
+/* Chips wrap nicely */
+#bookingModal .booking-chips {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Step 2 grid responsive */
+#bookingModal .dt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Step 4 form fields spacing */
+#bookingModal .two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* Inputs full width */
+#bookingModal .field input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Close X always visible */
+#bookingModal .booking-x {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  z-index: 5;
+}
+
+/* =========================
+   Mobile (<= 768px)
+========================= */
+@media (max-width: 768px) {
+  #bookingModal .modal-dialog {
+    width: calc(100% - 12px);
+    margin: 6px auto;
+  }
+
+  #bookingModal .booking-title {
+    font-size: 20px;
+  }
+
+  #bookingModal .booking-body {
+    max-height: calc(100vh - 200px);
+    padding: 14px;
+  }
+
+  /* Stack calendar + time slots */
+  #bookingModal .dt-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stack form fields */
+  #bookingModal .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer: wrap buttons */
+  #bookingModal .booking-footer {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #bookingModal .booking-footer .spacer {
+    display: none;
+  }
+
+  #bookingModal .booking-footer .booking-btn {
+    flex: 1 1 auto;
+  }
+}
+
+/* =========================
+   Very small phones (<= 420px)
+========================= */
+@media (max-width: 420px) {
+  #bookingModal .booking-body {
+    max-height: calc(100vh - 190px);
+  }
+
+  #bookingModal .booking-footer .booking-btn {
+    width: 100%;
+  }
+}
+
 
 
 /* ✅ Service list fixed height + scroll */
