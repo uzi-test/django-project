@@ -6,43 +6,57 @@
 {% block content %}
 
 <!-- ✅ Hero Section -->
-<section class="hero-banner d-flex align-items-center text-light"
-         style="background: url('{% static "images/herowei.jpg" %}') center/cover no-repeat;
-                height: 75vh; position: relative;">
+
+<section class="hero-banner d-flex align-items-start text-light"
+  style="
+    background: url('{% static "images/herowei.jpg" %}') center/cover no-repeat;
+    min-height: 100vh; padding: 120px 0 40px;
+
+    padding: 140px 0 80px;   /* navbar + bottom space */
+    position: relative;
+    overflow: hidden;
+  ">
+
   <div class="overlay"
-       style="position:absolute; top:0; left:0; right:0; bottom:0;
-              background: rgba(0,50,0,0.65);"></div>
+    style="position:absolute; inset:0; background: rgba(0,50,0,0.65);">
+  </div>
 
   <div class="container position-relative">
     <div class="row">
       <div class="col-lg-7 col-md-9">
+
         <div class="hero-content animate-slide-up text-start">
 
-          <h1 class="fw-bold text-uppercase text-dark-green" style="font-size:2.1rem;">
+          <h1 class="fw-bold text-uppercase" style="font-size:2.1rem;">
             Your Journey to a Healthier You
           </h1>
-          <h2 class="fw-bold mt-2 text-dark-green" style="font-size:1.7rem;">
+
+          <h2 class="fw-bold mt-2" style="font-size:1.7rem;">
             Weight Management Support
           </h2>
 
           <p class="mt-3" style="font-size:1rem; line-height:1.5; max-width:550px;">
-            Losing weight isn’t just about looking good — it’s about feeling better and living a healthier life. 
+            Losing weight isn’t just about looking good — it’s about feeling better and living a healthier life.
             Our pharmacy offers expert-led advice, tailored plans, and trusted support to help you achieve your goals safely and effectively.
           </p>
 
           <p class="mt-3" style="font-size:1rem; line-height:1.5; max-width:550px;">
-            Whether you need guidance on balanced nutrition, exercise, or medication support, we’re here to help you every step of the way.
+            Whether you need guidance on balanced nutrition, exercise, or medication support,
+            we’re here to help you every step of the way.
           </p>
 
           <p class="mt-3" style="font-size:1rem; line-height:1.5; max-width:550px;">
-            Take control of your health today and let us support you on your journey toward a more active and confident you.
+            Take control of your health today and let us support you on your journey
+            toward a more active and confident you.
           </p>
 
         </div>
+
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- 🧠 Health Benefits Section -->
 <section class="py-5" style="background-color:#022b14;">

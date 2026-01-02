@@ -7,27 +7,61 @@
 
 <!-- ✅ Hero Banner Section -->
 <section class="hero-banner d-flex align-items-center text-light" 
-         style="background: url('{% static 'images/pharmacy1slider.jpg' %}') center/cover no-repeat; height: 80vh; position: relative;">
+         style="background: url('{% static 'images/pharmacy1slider.jpg' %}') center/cover no-repeat;
+                height: 80vh;
+                position: relative;">
   
   <!-- Overlay -->
-  <div class="overlay" style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0, 50, 0, 0.6);"></div>
+  <div class="overlay" 
+       style="position: absolute;
+              top:0;
+              left:0;
+              right:0;
+              bottom:0;
+              background: rgba(0, 50, 0, 0.6);">
+  </div>
   
   <div class="container position-relative">
     <div class="row">
       <div class="col-lg-6 col-md-8">
-        <h1 class="fw-bold display-4">Pharmacy First</h1>
-        <p class="lead mt-3">
+
+        <!-- MAIN HEADING -->
+        <h1 class="fw-bold"
+            style="
+              font-size: 2.1rem;
+              letter-spacing: 0.6px;
+              line-height: 1.2;
+              margin-bottom: 14px;
+            ">
+          Pharmacy First
+        </h1>
+
+        <!-- DESCRIPTION -->
+        <p class="mt-3"
+           style="
+             font-size: 0.95rem;
+             line-height: 1.65;
+             color: #eef5f1;
+           ">
           We can give you advice on a range of conditions and suggest medicines that can help.  
           We may also be able to offer treatment and some prescription medicine for some conditions,  
           without you needing to see a GP (this is called Pharmacy First).
         </p>
-        <p class="mt-4">
+
+        <!-- SUB TEXT -->
+        <p class="mt-3"
+           style="
+             font-size: 0.85rem;
+             color: #dfeee6;
+           ">
           <strong>Conditions we can treat as part of Pharmacy First are:</strong>
         </p>
+
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- ✅ Services Cards Section -->
 <section class="services-section py-5">
