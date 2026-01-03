@@ -930,6 +930,135 @@ Last reviewed: 12 November 2025
 }
 
 
+NHS_CONDITIONS["abdominal-aortic-aneurysm"] = {
+    "title": "Abdominal aortic aneurysm",
+    "content": """
+    <p>An abdominal aortic aneurysm (AAA) is a swelling in the aorta, the artery that carries blood from the heart to the tummy (abdomen). Most aneurysms do not cause any problems, but they can be serious because there's a risk they could burst (rupture).</p>
+
+    <h2>Symptoms of abdominal aortic aneurysm</h2>
+    <p>Abdominal aortic aneurysm often has no symptoms.</p>
+
+    <p>If an aneurysm gets bigger, you might sometimes notice:</p>
+    <ul>
+      <li>tummy or back pain</li>
+      <li>a pulsing feeling in your tummy</li>
+    </ul>
+
+    <div class="nhs-inset">
+      <h3>See a GP if:</h3>
+      <ul>
+        <li>you have tummy or back pain that does not go away or keeps coming back</li>
+        <li>you feel a lump in your tummy</li>
+      </ul>
+      <p>These symptoms can be caused by lots of things and do not mean you have an abdominal aortic aneurysm, but it's best to get them checked.</p>
+    </div>
+
+    <div class="nhs-urgent">
+      <h3>Call 999 if you or someone else:</h3>
+      <ul>
+        <li>have sudden, severe pain in your tummy or back</li>
+        <li>are struggling to breathe or have stopped breathing</li>
+        <li>have pale or grey skin</li>
+        <li>lose consciousness</li>
+      </ul>
+      <p>These could be signs of an abdominal aortic aneurysm bursting (rupturing). This is a life-threatening emergency that needs to be treated in hospital as soon as possible.</p>
+    </div>
+
+    <h2>Tests for abdominal aortic aneurysm</h2>
+    <p>The main test to find out if you have an abdominal aortic aneurysm is an <strong>ultrasound scan</strong> of your tummy.</p>
+
+    <h2>Screening for abdominal aortic aneurysm</h2>
+    <p>An ultrasound test is offered to all men when they turn 65.</p>
+
+    <h2>Treatment for abdominal aortic aneurysm</h2>
+    <p>Treatment depends on how big it is and if you have symptoms.</p>
+
+    <h2>How to lower your risk</h2>
+    <div class="nhs-do">
+      <h3>Do</h3>
+      <ul>
+        <li>eat healthily</li>
+        <li>exercise regularly</li>
+        <li>try to lose weight if you're overweight</li>
+        <li>try to cut down on alcohol</li>
+      </ul>
+    </div>
+
+    <div class="nhs-dont">
+      <h3>Don't</h3>
+      <ul>
+        <li>do not smoke</li>
+      </ul>
+    </div>
+
+    <h2>Causes</h2>
+    <p>An abdominal aortic aneurysm happens when the aorta becomes weakened.</p>
+    
+    """
+    ,
+"abdominal-aortic-aneurysm": {
+    "title": "Abdominal aortic aneurysm",
+    "content": """
+    <!-- 🔴 Emergency box -->
+    <div class="nhs-urgent">
+      <h3>Call 999 if:</h3>
+      <p>You have sudden, severe pain in your tummy or back.</p>
+    </div>
+
+    <p>
+      An abdominal aortic aneurysm (AAA) is a swelling in the aorta,
+      the main blood vessel that runs from the heart down through the tummy.
+    </p>
+
+    <h2>Symptoms</h2>
+    <p>Most abdominal aortic aneurysms do not cause any symptoms.</p>
+
+    <ul>
+      <li>persistent tummy pain</li>
+      <li>persistent lower back pain</li>
+      <li>a pulsing feeling in the tummy</li>
+    </ul>
+
+    <!-- 🟢 GP box -->
+    <div class="nhs-inset">
+      <h3>See a GP if:</h3>
+      <p>You have ongoing tummy or back pain.</p>
+    </div>
+
+    <h2>Screening</h2>
+    <p>
+      In England, men are offered screening for abdominal aortic aneurysm
+      during the year they turn 65.
+    </p>
+
+    <h2>Treatment</h2>
+    <p>
+      Treatment depends on the size of the aneurysm and may include
+      regular monitoring or surgery.
+    </p>
+
+    <!-- 🟢 Do / 🔴 Don't -->
+    <div class="nhs-do">
+      <h3>Do</h3>
+      <ul>
+        <li>stop smoking</li>
+        <li>eat a healthy diet</li>
+        <li>exercise regularly</li>
+      </ul>
+    </div>
+
+    <div class="nhs-dont">
+      <h3>Don't</h3>
+      <ul>
+        <li>ignore ongoing tummy or back pain</li>
+      </ul>
+    </div>
+    """
+}
+
+}
+
+
 def nhs_condition_detail(request, slug):
     condition = NHS_CONDITIONS.get(slug)
 

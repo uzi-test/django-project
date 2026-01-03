@@ -3169,3 +3169,32 @@ body {
 }
 .nhs-content a { color: #0b5d2a; font-weight: 700; text-decoration: none; }
 .nhs-content a:hover { text-decoration: underline; }
+
+.nhs-inset{
+  border-left: 6px solid #007f3b;
+  background: #f2fbf5;
+  padding: 18px;
+  margin: 22px 0;
+  border-radius: 6px;
+}
+.nhs-urgent{
+  border-left: 6px solid #d5281b;
+  background: #fff3f2;
+  padding: 18px;
+  margin: 22px 0;
+  border-radius: 6px;
+}
+.nhs-do{
+  border-left: 6px solid #007f3b;
+  background: #f2fbf5;
+  padding: 18px;
+  margin: 22px 0;
+  border-radius: 6px;
+}
+.nhs-dont{
+  border-left: 6px solid #d5281b;
+  background: #fff3f2;
+  padding: 18px;
+  margin: 22px 0;
+  border-radius: 6px;
+}
