@@ -447,7 +447,6 @@ NHS_CONDITIONS = {
     <strong>Read about Right to Choose and your choices in the NHS</strong>
   </a>.
 
-
               <p>You can ask for an NHS appointment at any clinic, including a private clinic, if it provides ADHD services for the NHS in England.</p>
               <p>
   <strong>
@@ -456,7 +455,6 @@ NHS_CONDITIONS = {
     </a>
   </strong>.
 </p>
-
 
             <h2>How to manage ADHD (attention deficit hyperactivity disorder)</h2>
             <p>ADHD can be managed in many ways, including lifestyle changes, changes at work, or medicines.</p>
@@ -523,8 +521,6 @@ NHS_CONDITIONS = {
     <strong>Find out how to get help for suicidal thoughts</strong>
   </a>
 </p>
-
-
 
             <h2>What causes ADHD (attention deficit hyperactivity disorder)</h2>
             <p>The cause of ADHD is not always known. ADHD may be caused by genetic differences and often runs in families.</p>
@@ -597,15 +593,12 @@ NHS_CONDITIONS = {
      rel="noopener">
     <strong>Advice and information (MindOUT)</strong>
   </a>
-
-
         """
     },
 
-"adhd-children-young-people": {
-  "title": "ADHD in children and young people",
-  "content": """
-
+    "adhd-children-young-people": {
+        "title": "ADHD in children and young people",
+        "content": """
 <!-- LINK TO ADULTS -->
 <div class="nhs-inset">
   <h3>ADHD in adults</h3>
@@ -924,12 +917,11 @@ Last reviewed: 12 November 2025
 </p>
 
 """
+    }
 }
 
 
-}
-
-
+# ✅ KEEP YOUR EXISTING PAGE (DO NOT REMOVE)
 NHS_CONDITIONS["abdominal-aortic-aneurysm"] = {
     "title": "Abdominal aortic aneurysm",
     "content": """
@@ -993,69 +985,124 @@ NHS_CONDITIONS["abdominal-aortic-aneurysm"] = {
 
     <h2>Causes</h2>
     <p>An abdominal aortic aneurysm happens when the aorta becomes weakened.</p>
-    
-    """
-    ,
-"abdominal-aortic-aneurysm": {
-    "title": "Abdominal aortic aneurysm",
-    "content": """
-    <!-- 🔴 Emergency box -->
-    <div class="nhs-urgent">
-      <h3>Call 999 if:</h3>
-      <p>You have sudden, severe pain in your tummy or back.</p>
-    </div>
-
-    <p>
-      An abdominal aortic aneurysm (AAA) is a swelling in the aorta,
-      the main blood vessel that runs from the heart down through the tummy.
-    </p>
-
-    <h2>Symptoms</h2>
-    <p>Most abdominal aortic aneurysms do not cause any symptoms.</p>
-
-    <ul>
-      <li>persistent tummy pain</li>
-      <li>persistent lower back pain</li>
-      <li>a pulsing feeling in the tummy</li>
-    </ul>
-
-    <!-- 🟢 GP box -->
-    <div class="nhs-inset">
-      <h3>See a GP if:</h3>
-      <p>You have ongoing tummy or back pain.</p>
-    </div>
-
-    <h2>Screening</h2>
-    <p>
-      In England, men are offered screening for abdominal aortic aneurysm
-      during the year they turn 65.
-    </p>
-
-    <h2>Treatment</h2>
-    <p>
-      Treatment depends on the size of the aneurysm and may include
-      regular monitoring or surgery.
-    </p>
-
-    <!-- 🟢 Do / 🔴 Don't -->
-    <div class="nhs-do">
-      <h3>Do</h3>
-      <ul>
-        <li>stop smoking</li>
-        <li>eat a healthy diet</li>
-        <li>exercise regularly</li>
-      </ul>
-    </div>
-
-    <div class="nhs-dont">
-      <h3>Don't</h3>
-      <ul>
-        <li>ignore ongoing tummy or back pain</li>
-      </ul>
-    </div>
     """
 }
 
+
+# ✅ NEW PAGE ADDED (ONLY UPDATE YOU NEEDED)
+NHS_CONDITIONS["abdominal-aortic-aneurysm-screening"] = {
+    "title": "Abdominal aortic aneurysm (AAA) screening",
+    "content": """
+    <p>
+      AAA screening is offered to all men over the age of 64. Anyone assigned male at birth
+      who is over the age of 64 can have it.
+    </p>
+
+    <h2>Why abdominal aortic aneurysm (AAA) screening is done</h2>
+    <p>
+      Abdominal aortic aneurysm (AAA) screening is done to check if there are any swellings
+      (aneurysms) in the main blood vessel in your tummy (abdomen), called the aorta.
+      The aorta runs from your heart down to your abdomen.
+    </p>
+    <p>
+      AAA screening can help find an abdominal aortic aneurysm early. This means it can be
+      monitored and treated, if needed, so it's less likely to burst (rupture), which can be
+      life threatening.
+    </p>
+
+    <h2>Who abdominal aortic aneurysm (AAA) screening is for</h2>
+    <p>
+      All men living in England are invited for abdominal aortic aneurysm (AAA) screening
+      the year they turn 65.
+    </p>
+    <p>
+      AAA screening is recommended for anyone assigned male at birth. This includes men,
+      trans women and non-binary people.
+    </p>
+    <p>
+      You'll have the AAA screening test once, unless an aneurysm is found.
+    </p>
+
+    <h3>If you're trans or non-binary</h3>
+    <p>Your need for AAA screening depends on the sex you were assigned at birth:</p>
+    <ul>
+      <li>If you were assigned male at birth, it's recommended you have AAA screening</li>
+      <li>If you were assigned female at birth, you do not have the same risk, so will not usually be offered AAA screening</li>
+    </ul>
+    <p>
+      If you're registered as male with a GP, you'll be invited automatically the year you turn 65.
+      If you're registered as female with a GP, you may need to talk to the GP surgery or call your local AAA screening service to ask for an appointment.
+    </p>
+
+    <div class="nhs-inset">
+      <h3>If you have a higher risk of abdominal aortic aneurysm</h3>
+      <p>
+        If you're not eligible for AAA screening but you think you're at higher risk, talk to a GP about the possibility of getting a scan.
+      </p>
+      <p>You may be at higher risk if:</p>
+      <ul>
+        <li>people in your family have had an abdominal aortic aneurysm</li>
+        <li>you have high blood pressure, diabetes or chronic obstructive pulmonary disease (COPD)</li>
+        <li>you smoke</li>
+      </ul>
+    </div>
+
+    <h2>How to get abdominal aortic aneurysm (AAA) screening</h2>
+    <p>
+      During the year you turn 65, you'll get a letter inviting you for a pre-booked AAA screening appointment.
+      The letter is usually sent 3 to 6 weeks before the appointment.
+    </p>
+    <p>
+      AAA screening usually takes place at GP surgeries or health centres, and sometimes hospitals.
+      If you need to change your appointment or you've not had an invitation letter and think you should have, contact your local AAA screening service.
+    </p>
+    <p>
+      It's your choice if you want to have AAA screening. Most abdominal aortic aneurysms do not have any symptoms,
+      so screening is the best way to find one.
+    </p>
+
+    <h2>How abdominal aortic aneurysm (AAA) screening is done</h2>
+    <p>
+      The main test is an <strong>ultrasound scan</strong> of your tummy. It usually takes around 10 to 15 minutes and is painless.
+    </p>
+    <ul>
+      <li>A small handheld device called a probe is placed on your tummy</li>
+      <li>Images of the inside of your tummy are shown on a screen</li>
+      <li>The medical professional checks for any bulges or swelling of the aorta</li>
+    </ul>
+    <p>
+      Sometimes it may not be possible to get a clear picture of your aorta. If this happens, you may need another scan.
+    </p>
+
+    <h2>Getting your results</h2>
+    <p>
+      You'll get the results at the end of the scan and your GP surgery will be sent the results.
+    </p>
+
+    <h3>If an aneurysm is not found</h3>
+    <p>If you do not have an aneurysm, you will not need any more scans.</p>
+
+    <h3>If an aneurysm is found</h3>
+    <p>If an aneurysm is found, what happens next depends on the size:</p>
+    <ul>
+      <li><strong>Small (3cm to 4.4cm):</strong> scan every year + specialist nurse advice</li>
+      <li><strong>Medium (4.5cm to 5.4cm):</strong> scan every 3 months + specialist nurse advice</li>
+      <li><strong>Large (5.5cm or bigger):</strong> referred to a vascular surgeon for more tests and possible treatment</li>
+    </ul>
+
+    <div class="nhs-inset">
+      <h3>Monitoring a small or medium aneurysm</h3>
+      <p>
+        If you have a small or medium aneurysm, you’ll be offered an appointment with a specialist nurse.
+        They may talk to you about medicines, checking your blood pressure more often, and things you can do
+        to slow the growth (for example quitting smoking, losing weight, and eating a healthy balanced diet).
+      </p>
+    </div>
+
+    <p style="margin-top:40px;font-size:14px;color:#666;">
+      Last reviewed: 13 November 2024
+    </p>
+    """
 }
 
 
@@ -1071,6 +1118,7 @@ def nhs_condition_detail(request, slug):
         "slug": slug,
         "condition": condition,
     })
+
 
 def pharmacy_services(request):
     return render(request, "home/partials/pharmacy_services.html")
